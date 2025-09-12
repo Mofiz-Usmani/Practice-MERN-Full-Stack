@@ -7,3 +7,10 @@ img {
     height: 200px;
     width: 250px;
 }
+
+span {
+    color: green;
+    font-weight: bolder;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
