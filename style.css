@@ -14,3 +14,24 @@ span {
     font-size: larger;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+#one {
+    text-align: left;
+}
+
+#two {
+    text-align: start;
+}
+
+#three {
+    text-align: right;
+}
+
+#four {
+    text-align: center;
+}
+
+#five {
+    text-align: justify;
+}
