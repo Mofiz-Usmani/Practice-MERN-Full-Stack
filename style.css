@@ -57,3 +57,14 @@ div p {
     color: rgb(31, 129, 129);
 }
 
+input[type="text"]{
+    color: blue;
+}
+
+input[type="password"]{
+    color: rgba(255, 0, 0, 0.92);
+}
+
+input[type]{
+    background-color: aqua;
+}
