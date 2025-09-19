@@ -68,3 +68,17 @@ input[type="password"]{
 input[type]{
     background-color: aqua;
 }
+
+
+#pseudo:hover {
+    background-color: aquamarine;
+}
+
+#pseudo:active {
+    background-color: greenyellow;
+}
+
+input[type="radio"]:checked + label {
+    color: red;
+    font-weight: bold;
+}
