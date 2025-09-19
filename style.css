@@ -82,3 +82,16 @@ input[type="radio"]:checked + label {
     color: red;
     font-weight: bold;
 }
+
+#pseudo_element::first-letter {
+    font-size: 30px;
+    color: magenta;
+}
+
+#pseudo_element::first-line{
+    color: purple;
+}
+
+#pseudo_element::selection {
+    background-color: greenyellow;
+}
