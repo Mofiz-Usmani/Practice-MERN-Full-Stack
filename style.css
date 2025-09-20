@@ -226,5 +226,6 @@ input[type="radio"]:checked + label {
     border-radius: 50%;
     transform: scale(3);
     transform: translateY(-50px);
+    box-shadow: 10px 10px 10px rgb(145, 150, 145);
     background-color: rgb(238, 255, 0);
 }
