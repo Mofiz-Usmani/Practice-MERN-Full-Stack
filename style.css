@@ -189,6 +189,37 @@ input[type="radio"]:checked + label {
     transition: all 3s ease-in-out;
 }
 
+#transitionbox {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: chartreuse;
+    transition: all 3s linear;
+}
+
+#transitionbox {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: chartreuse;
+    transition: all 3s ease;
+}
+#transitionbox {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: chartreuse;
+    transition: all 3s ease-in;
+}
+
+#transitionbox {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: chartreuse;
+    transition: all 3s ease-out;
+}
+
 
 #transitionbox:hover {
     margin-left: 1300px;
