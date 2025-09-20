@@ -138,6 +138,7 @@ input[type="radio"]:checked + label {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    opacity: 0.8;
     
 }
 
@@ -163,4 +164,5 @@ input[type="radio"]:checked + label {
     border: 2px solid black;
     border-radius: 50%;
     background-color: rgba(0,255,0, 0.7);
+    opacity: 0.5;
 }
