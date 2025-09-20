@@ -221,11 +221,24 @@ input[type="radio"]:checked + label {
 }
 
 
-#transitionbox:hover {
+/* #transitionbox:hover {
     margin-left: 1300px;
     border-radius: 50%;
     transform: scale(3);
     transform: translateY(-50px);
     box-shadow: 10px 10px 10px rgb(145, 150, 145);
     background-color: rgb(238, 255, 0);
+} */
+
+
+#transitionbox:hover {
+    margin-left: 1300px;
+    height: 200px;
+    width: 200px;
+    transform: scale(3);
+    transform: translateY(-50px);
+    box-shadow: 10px 10px 10px rgb(145, 150, 145);
+    background-color: rgb(238, 255, 0);
+    background-image: url("https://images.unsplash.com/photo-1757778281745-85a04487b859?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
 }
