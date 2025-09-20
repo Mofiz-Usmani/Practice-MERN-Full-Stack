@@ -166,3 +166,16 @@ input[type="radio"]:checked + label {
     background-color: rgba(0,255,0, 0.7);
     opacity: 0.5;
 }
+
+
+
+#transition {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    transition: background-color 2s ease;
+}
+
+#transition:hover {
+  background-color: red;
+}
