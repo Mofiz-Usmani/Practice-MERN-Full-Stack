@@ -356,10 +356,19 @@ input[type="radio"]:checked + label {
 
 
 
-body {
-    background-color: rgb(204, 255, 229);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.flexbox {
+    display: flex;
+    border: 2px solid black;
+    height: 400px;
+    width: 800px;
+    align-items: center;
+    background-color: rgb(255, 204, 229);
+}
+
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background-color: lightblue;
 }
