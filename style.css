@@ -490,3 +490,25 @@ input[type="radio"]:checked + label {
         background-color: lightgrey;
     }
 }
+
+
+
+.box_1 {
+    height: 100px;
+    width: 100px;
+    background-color: lightcoral;
+    border: 2px solid black;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.box_2 {
+    height: 100px;
+    width: 100px;
+    background-color: lightseagreen;
+    border: 2px solid black;
+    margin: -70px 0 0 40px;
+    z-index: 2;
+    position: relative;
+}
