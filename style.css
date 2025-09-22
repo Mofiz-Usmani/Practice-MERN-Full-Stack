@@ -482,3 +482,11 @@ input[type="radio"]:checked + label {
         transform: translateY(-10000px) scale(0.9);
     }
 }
+
+
+
+@media (min-width : 400px) {
+    body {
+        background-color: lightgrey;
+    }
+}
