@@ -138,20 +138,57 @@
 
 // Switch Case in JavaScript :
 
-let color = "yellow";
+// let color = "yellow";
 
-switch(color) {
-    case "red" :
-        console.log("Stop");
-        break;
-    case "yellow" :
-        console.log("Ready");
-        break;
-    case "green" :
-        console.log("Go");
-        break;
-    default :
-        console.log("Invalid Color");
-        break;
-}
+// switch(color) {
+//     case "red" :
+//         console.log("Stop");
+//         break;
+//     case "yellow" :
+//         console.log("Ready");
+//         break;
+//     case "green" :
+//         console.log("Go");
+//         break;
+//     default :
+//         console.log("Invalid Color");
+//         break;
+// }
+
+
+
+
+// Alert and Prompt in JavaScript :
+
+// let firstName = prompt("Enter your first name : ");
+// let lastName = prompt("Enter your last name : ");
+// let msg = `Hello ${firstName} ${lastName}, welcome to JavaScript!`;
+// alert(msg);
+
+
+
+// String Methods in JavaScript :
+
+
+// let str = "    hello ";
+// console.log(str.length);
+
+// // trim() method
+// console.log(str.trim());
+// console.log(str.length); // old string remains the same
+
+// console.log(str.trim().length); // new trimmed string length
+
+// // indexOf() method
+// let newStr = "Tony Stark";
+// console.log(newStr.indexOf("y"));
+
+
+// Slice() method
+
+let anotherStr = "Hello, World!";
+console.log(anotherStr.slice(0, 5));
+console.log(anotherStr.slice(7));
+console.log(anotherStr.slice(-6, -1)); // from end
+
 
