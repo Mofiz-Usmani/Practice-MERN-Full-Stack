@@ -13,7 +13,7 @@ let obj = { name: "Alice", age: 30 };
 let sym = Symbol("unique");
 
 // Checking Data Types
-console.log(typeof num); // "number"
+console.log(typeof(num)); // "number"
 console.log(typeof str); // "string"
 console.log(typeof isTrue); // "boolean"
 console.log(typeof emptyValue); // "object" (this is a known quirk in JavaScript)
@@ -43,3 +43,10 @@ console.log(error.message); // "Something went wrong!"
 console.log(date.toDateString()); // Outputs the date in a readable format
 console.log(arr.length); // 5
 console.log(func()); // "Hello"
+
+
+let newHello = function hello() {
+    console.log("Hello, World!");
+}
+
+newHello();
