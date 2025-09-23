@@ -1,33 +1,45 @@
+// Data Type in JavaScript : 
 
-// // Simple calculator functions
-// function add(a, b) {
-//   return a + b;
-// }
+// Primitives Data Types in JavaScript : They are immutable
+// Number, String, Boolean, Null, Undefined, Object, Symbol
 
-// function subtract(a, b) {
-//   return a - b;
-// }
+// Example :
+let num = 42; // Number
+let str = "Hello, World!";  
+let isTrue = true; // Boolean
+let emptyValue = null;
+let notDefined; // Undefined
+let obj = { name: "Alice", age: 30 };
+let sym = Symbol("unique");
 
-// function multiply(a, b) {
-//   return a * b;
-// }
-
-// function divide(a, b) {
-//   if (b === 0) {
-//     throw new Error("Cannot divide by zero");
-//   }
-//   return a / b;
-// }
-
-// // Example usage
-// const num1 = 10;
-// const num2 = 5;
-
-// console.log(`Addition: ${add(num1, num2)}`);
-// console.log(`Subtraction: ${subtract(num1, num2)}`);
-// console.log(`Multiplication: ${multiply(num1, num2)}`);
-// console.log(`Division: ${divide(num1, num2)}`);
+// Checking Data Types
+console.log(typeof num); // "number"
+console.log(typeof str); // "string"
+console.log(typeof isTrue); // "boolean"
+console.log(typeof emptyValue); // "object" (this is a known quirk in JavaScript)
+console.log(typeof notDefined); // "undefined"
+console.log(typeof obj); // "object"
+console.log(typeof sym); // "symbol"    
+console.log(" ");
 
 
+// Non-Primitives Data Types in JavaScript : They are mutable
+// Arrays, Functions, Dates, Error
 
-console.log("Hello, World!");
+// Example :
+let arr = [1, 2, 3, 4, 5]; // Array
+let func = function() { return "Hello"; }; // Function
+let date = new Date(); // Date
+let error = new Error("Something went wrong!"); // Error
+
+
+// Checking Data Types
+console.log(typeof arr); // "object"
+console.log(typeof func); // "function"
+console.log(typeof date); // "object"
+console.log(typeof regex); // "object"
+console.log(typeof error); // "object"
+console.log(error.message); // "Something went wrong!"
+console.log(date.toDateString()); // Outputs the date in a readable format
+console.log(arr.length); // 5
+console.log(func()); // "Hello"
