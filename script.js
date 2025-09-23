@@ -55,10 +55,44 @@
 // NaN in JavaScript : when a mathematical operation is not possible,-
 // it returns NaN (Not-a-Number)
 
-let a = 0;
-let b = "string";
-let c = a / b; // This will result in NaN (Not-a-Number)
+// let a = 0;
+// let b = "string";
+// let c = a / b; // This will result in NaN (Not-a-Number)
 
-console.log(c);
-console.log(typeof c); // "number"
-console.log(isNaN(c)); // true
+// console.log(c);
+// console.log(typeof c); // "number"
+// console.log(isNaN(c)); // true
+
+
+// Types of Variable Declaration in JavaScript :
+
+// var, let, const
+
+// // 1. var : Function-scoped or globally-scoped, can be re-declared and updated
+var x = 10;
+console.log(x); // 10
+
+var x = 20; // Re-declaration is allowed
+console.log(x); // 20
+x = 30; // Update is allowed
+console.log(x); // 30
+
+// // 2. let : Block-scoped, cannot be re-declared in the same scope but can be updated
+let y = 10;
+console.log(y); // 10
+
+// let y = 20; // Re-declaration in the same scope is not allowed (Uncommenting this line will cause an error)
+y = 20; // Update is allowed
+console.log(y); // 20
+
+// // 3. const : Block-scoped, cannot be re-declared or updated
+const z = 10;
+console.log(z); // 10    
+// const z = 20; // Re-declaration is not allowed (Uncommenting this line will cause an error)
+// z = 20; // Update is not allowed (Uncommenting this line will cause an error)
+console.log(z); // 10
+
+// // Summary
+// // var is function-scoped and can be re-declared and updated.
+// // let is block-scoped and can be updated but not re-declared in the same scope.
+// // const is block-scoped and cannot be re-declared or updated.
