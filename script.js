@@ -69,28 +69,28 @@
 // var, let, const
 
 // // 1. var : Function-scoped or globally-scoped, can be re-declared and updated
-var x = 10;
-console.log(x); // 10
+// var x = 10;
+// console.log(x); // 10
 
-var x = 20; // Re-declaration is allowed
-console.log(x); // 20
-x = 30; // Update is allowed
-console.log(x); // 30
+// var x = 20; // Re-declaration is allowed
+// console.log(x); // 20
+// x = 30; // Update is allowed
+// console.log(x); // 30
 
-// // 2. let : Block-scoped, cannot be re-declared in the same scope but can be updated
-let y = 10;
-console.log(y); // 10
+// // // 2. let : Block-scoped, cannot be re-declared in the same scope but can be updated
+// let y = 10;
+// console.log(y); // 10
 
-// let y = 20; // Re-declaration in the same scope is not allowed (Uncommenting this line will cause an error)
-y = 20; // Update is allowed
-console.log(y); // 20
+// // let y = 20; // Re-declaration in the same scope is not allowed (Uncommenting this line will cause an error)
+// y = 20; // Update is allowed
+// console.log(y); // 20
 
-// // 3. const : Block-scoped, cannot be re-declared or updated
-const z = 10;
-console.log(z); // 10    
-// const z = 20; // Re-declaration is not allowed (Uncommenting this line will cause an error)
-// z = 20; // Update is not allowed (Uncommenting this line will cause an error)
-console.log(z); // 10
+// // // 3. const : Block-scoped, cannot be re-declared or updated
+// const z = 10;
+// console.log(z); // 10    
+// // const z = 20; // Re-declaration is not allowed (Uncommenting this line will cause an error)
+// // z = 20; // Update is not allowed (Uncommenting this line will cause an error)
+// console.log(z); // 10
 
 // // Summary
 // // var is function-scoped and can be re-declared and updated.
@@ -100,12 +100,36 @@ console.log(z); // 10
 
 // Dynamic Typing in JavaScript : A variable can hold any type of data and can 
 // change types at runtime.
-let a = 10;
-console.log(typeof a);
-a = true;
-console.log(typeof a);
-a = "Hello";
-console.log(typeof a);
+// let a = 10;
+// console.log(typeof a);
+// a = true;
+// console.log(typeof a);
+// a = "Hello";
+// console.log(typeof a);
 
 
+
+// String in JavaScript :
+
+let FullName = "Tony Stark";
+
+console.log(FullName[0]);
+console.log(FullName.length);
+console.log(FullName.toUpperCase());
+console.log(FullName.toLowerCase());
+console.log(FullName.slice(0, 4));
+console.log(FullName.replace("Tony", "Iron"));
+console.log(FullName.concat(" is Iron Man"));
+
+
+
+// Template Literals in JavaScript :
+
+let firstName = "Tony";
+let lastName = "Stark";
+let age = 45;   
+
+let aboutMe = `My name is ${firstName} ${lastName} and I am ${age} years old.`;
+
+console.log(aboutMe);
 
