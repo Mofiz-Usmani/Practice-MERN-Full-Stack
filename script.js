@@ -96,3 +96,16 @@ console.log(z); // 10
 // // var is function-scoped and can be re-declared and updated.
 // // let is block-scoped and can be updated but not re-declared in the same scope.
 // // const is block-scoped and cannot be re-declared or updated.
+
+
+// Dynamic Typing in JavaScript : A variable can hold any type of data and can 
+// change types at runtime.
+let a = 10;
+console.log(typeof a);
+a = true;
+console.log(typeof a);
+a = "Hello";
+console.log(typeof a);
+
+
+
