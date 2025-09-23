@@ -111,25 +111,47 @@
 
 // String in JavaScript :
 
-let FullName = "Tony Stark";
+// let FullName = "Tony Stark";
 
-console.log(FullName[0]);
-console.log(FullName.length);
-console.log(FullName.toUpperCase());
-console.log(FullName.toLowerCase());
-console.log(FullName.slice(0, 4));
-console.log(FullName.replace("Tony", "Iron"));
-console.log(FullName.concat(" is Iron Man"));
+// console.log(FullName[0]);
+// console.log(FullName.length);
+// console.log(FullName.toUpperCase());
+// console.log(FullName.toLowerCase());
+// console.log(FullName.slice(0, 4));
+// console.log(FullName.replace("Tony", "Iron"));
+// console.log(FullName.concat(" is Iron Man"));
 
 
 
 // Template Literals in JavaScript :
 
-let firstName = "Tony";
-let lastName = "Stark";
-let age = 45;   
+// let firstName = "Tony";
+// let lastName = "Stark";
+// let age = 45;   
 
-let aboutMe = `My name is ${firstName} ${lastName} and I am ${age} years old.`;
+// let aboutMe = `My name is ${firstName} ${lastName} and I am ${age} years old.`;
 
-console.log(aboutMe);
+// console.log(aboutMe);
+
+
+
+
+// Switch Case in JavaScript :
+
+let color = "yellow";
+
+switch(color) {
+    case "red" :
+        console.log("Stop");
+        break;
+    case "yellow" :
+        console.log("Ready");
+        break;
+    case "green" :
+        console.log("Go");
+        break;
+    default :
+        console.log("Invalid Color");
+        break;
+}
 
