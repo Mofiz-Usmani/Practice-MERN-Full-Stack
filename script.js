@@ -197,6 +197,19 @@
 // console.log(str); // original string remains unchanged
 
 
-let str = "ILoveCoding";
-console.log(str.repeat(100));
+// let str = "ILoveCoding";
+// console.log(str.repeat(100));
 
+
+
+// Arrays in JavaScript :
+
+let students = ["Tony", "Steve", "Bruce", "Natasha"];
+let marks = [90, 85, 88, 92];
+let cgpa = [3.5, 3.8, 3.6, 3.9];
+let studentInfo = ["Tony", 9.5, 25, "passed"];
+
+console.log(students);
+console.log(marks);
+console.log(cgpa);
+console.log(studentInfo);
