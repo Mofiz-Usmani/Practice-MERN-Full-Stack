@@ -204,12 +204,37 @@
 
 // Arrays in JavaScript :
 
-let students = ["Tony", "Steve", "Bruce", "Natasha"];
-let marks = [90, 85, 88, 92];
-let cgpa = [3.5, 3.8, 3.6, 3.9];
-let studentInfo = ["Tony", 9.5, 25, "passed"];
+// let students = ["Tony", "Steve", "Bruce", "Natasha"];
+// let marks = [90, 85, 88, 92];
+// let cgpa = [3.5, 3.8, 3.6, 3.9];
+// let studentInfo = ["Tony", 9.5, 25, "passed"];
 
-console.log(students);
-console.log(marks);
-console.log(cgpa);
-console.log(studentInfo);
+// console.log(students);
+// console.log(marks);
+// console.log(cgpa);
+// console.log(studentInfo);
+
+
+
+
+// Arrays are Mutable : You can change the elements of an array
+
+let fruits = ["Apple", "Banana", "Orange"];
+console.log(fruits);
+
+fruits[1] = "Mango"; // Changing "Banana" to "Mango"
+console.log(fruits); // Changes done in the original array
+
+
+
+// Push Method : Adds one or more elements to the end of an-
+// array and returns the new length of the array
+fruits.push("Grapes");
+console.log(fruits); // add grapes at the end
+
+
+
+// Pop Method : Removes the last element from an array and-
+// returns that element
+let lastFruit = fruits.pop();
+console.log(fruits);
