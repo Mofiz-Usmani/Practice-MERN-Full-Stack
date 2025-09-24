@@ -192,6 +192,11 @@
 // console.log(anotherStr.slice(-6, -1)); // from end
 
 
+// let str = "ILoveCoding";
+// console.log(str.replace("Coding", "JavaScript"));
+// console.log(str); // original string remains unchanged
+
+
 let str = "ILoveCoding";
-console.log(str.replace("Coding", "JavaScript"));
-console.log(str); // original string remains unchanged
+console.log(str.repeat(100));
+
