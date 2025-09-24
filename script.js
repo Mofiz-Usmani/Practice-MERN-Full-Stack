@@ -186,9 +186,12 @@
 
 // Slice() method
 
-let anotherStr = "Hello, World!";
-console.log(anotherStr.slice(0, 5));
-console.log(anotherStr.slice(7));
-console.log(anotherStr.slice(-6, -1)); // from end
+// let anotherStr = "Hello, World!";
+// console.log(anotherStr.slice(0, 5));
+// console.log(anotherStr.slice(7));
+// console.log(anotherStr.slice(-6, -1)); // from end
 
 
+let str = "ILoveCoding";
+console.log(str.replace("Coding", "JavaScript"));
+console.log(str); // original string remains unchanged
