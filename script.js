@@ -237,4 +237,18 @@ console.log(fruits); // add grapes at the end
 // Pop Method : Removes the last element from an array and-
 // returns that element
 let lastFruit = fruits.pop();
-console.log(fruits);
+console.log(fruits); //removes grapes
+
+
+
+// Unshift Method : Adds one or more elements to the beginning of-
+// an array and returns the new length of the array
+fruits.unshift("Strawberry");
+console.log(fruits); // add strawberry at the beginning
+
+
+
+// Shift Method : Removes the first element from an array and-
+// returns that element
+let firstFruit = fruits.shift();
+console.log(fruits); // removes strawberry
