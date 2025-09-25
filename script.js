@@ -322,10 +322,32 @@
 
 // Array Reference vs Value :
 
-let arr1 = [1];
-let arr2 = [1];
+// let arr1 = [1];
+// let arr2 = [1];
 
-console.log(arr1 == arr2); // false, different references
+// console.log(arr1 == arr2); // false, different references
 
-let arr3 = arr1;
-console.log(arr1 == arr3); // true, same reference
+// let arr3 = arr1;
+// console.log(arr1 == arr3); // true, same reference
+
+
+
+
+// Print all odd numbers (1 to 100) using for loop :
+// for(let i=1; i<=100; i+=2) {
+//     console.log(i);
+// }
+
+
+// Print all even numbers (1 to 100) using for loop :
+// for(let i=2; i<=100; i+=2){
+//     console.log(i);
+// }
+
+
+// Print multiplication table of a given number using for loop :
+// let num = 5; 
+// for(let i=num; i<=num*10; i+=num){
+//     console.log(num + " X " + i/num + " = " + i);
+// }
+
