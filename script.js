@@ -219,36 +219,44 @@
 
 // Arrays are Mutable : You can change the elements of an array
 
-let fruits = ["Apple", "Banana", "Orange"];
-console.log(fruits);
+// let fruits = ["Apple", "Banana", "Orange"];
+// console.log(fruits);
 
-fruits[1] = "Mango"; // Changing "Banana" to "Mango"
-console.log(fruits); // Changes done in the original array
-
-
-
-// Push Method : Adds one or more elements to the end of an-
-// array and returns the new length of the array
-fruits.push("Grapes");
-console.log(fruits); // add grapes at the end
+// fruits[1] = "Mango"; // Changing "Banana" to "Mango"
+// console.log(fruits); // Changes done in the original array
 
 
 
-// Pop Method : Removes the last element from an array and-
-// returns that element
-let lastFruit = fruits.pop();
-console.log(fruits); //removes grapes
+// // Push Method : Adds one or more elements to the end of an-
+// // array and returns the new length of the array
+// fruits.push("Grapes");
+// console.log(fruits); // add grapes at the end
 
 
 
-// Unshift Method : Adds one or more elements to the beginning of-
-// an array and returns the new length of the array
-fruits.unshift("Strawberry");
-console.log(fruits); // add strawberry at the beginning
+// // Pop Method : Removes the last element from an array and-
+// // returns that element
+// let lastFruit = fruits.pop();
+// console.log(fruits); //removes grapes
+
+
+
+// // Unshift Method : Adds one or more elements to the beginning of-
+// // an array and returns the new length of the array
+// fruits.unshift("Strawberry");
+// console.log(fruits); // add strawberry at the beginning
 
 
 
 // Shift Method : Removes the first element from an array and-
 // returns that element
-let firstFruit = fruits.shift();
-console.log(fruits); // removes strawberry
+// let firstFruit = fruits.shift();
+// console.log(fruits); // removes strawberry
+
+
+
+
+// IndexOf Method : Returns the first index at which a given element-
+let primary = ['red', 'blue', 'green'];
+console.log(primary.indexOf('green')); // 2
+console.log(primary.indexOf('yellow')); // -1
