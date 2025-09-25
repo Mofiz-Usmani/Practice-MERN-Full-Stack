@@ -351,3 +351,14 @@
 //     console.log(num + " X " + i/num + " = " + i);
 // }
 
+
+
+
+// Guessin Movie Game : 
+let favoriteMovie = "The Dark Knight"; 
+let userGuess = prompt("Guess my favorite movie : ");
+
+while(userGuess !== favoriteMovie) {
+    userGuess = prompt("Wrong guess! Try again : ");
+}
+
