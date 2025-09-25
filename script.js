@@ -264,19 +264,30 @@
 
 
 // Includes Method : Determines whether an array includes a certain element-
-let primary = ['red', 'blue', 'green'];
-console.log(primary.includes('blue')); // true
-console.log(primary.includes('yellow')); // false
+// let primary = ['red', 'blue', 'green'];
+// console.log(primary.includes('blue')); // true
+// console.log(primary.includes('yellow')); // false
 
 
 
-// Concat Method : Merges two or more arrays and returns a new array
-let secondary = ['orange', 'purple'];
-let allColors = primary.concat(secondary);
-console.log(allColors); // ['red', 'blue', 'green', 'orange', 'purple']
+// // Concat Method : Merges two or more arrays and returns a new array
+// let secondary = ['orange', 'purple'];
+// let allColors = primary.concat(secondary);
+// console.log(allColors); // ['red', 'blue', 'green', 'orange', 'purple']
 
 
 
-// Reverse Method : Reverses the order of the elements in an array
-primary.reverse();
-console.log(primary); // ['green', 'blue', 'red']
+// // Reverse Method : Reverses the order of the elements in an array
+// primary.reverse();
+// console.log(primary); // ['green', 'blue', 'red']
+
+
+
+
+// Slice Method : Returns a shallow copy of a portion of an array into-
+let newArr = ['red', 'blue', 'green', 'yellow', 'purple'];
+console.log(newArr.slice(1,2));
+console.log(newArr.slice(1));
+console.log(newArr.slice(-2));
+console.log(newArr); // orignal array remains the same
+
