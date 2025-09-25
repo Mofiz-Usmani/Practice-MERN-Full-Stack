@@ -274,3 +274,9 @@ console.log(primary.includes('yellow')); // false
 let secondary = ['orange', 'purple'];
 let allColors = primary.concat(secondary);
 console.log(allColors); // ['red', 'blue', 'green', 'orange', 'purple']
+
+
+
+// Reverse Method : Reverses the order of the elements in an array
+primary.reverse();
+console.log(primary); // ['green', 'blue', 'red']
