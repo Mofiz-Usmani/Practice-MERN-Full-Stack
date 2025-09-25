@@ -311,8 +311,21 @@
 
 // Sort Method : Sorts the elements of an array in place and returns-
 // the sorted array
-let numbers = [40, 100, 1, 5, 25, 10];
-let fruits = ['banana', 'apple', 'orange', 'mango'];
-console.log(numbers.sort()); // [1, 10, 100, 25, 40, 5]
-console.log(fruits.sort()); // ['apple', 'banana', 'mango', 'orange']
-console.log(numbers.sort((a,b) => a-b)); // Correct way to sort numbers
+// let numbers = [40, 100, 1, 5, 25, 10];
+// let fruits = ['banana', 'apple', 'orange', 'mango'];
+// console.log(numbers.sort()); // [1, 10, 100, 25, 40, 5]
+// console.log(fruits.sort()); // ['apple', 'banana', 'mango', 'orange']
+// console.log(numbers.sort((a,b) => a-b)); // Correct way to sort numbers
+
+
+
+
+// Array Reference vs Value :
+
+let arr1 = [1];
+let arr2 = [1];
+
+console.log(arr1 == arr2); // false, different references
+
+let arr3 = arr1;
+console.log(arr1 == arr3); // true, same reference
