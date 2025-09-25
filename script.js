@@ -257,6 +257,13 @@
 
 
 // IndexOf Method : Returns the first index at which a given element-
+// let primary = ['red', 'blue', 'green'];
+// console.log(primary.indexOf('green')); // 2
+// console.log(primary.indexOf('yellow')); // -1
+
+
+
+// Includes Method : Determines whether an array includes a certain element-
 let primary = ['red', 'blue', 'green'];
-console.log(primary.indexOf('green')); // 2
-console.log(primary.indexOf('yellow')); // -1
+console.log(primary.includes('blue')); // true
+console.log(primary.includes('yellow')); // false
