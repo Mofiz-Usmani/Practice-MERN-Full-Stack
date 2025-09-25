@@ -296,12 +296,23 @@
 
 // Splice Method : Changes the contents of an array by removing or-
 // replacing existing elements and/or adding new elements in place
-let newArr = ['red', 'blue', 'green', 'yellow', 'purple'];
-console.log(newArr.splice(3));
-console.log(newArr); // original array is changed
+// let newArr = ['red', 'blue', 'green', 'yellow', 'purple'];
+// console.log(newArr.splice(3));
+// console.log(newArr); // original array is changed
 
-console.log(newArr.splice(0,1));
-console.log(newArr); // original array is changed
+// console.log(newArr.splice(0,1));
+// console.log(newArr); // original array is changed
 
-console.log(newArr.splice(0,2,"black","white","grey"));
-console.log(newArr); // original array is changed
+// console.log(newArr.splice(0,2,"black","white","grey"));
+// console.log(newArr); // original array is changed
+
+
+
+
+// Sort Method : Sorts the elements of an array in place and returns-
+// the sorted array
+let numbers = [40, 100, 1, 5, 25, 10];
+let fruits = ['banana', 'apple', 'orange', 'mango'];
+console.log(numbers.sort()); // [1, 10, 100, 25, 40, 5]
+console.log(fruits.sort()); // ['apple', 'banana', 'mango', 'orange']
+console.log(numbers.sort((a,b) => a-b)); // Correct way to sort numbers
