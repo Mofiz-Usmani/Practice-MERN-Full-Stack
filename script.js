@@ -1,3 +1,6 @@
+"use strict";
+
+
 // // Data Type in JavaScript : 
 
 // // Primitives Data Types in JavaScript : They are immutable
@@ -355,10 +358,17 @@
 
 
 // Guessin Movie Game : 
-let favoriteMovie = "The Dark Knight"; 
-let userGuess = prompt("Guess my favorite movie : ");
+// let favoriteMovie = "The Dark Knight"; 
+// let userGuess = prompt("Guess my favorite movie : ");
 
-while(userGuess !== favoriteMovie) {
-    userGuess = prompt("Wrong guess! Try again : ");
+// while(userGuess !== favoriteMovie) {
+//     userGuess = prompt("Wrong guess! Try again : ");
+// }
+
+
+
+// For of Loop in JavaScript :
+let numbers = [10, 20, 30, 40, 50];
+for(let nums of numbers){
+    console.log(nums);
 }
-
