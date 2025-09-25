@@ -285,9 +285,23 @@
 
 
 // Slice Method : Returns a shallow copy of a portion of an array into-
-let newArr = ['red', 'blue', 'green', 'yellow', 'purple'];
-console.log(newArr.slice(1,2));
-console.log(newArr.slice(1));
-console.log(newArr.slice(-2));
-console.log(newArr); // orignal array remains the same
+// let newArr = ['red', 'blue', 'green', 'yellow', 'purple'];
+// console.log(newArr.slice(1,2));
+// console.log(newArr.slice(1));
+// console.log(newArr.slice(-2));
+// console.log(newArr); // orignal array remains the same
 
+
+
+
+// Splice Method : Changes the contents of an array by removing or-
+// replacing existing elements and/or adding new elements in place
+let newArr = ['red', 'blue', 'green', 'yellow', 'purple'];
+console.log(newArr.splice(3));
+console.log(newArr); // original array is changed
+
+console.log(newArr.splice(0,1));
+console.log(newArr); // original array is changed
+
+console.log(newArr.splice(0,2,"black","white","grey"));
+console.log(newArr); // original array is changed
