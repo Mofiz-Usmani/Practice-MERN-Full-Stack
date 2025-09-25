@@ -368,7 +368,40 @@
 
 
 // For of Loop in JavaScript :
-let numbers = [10, 20, 30, 40, 50];
-for(let nums of numbers){
-    console.log(nums);
+// let numbers = [10, 20, 30, 40, 50];
+// for(let nums of numbers){
+//     console.log(nums);
+// }
+
+
+
+//ToDo App : 
+
+let todo = [];
+
+while(true) {
+    let request = prompt("Enter you request add, update, show, delete");
+    
+    if(request == "add"){
+        let task = prompt("Enter your task to add : ");
+        todo.push(task);
+        console.log("task added!");
+    }else if(request == "delete"){
+        let del = prompt("Enter you task no to delete : ");
+        todo.splice(del-1,1);
+        console.log("Task Deleted!");
+    }else if(request == "update"){
+        let update = prompt("Enter you task no to update : ");
+        let newtask = prompt("Enter you new task : ");
+        todo.splice(update-1,1,newtask);
+        console.log("Task Updated!");
+    }else if(request == "quit"){
+        break;
+    }else if(request == "show"){
+        for(let i=0; i<todo.length; i++){
+            console.log("Task "+i+ " : "+todo[i]);
+        }
+    } else {
+        console.log("Invalid Request! Please enter a valid request : ");
+    }
 }
