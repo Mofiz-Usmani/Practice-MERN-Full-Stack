@@ -267,3 +267,10 @@
 let primary = ['red', 'blue', 'green'];
 console.log(primary.includes('blue')); // true
 console.log(primary.includes('yellow')); // false
+
+
+
+// Concat Method : Merges two or more arrays and returns a new array
+let secondary = ['orange', 'purple'];
+let allColors = primary.concat(secondary);
+console.log(allColors); // ['red', 'blue', 'green', 'orange', 'purple']
