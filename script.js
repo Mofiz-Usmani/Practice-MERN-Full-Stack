@@ -527,3 +527,14 @@
 // console.log(Math.random()); // random number between 0 and 1
 // console.log(Math.random()*100); // random number between 0 and 100
 // console.log(Math.floor(Math.random()*100));
+
+
+
+
+// Functions in JavaScript :
+
+function greet() {
+    console.log("Hello, World!");
+}
+
+greet(); // Calling the function
