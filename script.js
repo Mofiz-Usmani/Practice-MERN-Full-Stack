@@ -615,17 +615,39 @@
 
 // Block Scope with let, const and var  :
 
-{
-    let x = 10; // Block-scoped
-}
-console.log(x); // Not Accessible, will throw an error
+// {
+//     let x = 10; // Block-scoped
+// }
+// console.log(x); // Not Accessible, will throw an error
 
-{
-    const y = 20; // Block-scoped
-}
-console.log(x); // Not Accessible, will throw an error
+// {
+//     const y = 20; // Block-scoped
+// }
+// console.log(x); // Not Accessible, will throw an error
 
-{
-    var z = 30; // Function-scoped or globally-scoped
+// {
+//     var z = 30; // Function-scoped or globally-scoped
+// }
+// console.log(z); // Accessible
+
+
+
+
+
+
+
+// Lexical Scope in JavaScript :
+
+function outerFunction() {
+    let outerVar = "I am from outer function";
+    function innerFunction() {
+        let innerVar = "I am from inner function";
+        console.log(outerVar); // Accessible
+        console.log(innerVar); // Accessible
+    }
+    innerFunction();
+    console.log(outerVar); // Accessible
+    console.log(innerVar); // Not Accessible, will throw an error
 }
-console.log(z); // Accessible
+
+outerFunction();
