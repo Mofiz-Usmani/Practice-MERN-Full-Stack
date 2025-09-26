@@ -429,13 +429,28 @@
 
 
 // Largest no in an array : 
-let arr = [2, 5, 10, 4, 2, 7, 1, 1];
-let largest = 0;
+// let arr = [2, 5, 10, 4, 2, 7, 1, 1];
+// let largest = 0;
 
-for(let i=0; i<arr.length; i++){
-    if(largest < arr[i]){
-        largest = arr[i];
+// for(let i=0; i<arr.length; i++){
+//     if(largest < arr[i]){
+//         largest = arr[i];
+//     }
+// }
+
+// console.log("Largest no is : " + largest);
+
+
+
+
+
+// Largest country name : 
+let countries = ["Palestine", "United States of America", "China", "Russia", "Australia"];
+let largest = "";
+
+for(let i=0; i<countries.length; i++){
+    if(largest.length < countries[i].length){
+        largest = countries[i];
     }
 }
-
-console.log("Largest no is : " + largest);
+console.log(largest);
