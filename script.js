@@ -428,3 +428,14 @@
 
 
 
+// Largest no in an array : 
+let arr = [2, 5, 10, 4, 2, 7, 1, 1];
+let largest = 0;
+
+for(let i=0; i<arr.length; i++){
+    if(largest < arr[i]){
+        largest = arr[i];
+    }
+}
+
+console.log("Largest no is : " + largest);
