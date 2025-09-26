@@ -409,6 +409,7 @@
 
 
 
+// Number of digits in a number :
 // let num = 12345;
 // let count = 0;
 // let n = num;
@@ -480,25 +481,49 @@
 
 
 
-const post = {
-    username : "tonyStark",
-    content : "About Movies",
-    likes : 100000,
-    comments : ["Great Post", "Awesome", "Nice Work"],
-    date : "2023-10-10"
-};
+// const post = {
+//     username : "tonyStark",
+//     content : "About Movies",
+//     likes : 100000,
+//     comments : ["Great Post", "Awesome", "Nice Work"],
+//     date : "2023-10-10"
+// };
 
-console.log(post);
-console.log(post.username);
-console.log(post.content);
-console.log(post.likes);
-console.log(post.comments);
-console.log(post.date);
+// console.log(post);
+// console.log(post.username);
+// console.log(post.content);
+// console.log(post.likes);
+// console.log(post.comments);
+// console.log(post.date);
 
 
-post.likes = 150000; // updating likes
-post.comments.push("Amazing!"); // adding new comment
-console.log(post.comments);
+// post.likes = 150000; // updating likes
+// post.comments.push("Amazing!"); // adding new comment
+// console.log(post.comments);
 
-post.genre = "Entertainment"; 
-console.log(post);// adding new property genre
+// post.genre = "Entertainment"; 
+// console.log(post);// adding new property genre
+
+
+
+
+// Math Object in JavaScript :
+
+// console.log(Math.PI); // 3.141592653589793
+
+// console.log(Math.abs(-10)); // 10
+// console.log(Math.abs(10)); // 10
+
+// console.log(Math.pow(2, 3)); // 8
+
+// console.log(Math.sqrt(16)); // 4
+
+// console.log(Math.ceil(4.2)); // 5 roundoff to the largest nearest integer
+// console.log(Math.ceil(4.8)); // 5
+
+// console.log(Math.floor(4.2)); // 4 // roundoff to the smallest nearest integer
+// console.log(Math.floor(4.8)); // 4
+
+// console.log(Math.random()); // random number between 0 and 1
+// console.log(Math.random()*100); // random number between 0 and 100
+// console.log(Math.floor(Math.random()*100));
