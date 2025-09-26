@@ -575,15 +575,35 @@
 
 
 // Function to return concat all strings in an array :
-let arr = ["Hello", " ", "World", "!"];
+// let arr = ["Hello", " ", "World", "!"];
 
-function concatStrings(array) {
-    let result = "";
+// function concatStrings(array) {
+//     let result = "";
 
-    for(let i=0; i<array.length; i++){
-        result += array[i];
-    }
-    return result;
+//     for(let i=0; i<array.length; i++){
+//         result += array[i];
+//     }
+//     return result;
+// }
+
+// console.log(concatStrings(arr));
+
+
+
+
+
+// Scope in JavaScript :
+
+// Global Scope
+let globalVar = "I am a global variable";
+
+function checkScope() {
+    // Local Scope
+    let localVar = "I am a local variable";
+    console.log(globalVar); // Accessible
+    console.log(localVar); // Accessible
 }
 
-console.log(concatStrings(arr));
+checkScope();
+console.log(globalVar); // Accessible
+console.log(localVar); // Not Accessible, will throw an error
