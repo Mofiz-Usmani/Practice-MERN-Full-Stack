@@ -538,3 +538,10 @@ function greet() {
 }
 
 greet(); // Calling the function
+
+
+let name = function() {
+    console.log("Tony Stark");
+}
+
+name(); // Calling the function
