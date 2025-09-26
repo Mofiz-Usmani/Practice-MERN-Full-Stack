@@ -618,7 +618,7 @@
 {
     let x = 10; // Block-scoped
 }
-console.log(x); 
+console.log(x); // Not Accessible, will throw an error
 
 {
     const y = 20; // Block-scoped
