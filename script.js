@@ -533,15 +533,57 @@
 
 // Functions in JavaScript :
 
-function greet() {
-    console.log("Hello, World!");
+// function greet() {
+//     console.log("Hello, World!");
+// }
+
+// greet(); // Calling the function
+
+
+// let name = function() {
+//     console.log("Tony Stark");
+// }
+
+// name(); // Calling the function
+
+
+
+
+
+// function avg(a,b,c){
+//     console.log((a+b+c)/3);
+// }
+
+// avg(10,20,30);
+// avg(40,50,60);
+// avg(70,80,90);
+
+
+
+
+// function sum(a,b){
+//     return a+b;
+// }
+
+// console.log(sum(10,20));
+// console.log(sum(30,40));
+// console.log(sum(50,60));
+
+
+
+
+
+
+// Function to return concat all strings in an array :
+let arr = ["Hello", " ", "World", "!"];
+
+function concatStrings(array) {
+    let result = "";
+
+    for(let i=0; i<array.length; i++){
+        result += array[i];
+    }
+    return result;
 }
 
-greet(); // Calling the function
-
-
-let name = function() {
-    console.log("Tony Stark");
-}
-
-name(); // Calling the function
+console.log(concatStrings(arr));
