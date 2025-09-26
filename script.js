@@ -445,12 +445,36 @@
 
 
 // Largest country name : 
-let countries = ["Palestine", "United States of America", "China", "Russia", "Australia"];
-let largest = "";
+// let countries = ["Palestine", "United States of America", "China", "Russia", "Australia"];
+// let largest = "";
 
-for(let i=0; i<countries.length; i++){
-    if(largest.length < countries[i].length){
-        largest = countries[i];
+// for(let i=0; i<countries.length; i++){
+//     if(largest.length < countries[i].length){
+//         largest = countries[i];
+//     }
+// }
+// console.log(largest);
+
+
+
+
+
+// Object Literal in JavaScript :
+
+let person = {
+    name : "Tony Stark",
+    age : 45,
+    isAvenger : true,
+    movies : ["Iron Man", "Avengers", "Spider-Man"],
+    address : {
+        state : "New York",
+        country : "USA"
     }
-}
-console.log(largest);
+};
+
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+console.log(person.isAvenger);
+console.log(person.movies);
+console.log(person.address);
