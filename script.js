@@ -377,31 +377,54 @@
 
 //ToDo App : 
 
-let todo = [];
+// let todo = [];
 
-while(true) {
-    let request = prompt("Enter you request add, update, show, delete");
+// while(true) {
+//     let request = prompt("Enter you request add, update, show, delete");
     
-    if(request == "add"){
-        let task = prompt("Enter your task to add : ");
-        todo.push(task);
-        console.log("task added!");
-    }else if(request == "delete"){
-        let del = prompt("Enter you task no to delete : ");
-        todo.splice(del-1,1);
-        console.log("Task Deleted!");
-    }else if(request == "update"){
-        let update = prompt("Enter you task no to update : ");
-        let newtask = prompt("Enter you new task : ");
-        todo.splice(update-1,1,newtask);
-        console.log("Task Updated!");
-    }else if(request == "quit"){
-        break;
-    }else if(request == "show"){
-        for(let i=0; i<todo.length; i++){
-            console.log("Task "+i+ " : "+todo[i]);
-        }
-    } else {
-        console.log("Invalid Request! Please enter a valid request : ");
-    }
-}
+//     if(request == "add"){
+//         let task = prompt("Enter your task to add : ");
+//         todo.push(task);
+//         console.log("task added!");
+//     }else if(request == "delete"){
+//         let del = prompt("Enter you task no to delete : ");
+//         todo.splice(del-1,1);
+//         console.log("Task Deleted!");
+//     }else if(request == "update"){
+//         let update = prompt("Enter you task no to update : ");
+//         let newtask = prompt("Enter you new task : ");
+//         todo.splice(update-1,1,newtask);
+//         console.log("Task Updated!");
+//     }else if(request == "quit"){
+//         break;
+//     }else if(request == "show"){
+//         for(let i=0; i<todo.length; i++){
+//             console.log("Task "+i+ " : "+todo[i]);
+//         }
+//     } else {
+//         console.log("Invalid Request! Please enter a valid request : ");
+//     }
+// }
+
+
+
+
+// let num = 12345;
+// let count = 0;
+// let n = num;
+
+// // Handle case if number is 0
+// if (n === 0) {
+//     count = 1;
+// } else {
+//     while (n > 0) {
+//         n = Math.floor(n / 10); // remove last digit
+//         count++;
+//     }
+// }
+
+// console.log("Number of digits in " + num + " is: " + count);
+
+
+
+
