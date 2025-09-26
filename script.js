@@ -595,15 +595,37 @@
 // Scope in JavaScript :
 
 // Global Scope
-let globalVar = "I am a global variable";
+// let globalVar = "I am a global variable";
 
-function checkScope() {
-    // Local Scope
-    let localVar = "I am a local variable";
-    console.log(globalVar); // Accessible
-    console.log(localVar); // Accessible
+// function checkScope() {
+//     // Local Scope
+//     let localVar = "I am a local variable";
+//     console.log(globalVar); // Accessible
+//     console.log(localVar); // Accessible
+// }
+
+// checkScope();
+// console.log(globalVar); // Accessible
+// console.log(localVar); // Not Accessible, will throw an error
+
+
+
+
+
+
+// Block Scope with let, const and var  :
+
+{
+    let x = 10; // Block-scoped
 }
+console.log(x); 
 
-checkScope();
-console.log(globalVar); // Accessible
-console.log(localVar); // Not Accessible, will throw an error
+{
+    const y = 20; // Block-scoped
+}
+console.log(x); // Not Accessible, will throw an error
+
+{
+    var z = 30; // Function-scoped or globally-scoped
+}
+console.log(z); // Accessible
