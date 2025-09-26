@@ -460,21 +460,45 @@
 
 
 // Object Literal in JavaScript :
+// let person = {
+//     name : "Tony Stark",
+//     age : 45,
+//     isAvenger : true,
+//     movies : ["Iron Man", "Avengers", "Spider-Man"],
+//     address : {
+//         state : "New York",
+//         country : "USA"
+//     }
+// };
 
-let person = {
-    name : "Tony Stark",
-    age : 45,
-    isAvenger : true,
-    movies : ["Iron Man", "Avengers", "Spider-Man"],
-    address : {
-        state : "New York",
-        country : "USA"
-    }
+// console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.isAvenger);
+// console.log(person.movies);
+// console.log(person.address);
+
+
+
+const post = {
+    username : "tonyStark",
+    content : "About Movies",
+    likes : 100000,
+    comments : ["Great Post", "Awesome", "Nice Work"],
+    date : "2023-10-10"
 };
 
-console.log(person);
-console.log(person.name);
-console.log(person.age);
-console.log(person.isAvenger);
-console.log(person.movies);
-console.log(person.address);
+console.log(post);
+console.log(post.username);
+console.log(post.content);
+console.log(post.likes);
+console.log(post.comments);
+console.log(post.date);
+
+
+post.likes = 150000; // updating likes
+post.comments.push("Amazing!"); // adding new comment
+console.log(post.comments);
+
+post.genre = "Entertainment"; 
+console.log(post);// adding new property genre
