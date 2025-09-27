@@ -676,24 +676,47 @@
 
 
 // Higher Order Function : 
-function OddorEvenFactory(request){
-    if(request == "odd"){
-        return function(n){
-            console.log(!(n%2 == 0));
-        }
-    }else if(request == "even"){
-        return function(n){
-            console.log(n%2 == 0);
-        }
-    }else {
-        console.log("Wrong Request");
-    }
+// function OddorEvenFactory(request){
+//     if(request == "odd"){
+//         return function(n){
+//             console.log(!(n%2 == 0));
+//         }
+//     }else if(request == "even"){
+//         return function(n){
+//             console.log(n%2 == 0);
+//         }
+//     }else {
+//         console.log("Wrong Request");
+//     }
+// }
+
+// let isOdd = OddorEvenFactory("odd");
+// isOdd(5);  // true
+// isOdd(6);  // false
+
+// let isEven = OddorEvenFactory("even");
+// isEven(4); // true
+// isEven(7); // false
+
+
+
+
+
+
+// Arrow Function : 
+const sum = (a,b) => {
+    console.log(a+b);
 }
 
-let isOdd = OddorEvenFactory("odd");
-isOdd(5);  // true
-isOdd(6);  // false
+let cube = n => {
+    console.log(n*n*n);
+}
 
-let isEven = OddorEvenFactory("even");
-isEven(4); // true
-isEven(7); // false
+const hello = () => {
+    console.log("Hello!!");
+}
+
+
+sum(4,5);
+cube(3);
+hello();
