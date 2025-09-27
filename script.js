@@ -659,14 +659,41 @@
 
 
 // Callback Function : 
-function greet( callback) {
-    console.log("Hello ");
-    callback();
-}
+// function greet( callback) {
+//     console.log("Hello ");
+//     callback();
+// }
 
-function sayGoodbye() {
-    console.log("Goodbye!");
-}
+// function sayGoodbye() {
+//     console.log("Goodbye!");
+// }
 
-greet(sayGoodbye);
+// greet(sayGoodbye);
 // Use : Make sure some code runs only after something else finishes.
+
+
+
+
+
+// Higher Order Function : 
+function OddorEvenFactory(request){
+    if(request == "odd"){
+        return function(n){
+            console.log(!(n%2 == 0));
+        }
+    }else if(request == "even"){
+        return function(n){
+            console.log(n%2 == 0);
+        }
+    }else {
+        console.log("Wrong Request");
+    }
+}
+
+let isOdd = OddorEvenFactory("odd");
+isOdd(5);  // true
+isOdd(6);  // false
+
+let isEven = OddorEvenFactory("even");
+isEven(4); // true
+isEven(7); // false
