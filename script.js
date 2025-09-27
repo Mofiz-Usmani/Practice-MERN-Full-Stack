@@ -637,17 +637,36 @@
 
 
 // Lexical Scope in JavaScript :
+// function outerFunction() {
+//     let outerVar = "I am from outer function";
+//     function innerFunction() {
+//         let innerVar = "I am from inner function";
+//         console.log(outerVar); // Accessible
+//         console.log(innerVar); // Accessible
+//     }
+//     innerFunction();
+//     console.log(outerVar); // Accessible
+//     console.log(innerVar); // Not Accessible, will throw an error
+// }
 
-function outerFunction() {
-    let outerVar = "I am from outer function";
-    function innerFunction() {
-        let innerVar = "I am from inner function";
-        console.log(outerVar); // Accessible
-        console.log(innerVar); // Accessible
-    }
-    innerFunction();
-    console.log(outerVar); // Accessible
-    console.log(innerVar); // Not Accessible, will throw an error
+// outerFunction();
+
+
+
+
+
+
+
+
+// Callback Function : 
+function greet( callback) {
+    console.log("Hello ");
+    callback();
 }
 
-outerFunction();
+function sayGoodbye() {
+    console.log("Goodbye!");
+}
+
+greet(sayGoodbye);
+// Use : Make sure some code runs only after something else finishes.
