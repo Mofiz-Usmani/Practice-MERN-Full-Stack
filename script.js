@@ -951,9 +951,30 @@
 
 
 // Reduce Mehtod: 
+// let arr = [1,2,3,4,5];
+
+// let newarr = arr.reduce((res,el) => (res+el));
+
+// console.log(newarr);
+// console.log(arr);
+
+
+
+
+
+
+// Spread Method : 
+// let arr = [1,2,3,4,5];
+
+// console.log(Math.min(arr)); // This not works 
+
+// console.log(Math.min(...arr)); // This works
+
+// console.log(Math.max(...arr)); 
+
+// console.log(..."apnacollege");
+
 let arr = [1,2,3,4,5];
 
-let newarr = arr.reduce((res,el) => (res+el));
-
-console.log(newarr);
-console.log(arr);
+let newArr = [...arr];
+console.log(newArr);
