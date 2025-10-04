@@ -782,29 +782,85 @@
 
 
 
-let arr = [
-    {
-        name: "alex",
-        marks: 70,
-    },
-    {
-        name: "John",
-        marks: 89,
-    },
-    {
-        name: "peter",
-        marks: 90,
-    },
-];
+// let arr = [
+//     {
+//         name: "alex",
+//         marks: 70,
+//     },
+//     {
+//         name: "John",
+//         marks: 89,
+//     },
+//     {
+//         name: "peter",
+//         marks: 90,
+//     },
+// ];
 
-arr.forEach(students => {
-    console.log(students.marks);
-    console.log(students.name);
-});
-
-
+// arr.forEach(students => {
+//     console.log(students.marks);
+//     console.log(students.name);
+// });
 
 
 
 
 
+// map() is an array method in JavaScript that’s used to create a new array-
+// by applying a function to each element of an existing array.
+// It transforms every element of an array and returns a new array — 
+// without changing the original one.
+// Map Method: 
+// let nums = [1, 2, 3, 4, 5, 6];
+
+// let double = nums.map(el => {
+//     return el*el;
+// });
+
+// console.log(double);
+// console.log(nums);
+// ✅ Creates a new array
+// ❌ Does not modify the original array
+
+
+
+
+
+// let arr = [10, 20, 30];
+
+// let result = arr.map((value, index) => value + index);
+
+// console.log(result);  // [10, 21, 32]
+
+
+
+
+
+
+
+
+// const users = [
+//   { name: "Jackal", age: 21 },
+//   { name: "Rohan", age: 19 },
+//   { name: "Aditi", age: 22 }
+// ];
+
+// const names = users.map(user => user.name);
+
+// console.log(names); // ["Jackal", "Rohan", "Aditi"]
+
+
+
+
+
+// Chaining with other array methods
+// You can chain map() with filter() or reduce() for powerful transformations:
+// let nums = [1, 2, 3, 4, 5, 6];
+
+// let result = nums
+//   .filter(num => num % 2 === 0) // only even numbers
+//   .map(num => num * num);       // square them
+
+// console.log(result); // [4, 16, 36]
+
+// map() = “Take each item, do something to it, and give me a new array with the results.”
