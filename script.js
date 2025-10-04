@@ -836,9 +836,6 @@
 
 
 
-
-
-
 // const users = [
 //   { name: "Jackal", age: 21 },
 //   { name: "Rohan", age: 19 },
@@ -864,3 +861,28 @@
 // console.log(result); // [4, 16, 36]
 
 // map() = “Take each item, do something to it, and give me a new array with the results.”
+
+
+
+
+
+
+
+// Filter : filter() is an array method that creates a new array containing-
+// only the elements that pass a given test condition.
+
+let nums = [1, 2, 3, 4, 5, 6];
+
+let evenNums = nums.filter(num => num % 2 === 0);
+
+console.log(evenNums); // [2, 4, 6]
+
+
+
+
+let fruits = ["apple", "banana", "mango", "kiwi"];
+
+let result = fruits.filter(fruit => fruit.length > 5);
+
+console.log(result); // ["banana"]
+
