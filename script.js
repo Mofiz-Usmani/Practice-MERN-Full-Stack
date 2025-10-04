@@ -870,19 +870,55 @@
 
 // Filter : filter() is an array method that creates a new array containing-
 // only the elements that pass a given test condition.
+// let nums = [1, 2, 3, 4, 5, 6];
 
-let nums = [1, 2, 3, 4, 5, 6];
+// let evenNums = nums.filter(num => num % 2 === 0);
 
-let evenNums = nums.filter(num => num % 2 === 0);
-
-console.log(evenNums); // [2, 4, 6]
-
+// console.log(evenNums); // [2, 4, 6]
 
 
 
-let fruits = ["apple", "banana", "mango", "kiwi"];
 
-let result = fruits.filter(fruit => fruit.length > 5);
+// let fruits = ["apple", "banana", "mango", "kiwi"];
 
-console.log(result); // ["banana"]
+// let result = fruits.filter(fruit => fruit.length > 5);
 
+// console.log(result); // ["banana"]
+
+
+
+
+
+
+
+// Every Mehtod : The every() method checks if all elements in an array pass-
+// a test (i.e., the callback function returns true).
+// If all elements pass, it returns true.
+// If any element fails, it returns false.
+// Unlike map or filter, it does not create a new array — it just returns a boolean.
+// let nums = [1,2,3,4,5,6];
+
+// let isAllEven = nums.every(num => 
+//     num % 2 === 0; );
+
+// console.log(isAllEven);  // false
+
+
+
+let nums = [2,4,6];
+
+let isAllEven = nums.every(num => num % 2 === 0);
+
+console.log(isAllEven);  //true
+
+
+
+// When you use curly braces { } in an arrow function without a return statement,-
+//  the function does not return a value, so it implicitly returns undefined.
+let numbers = [2, 4, 6];
+
+let isAllEvenn = numbers.every(num => {
+    return num % 2 === 0;
+});
+
+console.log(isAllEven); // true
