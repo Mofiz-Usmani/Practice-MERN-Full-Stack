@@ -905,20 +905,38 @@
 
 
 
-let nums = [2,4,6];
+// let nums = [2,4,6];
 
-let isAllEven = nums.every(num => num % 2 === 0);
+// let isAllEven = nums.every(num => num % 2 === 0);
 
-console.log(isAllEven);  //true
+// console.log(isAllEven);  //true
 
 
 
 // When you use curly braces { } in an arrow function without a return statement,-
 //  the function does not return a value, so it implicitly returns undefined.
-let numbers = [2, 4, 6];
+// let numbers = [2, 4, 6];
 
-let isAllEvenn = numbers.every(num => {
-    return num % 2 === 0;
+// let isAllEvenn = numbers.every(num => {
+//     return num % 2 === 0;
+// });
+
+// console.log(isAllEven); // true
+
+
+
+
+
+
+
+// Some method : 
+// console.log([1,2,3,4,5].some(nums => nums%2 === 0));
+
+
+let nums = [1,2,5,7];
+
+let newval = nums.some(num => {
+    return num%2 === 0;
 });
 
-console.log(isAllEven); // true
+console.log(newval);
