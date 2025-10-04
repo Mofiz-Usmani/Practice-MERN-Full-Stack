@@ -752,25 +752,59 @@
 // Best used when you just need to perform an action on each element (like printing or modifying in-place).
 
 // For Each
-const numbers = [10, 20, 30, 40, 50];
+// const numbers = [10, 20, 30, 40, 50];
 
-numbers.forEach(nums => {
-    console.log(nums);
+// numbers.forEach(nums => {
+//     console.log(nums);
+// });
+
+
+
+// const fruits = ["apple", "banana", "mango"];
+
+// fruits.forEach((fruit, index) => {
+//     console.log(index, fruit);
+// });
+
+
+
+
+// let nums = [1, 2, 3, 4];
+
+// nums.forEach((num, i, arr) => {
+//     arr[i] = num*2;
+// });
+
+// console.log(nums);
+
+// You can’t store modified values from forEach() into a new variable.
+// It’s only for performing actions, not for creating new data.
+
+
+
+let arr = [
+    {
+        name: "alex",
+        marks: 70,
+    },
+    {
+        name: "John",
+        marks: 89,
+    },
+    {
+        name: "peter",
+        marks: 90,
+    },
+];
+
+arr.forEach(students => {
+    console.log(students.marks);
+    console.log(students.name);
 });
 
 
 
-const fruits = ["apple", "banana", "mango"];
-
-fruits.forEach((fruit, index) => {
-    console.log(index, fruit);
-});
 
 
 
 
-let nums = [1, 2, 3, 4];
-
-nums.forEach((nums) => {
-    console.log(nums*2);
-})
