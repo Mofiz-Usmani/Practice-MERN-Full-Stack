@@ -117,7 +117,7 @@
 // let FullName = "Tony Stark";
 
 // console.log(FullName[0]);
-// console.log(FullName.length);
+// console.log(FullName.length); 
 // console.log(FullName.toUpperCase());
 // console.log(FullName.toLowerCase());
 // console.log(FullName.slice(0, 4));
@@ -319,8 +319,7 @@
 // console.log(numbers.sort()); // [1, 10, 100, 25, 40, 5]
 // console.log(fruits.sort()); // ['apple', 'banana', 'mango', 'orange']
 // console.log(numbers.sort((a,b) => a-b)); // Correct way to sort numbers
-
-
+// console.log(numbers.sort((a,b) => {a-b}));
 
 
 // Array Reference vs Value :
@@ -353,7 +352,6 @@
 // for(let i=num; i<=num*10; i+=num){
 //     console.log(num + " X " + i/num + " = " + i);
 // }
-
 
 
 
@@ -410,7 +408,7 @@
 
 
 // Number of digits in a number :
-// let num = 12345;
+// let num = 1233445;
 // let count = 0;
 // let n = num;
 
@@ -425,7 +423,6 @@
 // }
 
 // console.log("Number of digits in " + num + " is: " + count);
-
 
 
 
@@ -659,7 +656,7 @@
 
 
 // Callback Function : 
-// function greet( callback) {
+// function greet(callback) {
 //     console.log("Hello ");
 //     callback();
 // }
@@ -733,11 +730,47 @@
 
 
 
-// Set Interval: 
-let id = setInterval(() => {
-    console.log("Hello");
-},1000);
+// // Set Interval: 
+// let id = setInterval(() => {
+//     console.log("Hello");
+// },1000);
 
-setTimeout(() => {
-    clearInterval(id);
-},4000);
+// setTimeout(() => {
+//     clearInterval(id);
+// },4000);
+
+
+
+
+
+
+
+
+
+// Array Methods: 
+// You can’t break, return, or use continue inside a forEach() — unlike a normal for loop.
+// Best used when you just need to perform an action on each element (like printing or modifying in-place).
+
+// For Each
+const numbers = [10, 20, 30, 40, 50];
+
+numbers.forEach(nums => {
+    console.log(nums);
+});
+
+
+
+const fruits = ["apple", "banana", "mango"];
+
+fruits.forEach((fruit, index) => {
+    console.log(index, fruit);
+});
+
+
+
+
+let nums = [1, 2, 3, 4];
+
+nums.forEach((nums) => {
+    console.log(nums*2);
+})
