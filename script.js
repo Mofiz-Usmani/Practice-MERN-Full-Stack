@@ -933,10 +933,27 @@
 // console.log([1,2,3,4,5].some(nums => nums%2 === 0));
 
 
-let nums = [1,2,5,7];
+// let nums = [1,2,5,7];
 
-let newval = nums.some(num => {
-    return num%2 === 0;
-});
+// let newval = nums.some(num => {
+//     return num%2 === 0;
+// });
 
-console.log(newval);
+// console.log(newval);
+
+
+
+
+
+
+
+
+
+
+// Reduce Mehtod: 
+let arr = [1,2,3,4,5];
+
+let newarr = arr.reduce((res,el) => (res+el));
+
+console.log(newarr);
+console.log(arr);
