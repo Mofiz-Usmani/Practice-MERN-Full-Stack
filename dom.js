@@ -102,9 +102,9 @@
 
 
 
-let h3 = document.querySelector('h3');
+// let h3 = document.querySelector('h3');
 
-h3.style.color = "purple";
+// h3.style.color = "purple";
 
 
 // let div = document.querySelector('div');
@@ -115,24 +115,46 @@ h3.style.color = "purple";
 
 
 
-let divs = document.querySelectorAll('div');
+// let divs = document.querySelectorAll('div');
 
-for(let div of divs){
-    div.style.height = "100px";
-    div.style.width = "100px";
-    div.style.backgroundColor = "purple";
-    div.style.border = "2px solid black";
-}
-
-
+// for(let div of divs){
+//     div.style.height = "100px";
+//     div.style.width = "100px";
+//     div.style.backgroundColor = "purple";
+//     div.style.border = "2px solid black";
+// }
 
 
-let spans = document.querySelectorAll('span');
 
-for(let span of spans){
-    span.style.height = "100px";
-    span.style.width = "100px";
-    span.style.backgroundColor = "green";
-    span.style.border = "2px solid black";
-    span.style.display = "inline-block";
-}
+
+// let spans = document.querySelectorAll('span');
+
+// for(let span of spans){
+//     span.style.height = "100px";
+//     span.style.width = "100px";
+//     span.style.backgroundColor = "green";
+//     span.style.border = "2px solid black";
+//     span.style.display = "inline-block";
+// }
+
+
+
+
+
+
+
+
+let heading = document.querySelector('h3');
+
+console.log(heading.classList); // to check if the element have a class or not
+
+heading.classList.add('green'); // this adds class green to the element 
+
+console.log(heading.classList.value); // now this shows class green
+
+heading.classList.remove('green'); // removes the class green form the element
+
+console.log(heading.classList.contains('green')); // this returns true or flase if have class or not
+
+
+heading.classList.toggle('green'); // if have the green class then it removes it, and if not adds it 
