@@ -63,17 +63,35 @@
 
 
 
-let p = document.querySelector('p');
+// let p = document.querySelector('p');
 
-// Logs only the visible text inside the <p> tag
-console.log(p.innerText); // what the user sees (rendered text)
+// // Logs only the visible text inside the <p> tag
+// console.log(p.innerText); // what the user sees (rendered text)
 
-// Logs all the text content inside the <p> tag (including hidden text, spacing, etc.)
-console.log(p.textContent); // all text, including hidden
+// // Logs all the text content inside the <p> tag (including hidden text, spacing, etc.)
+// console.log(p.textContent); // all text, including hidden
 
-// Logs the raw HTML inside the <p> tag (includes inner tags, not just plain text)
-console.log(p.innerHTML); // HTML code inside the element
+// // Logs the raw HTML inside the <p> tag (includes inner tags, not just plain text)
+// console.log(p.innerHTML); // HTML code inside the element
 
 
 
-p.innerHTML = "<u>Spiderman is an <b>Avenger<b></u>";
+// p.innerHTML = "<u>Spiderman is an <b>Avenger<b></u>";
+
+
+
+
+let head = document.querySelector('h3');
+
+console.log(head.getAttribute('id'));  // gives id of the selected element
+
+
+head.setAttribute('id', 'h3');
+
+console.log(head.getAttribute('id'));  // set the the attribute to the new attribute value
+
+console.log(head.getAttribute('class'));
+
+head.setAttribute('class', 'newclass');
+
+console.log(head.getAttribute('class'));
