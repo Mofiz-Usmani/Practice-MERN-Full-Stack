@@ -37,21 +37,43 @@
 
 
 
-let para1 = document.querySelector('p');  // selects first p element
-console.log(para1.innerText);
+// let para1 = document.querySelector('p');  // selects first p element
+// console.log(para1.innerText);
 
-let para2 = document.querySelector('#para2');  // selects first element with id para2
-console.log(para2.innerText);
+// let para2 = document.querySelector('#para2');  // selects first element with id para2
+// console.log(para2.innerText);
 
-let para3 = document.querySelector(".para3");  // selects first element with class para3
-console.log(para3.innerText);
+// let para3 = document.querySelector(".para3");  // selects first element with class para3
+// console.log(para3.innerText);
 
-let para = document.querySelectorAll('p');  // selects all p elements
-console.log(para[0].innerText);
+// let para = document.querySelectorAll('p');  // selects all p elements
+// console.log(para[0].innerText);
 
 
-let a = document.querySelector('div a');  // Selects first anchor tag in the div element
-console.log(a.innerText);
+// let a = document.querySelector('div a');  // Selects first anchor tag in the div element
+// console.log(a.innerText);
 
-let b = document.querySelectorAll('div a');  // Selects all anchor tags in the div element
-console.log(b[2].innerText);
+// let b = document.querySelectorAll('div a');  // Selects all anchor tags in the div element
+// console.log(b[2].innerText);
+
+
+
+
+
+
+
+
+let p = document.querySelector('p');
+
+// Logs only the visible text inside the <p> tag
+console.log(p.innerText); // what the user sees (rendered text)
+
+// Logs all the text content inside the <p> tag (including hidden text, spacing, etc.)
+console.log(p.textContent); // all text, including hidden
+
+// Logs the raw HTML inside the <p> tag (includes inner tags, not just plain text)
+console.log(p.innerHTML); // HTML code inside the element
+
+
+
+p.innerHTML = "<u>Spiderman is an <b>Avenger<b></u>";
