@@ -81,17 +81,58 @@
 
 
 
-let head = document.querySelector('h3');
+// let head = document.querySelector('h3');
 
-console.log(head.getAttribute('id'));  // gives id of the selected element
+// console.log(head.getAttribute('id'));  // gives id of the selected element
 
 
-head.setAttribute('id', 'h3');
+// head.setAttribute('id', 'h3');
 
-console.log(head.getAttribute('id'));  // set the the attribute to the new attribute value
+// console.log(head.getAttribute('id'));  // set the the attribute to the new attribute value
 
-console.log(head.getAttribute('class'));
+// console.log(head.getAttribute('class'));
 
-head.setAttribute('class', 'newclass');
+// head.setAttribute('class', 'newclass');
 
-console.log(head.getAttribute('class'));
+// console.log(head.getAttribute('class'));
+
+
+
+
+
+
+
+let h3 = document.querySelector('h3');
+
+h3.style.color = "purple";
+
+
+// let div = document.querySelector('div');
+
+// div.style.height = "100px";
+// div.style.width = "100px";
+// div.style.backgroundColor = "purple";
+
+
+
+let divs = document.querySelectorAll('div');
+
+for(let div of divs){
+    div.style.height = "100px";
+    div.style.width = "100px";
+    div.style.backgroundColor = "purple";
+    div.style.border = "2px solid black";
+}
+
+
+
+
+let spans = document.querySelectorAll('span');
+
+for(let span of spans){
+    span.style.height = "100px";
+    span.style.width = "100px";
+    span.style.backgroundColor = "green";
+    span.style.border = "2px solid black";
+    span.style.display = "inline-block";
+}
