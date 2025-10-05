@@ -995,8 +995,53 @@
 
 
 // Rest Method : lets you collect multiple arguments into a single array
-function sum(...numbers){
-    return numbers.reduce((acc, num) => acc + num, 0);
-}
+// function sum(...numbers){
+//     return numbers.reduce((acc, num) => acc + num, 0);
+// }
 
-console.log(sum(1,2,3,4,5));
+// console.log(sum(1,2,3,4,5));
+
+
+
+
+
+
+// Destructuring : is a shortcut for extracting values from arrays or objects-
+// and storing them in variables — all in a single line.
+const nums = [1,2,3,4,5,6];
+
+const [a,b,c] = nums;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+
+let names = ['tony', 'steve', 'bruce', 'peter'];
+
+let [winner, , runnerup,...others] = names;
+
+console.log(winner);
+console.log(runnerup);
+console.log(others);
+
+
+
+let students = {
+    name : "karan",
+    roll : 34,
+    subjects : ['math', 'physics', 'chemistry'],
+    username : "karan@123",
+    password : "Karan@abcd",
+};
+
+let {username, password} = students;
+
+console.log(username)
+console.log(password)
+
+//this assigns the value of username to user
+let {username : user, password : secret} = students;
+
+console.log(user);
+console.log(secret);
