@@ -23,12 +23,35 @@
 
 
 
-let p1 = document.getElementsByTagName("p");
+// let p1 = document.getElementsByTagName("p");
 
-console.log(p1);
-console.log(p1[0].innerText);
-console.log(p1[1].innerText);
-console.log(p1[2].innerText);
+// console.log(p1);
+// console.log(p1[0].innerText);
+// console.log(p1[1].innerText);
+// console.log(p1[2].innerText);
 
-p1[0].innerText = "Lorem";
-console.log(p1[0].innerText);
+// p1[0].innerText = "Lorem";
+// console.log(p1[0].innerText);
+
+
+
+
+
+let para1 = document.querySelector('p');  // selects first p element
+console.log(para1.innerText);
+
+let para2 = document.querySelector('#para2');  // selects first element with id para2
+console.log(para2.innerText);
+
+let para3 = document.querySelector(".para3");  // selects first element with class para3
+console.log(para3.innerText);
+
+let para = document.querySelectorAll('p');  // selects all p elements
+console.log(para[0].innerText);
+
+
+let a = document.querySelector('div a');  // Selects first anchor tag in the div element
+console.log(a.innerText);
+
+let b = document.querySelectorAll('div a');  // Selects all anchor tags in the div element
+console.log(b[2].innerText);
