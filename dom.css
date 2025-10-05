@@ -3,3 +3,13 @@ body {
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
