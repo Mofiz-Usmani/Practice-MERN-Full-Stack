@@ -144,17 +144,42 @@
 
 
 
-let heading = document.querySelector('h3');
+// let heading = document.querySelector('h3');
 
-console.log(heading.classList); // to check if the element have a class or not
+// console.log(heading.classList); // to check if the element have a class or not
 
-heading.classList.add('green'); // this adds class green to the element 
+// heading.classList.add('green'); // this adds class green to the element 
 
-console.log(heading.classList.value); // now this shows class green
+// console.log(heading.classList.value); // now this shows class green
 
-heading.classList.remove('green'); // removes the class green form the element
+// heading.classList.remove('green'); // removes the class green form the element
 
-console.log(heading.classList.contains('green')); // this returns true or flase if have class or not
+// console.log(heading.classList.contains('green')); // this returns true or flase if have class or not
 
 
-heading.classList.toggle('green'); // if have the green class then it removes it, and if not adds it 
+// heading.classList.toggle('green'); // if have the green class then it removes it, and if not adds it 
+
+
+
+
+
+
+
+let div = document.querySelector('div');
+let h3 = document.querySelector('h3');
+
+console.log(h3.parentElement);
+console.log(div.children);
+console.log(div.childElementCount);
+
+
+
+
+let middleDiv = document.querySelector('#middle');
+
+console.log(middleDiv.previousElementSibling.innerHTML); // <div>First</div>
+console.log(middleDiv.nextElementSibling.innerHTML);     // <div>Third</div>
+
+
+middleDiv.previousElementSibling.style.color = "red";
+middleDiv.nextElementSibling.style.color = "green";
