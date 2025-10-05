@@ -11,10 +11,24 @@
 
 
 
-let images = document.getElementsByClassName("imgs");
+// let images = document.getElementsByClassName("imgs");
 
-for(let i=0; i<images.length; i++){
-    console.dir(document.getElementsByClassName("img")[i]);
-    console.log(images[i].src);
-}
+// for(let i=0; i<images.length; i++){
+//     console.dir(document.getElementsByClassName("img")[i]);
+//     console.log(images[i].src);
+// }
 
+
+
+
+
+
+let p1 = document.getElementsByTagName("p");
+
+console.log(p1);
+console.log(p1[0].innerText);
+console.log(p1[1].innerText);
+console.log(p1[2].innerText);
+
+p1[0].innerText = "Lorem";
+console.log(p1[0].innerText);
