@@ -36,3 +36,9 @@ imgs {
     background-color: blueviolet;
     color: white;
 }
+
+
+.head-style {
+    text-decoration: underline;
+    color: purple;
+}

@@ -275,17 +275,30 @@
 
 
 
-let input = document.createElement('input');
-let btn = document.createElement('button');
+// let input = document.createElement('input');
+// let btn = document.createElement('button');
 
-btn.innerText = "Click Me";
+// btn.innerText = "Click Me";
 
-document.querySelector('body').append(input, btn);
+// document.querySelector('body').append(input, btn);
 
 
-input.setAttribute('placeholder', 'username');
-btn.setAttribute('id', 'btn');
+// input.setAttribute('placeholder', 'username');
+// btn.setAttribute('id', 'btn');
 
-console.log(btn.getAttribute("id"));  // prints btn id
+// console.log(btn.getAttribute("id"));  // prints btn id
 
-btn.classList.add('btn-style');
+// btn.classList.add('btn-style');
+
+
+
+
+
+
+
+let h1 = document.createElement('h1');
+document.querySelector('body').append(h1);
+
+h1.innerText = "DOM Practice";
+
+h1.classList.add('head-style');
