@@ -244,10 +244,28 @@
 
 
 
+// let p = document.createElement('p');
+
+// p.innerText = "Hey, i'm red";
+
+// p.style.color = 'red';
+
+// document.querySelector('body').appendChild(p);
+
+
+
+
+
+
+let div = document.createElement('div');
+let h1 = document.createElement('h1');
 let p = document.createElement('p');
 
-p.innerText = "Hey, i'm red";
+h1.innerText = "I'm in a div";
+p.innerText = "ME TOO!";
 
-p.style.color = 'red';
+document.querySelector('body').appendChild(div);
 
-document.querySelector('body').appendChild(p);
+div.appendChild(h1);
+div.appendChild(p);
+div.classList.add("newdiv");
