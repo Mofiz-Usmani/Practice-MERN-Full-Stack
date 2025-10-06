@@ -296,9 +296,32 @@
 
 
 
-let h1 = document.createElement('h1');
-document.querySelector('body').append(h1);
+// let h1 = document.createElement('h1');
+// document.querySelector('body').append(h1);
 
-h1.innerText = "DOM Practice";
+// h1.innerText = "DOM Practice";
 
-h1.classList.add('head-style');
+// h1.classList.add('head-style');
+
+
+
+
+
+
+
+
+let btn = document.querySelector('button');
+
+btn.onclick = function() {
+    console.log("Button was clicked!");
+}
+
+
+let sayHello = () => {
+    let name = prompt("Enter your name : ");
+    alert(`Hello ${name}`);
+}
+
+btn.onclick = sayHello;
+
+
