@@ -165,21 +165,44 @@
 
 
 
-let div = document.querySelector('div');
-let h3 = document.querySelector('h3');
+// let div = document.querySelector('div');
+// let h3 = document.querySelector('h3');
 
-console.log(h3.parentElement);
-console.log(div.children);
-console.log(div.childElementCount);
-
-
+// console.log(h3.parentElement);
+// console.log(div.children);
+// console.log(div.childElementCount);
 
 
-let middleDiv = document.querySelector('#middle');
-
-console.log(middleDiv.previousElementSibling.innerHTML); // <div>First</div>
-console.log(middleDiv.nextElementSibling.innerHTML);     // <div>Third</div>
 
 
-middleDiv.previousElementSibling.style.color = "red";
-middleDiv.nextElementSibling.style.color = "green";
+// let middleDiv = document.querySelector('#middle');
+
+// console.log(middleDiv.previousElementSibling.innerHTML); // <div>First</div>
+// console.log(middleDiv.nextElementSibling.innerHTML);     // <div>Third</div>
+
+
+// middleDiv.previousElementSibling.style.color = "red";
+// middleDiv.nextElementSibling.style.color = "green";
+
+
+let p = document.createElement('p');
+
+p.innerText = "Hi, i am a new para";
+
+let body = document.querySelector('body');
+
+body.appendChild(p);
+
+
+let btn = document.createElement('button');
+
+btn.innerText = "Click Me!";
+
+body.appendChild(btn);
+
+p.append(", this is a new text");
+
+p.append(btn);
+
+p.prepend(btn); // moves or add the element to the start of the para
+
