@@ -257,15 +257,35 @@
 
 
 
-let div = document.createElement('div');
-let h1 = document.createElement('h1');
-let p = document.createElement('p');
+// let div = document.createElement('div');
+// let h1 = document.createElement('h1');
+// let p = document.createElement('p');
 
-h1.innerText = "I'm in a div";
-p.innerText = "ME TOO!";
+// h1.innerText = "I'm in a div";
+// p.innerText = "ME TOO!";
 
-document.querySelector('body').appendChild(div);
+// document.querySelector('body').appendChild(div);
 
-div.appendChild(h1);
-div.appendChild(p);
-div.classList.add("newdiv");
+// div.appendChild(h1);
+// div.appendChild(p);
+// div.classList.add("newdiv");
+
+
+
+
+
+
+let input = document.createElement('input');
+let btn = document.createElement('button');
+
+btn.innerText = "Click Me";
+
+document.querySelector('body').append(input, btn);
+
+
+input.setAttribute('placeholder', 'username');
+btn.setAttribute('id', 'btn');
+
+console.log(btn.getAttribute("id"));  // prints btn id
+
+btn.classList.add('btn-style');

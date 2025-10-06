@@ -31,3 +31,8 @@ imgs {
     background-color: pink;
     border: 2px solid grey;
 }
+
+.btn-style {
+    background-color: blueviolet;
+    color: white;
+}
