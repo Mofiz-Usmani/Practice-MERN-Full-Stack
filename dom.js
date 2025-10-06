@@ -190,52 +190,64 @@
 
 
 
+// let p = document.createElement('p');
+
+// p.innerText = "Hi, i am a new para";
+
+// let body = document.querySelector('body');
+
+// body.appendChild(p);
+
+
+// let btn = document.createElement('button');
+
+// btn.innerText = "Click Me!";
+
+// body.appendChild(btn);
+
+// p.append(", this is a new text");
+
+// p.append(btn);
+
+// p.prepend(btn); // moves or add the element to the start of the para
+
+// // adds the button before the para beign means above the para line
+// p.insertAdjacentElement('beforebegin', btn); 
+
+// // adds the button before the para start on the same line
+// p.insertAdjacentElement('afterbegin', btn);
+
+// // places the btn at the end of the para on the same line
+// p.insertAdjacentElement('beforeend', btn);
+
+// // places the btn below the para line line at the start of the new line
+// p.insertAdjacentElement('afterend', btn);
+
+
+
+
+
+
+
+
+// body.removeChild(p);
+
+// p.remove();
+
+// body.removeChild(btn);
+
+// btn.remove();
+
+
+
+
+
+
+
 let p = document.createElement('p');
 
-p.innerText = "Hi, i am a new para";
+p.innerText = "Hey, i'm red";
 
-let body = document.querySelector('body');
+p.style.color = 'red';
 
-body.appendChild(p);
-
-
-let btn = document.createElement('button');
-
-btn.innerText = "Click Me!";
-
-body.appendChild(btn);
-
-p.append(", this is a new text");
-
-p.append(btn);
-
-p.prepend(btn); // moves or add the element to the start of the para
-
-// adds the button before the para beign means above the para line
-p.insertAdjacentElement('beforebegin', btn); 
-
-// adds the button before the para start on the same line
-p.insertAdjacentElement('afterbegin', btn);
-
-// places the btn at the end of the para on the same line
-p.insertAdjacentElement('beforeend', btn);
-
-// places the btn below the para line line at the start of the new line
-p.insertAdjacentElement('afterend', btn);
-
-
-
-
-
-
-
-
-body.removeChild(p);
-
-p.remove();
-
-body.removeChild(btn);
-
-btn.remove();
-
-
+document.querySelector('body').appendChild(p);
