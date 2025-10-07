@@ -569,20 +569,34 @@
 
 
 
-let form = document.querySelector('form');
+// let form = document.querySelector('form');
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
 
-    // used when we have lot of html elements
-    let user = event.target.elements[0];  
-    let pass = event.target.elements[1];
-    let color = event.target.elements[2];  
+//     // used when we have lot of html elements
+//     let user = event.target.elements[0];  
+//     let pass = event.target.elements[1];
+//     let color = event.target.elements[2];  
 
-    console.log(user.value);
-    console.log(pass.value);
-    console.log(color.value);
-});
+//     console.log(user.value);
+//     console.log(pass.value);
+//     console.log(color.value);
+// });
+
+
+
+
+
+
+
+let user = document.querySelector('#user');
+
+user.addEventListener("change", function(e) {
+    e.preventDefault();
+    console.log('input changed');
+    console.log('final value : ', user.value);
+})
 
 
 
