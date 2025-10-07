@@ -442,24 +442,51 @@
 
 
 // Activity : 
+// let btn = document.querySelector('button');
+// let div = document.querySelector('div');
+// let h3 = document.querySelector('h3');
+
+
+// let r = Math.floor(Math.random() * 256);
+// let g = Math.floor(Math.random() * 256);
+// let b = Math.floor(Math.random() * 256);
+
+
+// btn.addEventListener('click', generateColor);
+
+
+// function generateColor() {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+//     btn.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+//     h3.innerText = `rgb(${r}, ${g}, ${b})`;
+// }
+
+
+
+
+
+
+
+
+// This in eventlistener
 let btn = document.querySelector('button');
-let div = document.querySelector('div');
+let p = document.querySelector('p');
+let h1 = document.querySelector('h1');
 let h3 = document.querySelector('h3');
 
 
-let r = Math.floor(Math.random() * 256);
-let g = Math.floor(Math.random() * 256);
-let b = Math.floor(Math.random() * 256);
-
-
-btn.addEventListener('click', generateColor);
-
-
-function generateColor() {
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    btn.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    h3.innerText = `rgb(${r}, ${g}, ${b})`;
+function changeColor() {
+    console.dir(this.innerText);
+    this.style.backgroundColor = "blue";
+    this.style.color = "white";
+    this.style.padding = "10px";
+    this.style.border = "2px solid black";
 }
+
+btn.addEventListener('click', changeColor);
+p.addEventListener('click', changeColor);
+h1.addEventListener('click', changeColor);
+h3.addEventListener('click', changeColor);
