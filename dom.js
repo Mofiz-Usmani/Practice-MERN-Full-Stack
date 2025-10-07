@@ -472,21 +472,42 @@
 
 
 // This in eventlistener
-let btn = document.querySelector('button');
-let p = document.querySelector('p');
-let h1 = document.querySelector('h1');
-let h3 = document.querySelector('h3');
+// let btn = document.querySelector('button');
+// let p = document.querySelector('p');
+// let h1 = document.querySelector('h1');
+// let h3 = document.querySelector('h3');
 
 
-function changeColor() {
-    console.dir(this.innerText);
-    this.style.backgroundColor = "blue";
-    this.style.color = "white";
-    this.style.padding = "10px";
-    this.style.border = "2px solid black";
-}
+// function changeColor() {
+//     console.dir(this.innerText);
+//     this.style.backgroundColor = "blue";
+//     this.style.color = "white";
+//     this.style.padding = "10px";
+//     this.style.border = "2px solid black";
+// }
 
-btn.addEventListener('click', changeColor);
-p.addEventListener('click', changeColor);
-h1.addEventListener('click', changeColor);
-h3.addEventListener('click', changeColor);
+// btn.addEventListener('click', changeColor);
+// p.addEventListener('click', changeColor);
+// h1.addEventListener('click', changeColor);
+// h3.addEventListener('click', changeColor);
+
+
+
+
+
+
+
+let inp = document.querySelector('input');
+
+inp.addEventListener('keydown', function(event) {
+    console.log("Key was pressed");
+    console.log(event.key);
+    console.log(event.code);
+});
+
+
+inp.addEventListener('keyup', function(event){
+    console.log('key was released');
+    console.log(event.key);
+    console.log(event.code);
+});
