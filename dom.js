@@ -605,14 +605,27 @@
 
 
 
-let inp = document.querySelector("#text");
-let p = document.querySelector('p');
+// let inp = document.querySelector("#text");
+// let p = document.querySelector('p');
 
-inp.addEventListener('input', function() {
-    console.log(inp.value);
-    p.style.fontWeight = 'bolder';
-    p.innerText = inp.value;
-})
+// inp.addEventListener('input', function() {
+//     console.log(inp.value);
+//     p.style.fontWeight = 'bolder';
+//     p.innerText = inp.value;
+// });
+
+
+
+
+
+
+
+
+
+window.addEventListener('scroll', () => {
+    console.log("You are scrolling the page");
+});
+
 
 
 
