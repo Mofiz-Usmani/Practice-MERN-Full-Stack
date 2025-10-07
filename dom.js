@@ -519,11 +519,76 @@
 
 
 
+// let form = document.querySelector('form');
+
+// // event.preventDefault() stops the browser’s default action for that event-
+// // in forms, it prevents the page from reloading on submit.
+// form.addEventListener('submit', (event) =>{
+//     event.preventDefault();
+//     alert("Form submitted");
+// }); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let form = document.querySelector('form');
+
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+
+//     let user = document.querySelector('#user');
+//     let pass = document.querySelector('#pass');
+
+
+//     console.log(user.value);
+//     console.log(pass.value);
+// });
+
+
+
+
+
+
+
+
 let form = document.querySelector('form');
 
-// event.preventDefault() stops the browser’s default action for that event-
-// in forms, it prevents the page from reloading on submit.
-form.addEventListener('submit', (event) =>{
+form.addEventListener('submit', (event) => {
     event.preventDefault();
-    alert("Form submitted");
-}); 
+
+    // used when we have lot of html elements
+    let user = event.target.elements[0];  
+    let pass = event.target.elements[1];
+    let color = event.target.elements[2];  
+
+    console.log(user.value);
+    console.log(pass.value);
+    console.log(color.value);
+});
+
+
+
+
+
+
+
+
+
