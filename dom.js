@@ -590,13 +590,35 @@
 
 
 
-let user = document.querySelector('#user');
+// let user = document.querySelector('#user');
 
-user.addEventListener("change", function(e) {
-    e.preventDefault();
-    console.log('input changed');
-    console.log('final value : ', user.value);
+// user.addEventListener("change", function(e) {
+//     e.preventDefault();
+//     console.log('input changed');
+//     console.log('final value : ', user.value);
+// });
+
+
+
+
+
+
+
+
+let inp = document.querySelector("#text");
+let p = document.querySelector('p');
+
+inp.addEventListener('input', function() {
+    console.log(inp.value);
+    p.style.fontWeight = 'bolder';
+    p.innerText = inp.value;
 })
+
+
+
+
+
+
 
 
 
