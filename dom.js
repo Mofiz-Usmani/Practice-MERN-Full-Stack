@@ -497,17 +497,33 @@
 
 
 
-let inp = document.querySelector('input');
+// let inp = document.querySelector('input');
 
-inp.addEventListener('keydown', function(event) {
-    console.log("Key was pressed");
-    console.log(event.key);
-    console.log(event.code);
-});
+// inp.addEventListener('keydown', function(event) {
+//     console.log("Key was pressed");
+//     console.log(event.key);
+//     console.log(event.code);
+// });
 
 
-inp.addEventListener('keyup', function(event){
-    console.log('key was released');
-    console.log(event.key);
-    console.log(event.code);
-});
+// inp.addEventListener('keyup', function(event){
+//     console.log('key was released');
+//     console.log(event.key);
+//     console.log(event.code);
+// });
+
+
+
+
+
+
+
+
+let form = document.querySelector('form');
+
+// event.preventDefault() stops the browser’s default action for that event-
+// in forms, it prevents the page from reloading on submit.
+form.addEventListener('submit', (event) =>{
+    event.preventDefault();
+    alert("Form submitted");
+}); 
