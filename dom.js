@@ -620,24 +620,66 @@
 
 
 
+// window.addEventListener('scroll', () => {
+//     console.log("You are scrolling the page");
+// });
 
 
-window.addEventListener('scroll', () => {
-    console.log("You are scrolling the page");
+
+
+
+
+
+
+
+
+
+// let btn = document.createElement('button');
+
+// document.querySelector('body').append(btn);
+
+// btn.innerText = "Click Me!";
+
+
+// btn.addEventListener('click', () => {
+//     btnColorChange();
+// });
+
+// function btnColorChange() {
+//     btn.classList.add('change-color');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Event Bubbling : 
+let div = document.querySelector('div')
+let ul = document.querySelector('ul');
+let lis = document.querySelectorAll('li');
+
+
+div.addEventListener('click', () => {
+    console.log("Div was clicked");
+});
+
+ul.addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log('Ul was clicked');
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for(let li of lis){
+    li.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log("Li was clicked");
+    });
+}
