@@ -330,14 +330,14 @@
 
 
 
-let btns = document.querySelectorAll("button");
+// let btns = document.querySelectorAll("button");
 
-for(let btn of btns){
-    btn.onclick = sayHello;
-    btn.onmouseenter = () => {
-        console.log("Mouse Entered");
-    }
-}
+// for(let btn of btns){
+//     btn.onclick = sayHello;
+//     btn.onmouseenter = () => {
+//         console.log("Mouse Entered");
+//     }
+// }
 
 
 // Arrow functions and function expressions are not hoisted,
@@ -348,6 +348,87 @@ for(let btn of btns){
 //     console.log("Hello!");
 // }
 
+// function sayHello() {
+//     console.log("Hello!");
+// }
+
+
+
+
+
+
+
+
+// Overwriting Problem with onclick
+
+// let btn = document.querySelector("button");
+
+// btn.onclick = () => console.log("First handler");
+// btn.onclick = () => console.log("Second handler"); //This overwrites the first one
+
+// btn.click(); // Output: "Second handler"
+
+
+
+
+// Using addEventListener
+
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", () => console.log("First handler"));
+// btn.addEventListener("click", () => console.log("Second handler"));
+
+// btn.click();
+// Now both handlers run — no overwriting.
+
+
+
+
+
+// let btn = document.querySelector('button');
+
+// // Removing a Listener
+// function sayHi() {
+//     console.log("Hi!");
+// }
+
+// btn.addEventListener("click", sayHi);
+
+// Later if needed:
+// btn.removeEventListener("click", sayHi); 
+//Works only with addEventListener
+
+
+
+
+
+
+
+// Using Options
+// let btn = document.querySelector('button');
+
+// btn.addEventListener("click", () => {
+//     console.log("Clicked only once");
+// }, { once: true }); //Runs just once
+
+// onclick = simple, but old-school and limited.
+// addEventListener() = modern, powerful, and scalable — used in all real projects.
+
+
+
+
+
+let btns = document.querySelectorAll('button');
+
+for(let btn of btns){
+    btn.addEventListener('click', sayHello);
+    btn.addEventListener('click', sayName);
+}
+
 function sayHello() {
-    console.log("Hello!");
+    alert("Hello!");
+}
+
+function sayName() {
+    alert("Apna College");
 }
