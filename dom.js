@@ -310,18 +310,44 @@
 
 
 
-let btn = document.querySelector('button');
+// let btn = document.querySelector('button');
 
-btn.onclick = function() {
-    console.log("Button was clicked!");
+// btn.onclick = function() {
+//     console.log("Button was clicked!");
+// }
+
+
+// let sayHello = () => {
+//     let name = prompt("Enter your name : ");
+//     alert(`Hello ${name}`);
+// }
+
+// btn.onclick = sayHello;
+
+
+
+
+
+
+
+let btns = document.querySelectorAll("button");
+
+for(let btn of btns){
+    btn.onclick = sayHello;
+    btn.onmouseenter = () => {
+        console.log("Mouse Entered");
+    }
 }
 
 
-let sayHello = () => {
-    let name = prompt("Enter your name : ");
-    alert(`Hello ${name}`);
+// Arrow functions and function expressions are not hoisted,
+// so they can’t be used before they’re defined.
+// Function declarations are hoisted, so they can be used anywhere in the code.
+
+// let sayHello = () => {
+//     console.log("Hello!");
+// }
+
+function sayHello() {
+    console.log("Hello!");
 }
-
-btn.onclick = sayHello;
-
-
