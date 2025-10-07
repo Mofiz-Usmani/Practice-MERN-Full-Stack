@@ -418,17 +418,48 @@
 
 
 
-let btns = document.querySelectorAll('button');
+// let btns = document.querySelectorAll('button');
 
-for(let btn of btns){
-    btn.addEventListener('click', sayHello);
-    btn.addEventListener('click', sayName);
-}
+// for(let btn of btns){
+//     btn.addEventListener('click', sayHello);
+//     btn.addEventListener('click', sayName);
+// }
 
-function sayHello() {
-    alert("Hello!");
-}
+// function sayHello() {
+//     alert("Hello!");
+// }
 
-function sayName() {
-    alert("Apna College");
+// function sayName() {
+//     alert("Apna College");
+// }
+
+
+
+
+
+
+
+
+
+// Activity : 
+let btn = document.querySelector('button');
+let div = document.querySelector('div');
+let h3 = document.querySelector('h3');
+
+
+let r = Math.floor(Math.random() * 256);
+let g = Math.floor(Math.random() * 256);
+let b = Math.floor(Math.random() * 256);
+
+
+btn.addEventListener('click', generateColor);
+
+
+function generateColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    btn.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    h3.innerText = `rgb(${r}, ${g}, ${b})`;
 }

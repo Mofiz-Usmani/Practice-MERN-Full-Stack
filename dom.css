@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 h1 {
@@ -41,4 +42,14 @@ imgs {
 .head-style {
     text-decoration: underline;
     color: purple;
+}
+
+
+
+
+div {
+    height: 100px;
+    width: 500px;
+    border: 2px solid slategray;
+    margin: auto;
 }
