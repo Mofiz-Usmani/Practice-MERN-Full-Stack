@@ -662,24 +662,66 @@
 
 
 // Event Bubbling : 
-let div = document.querySelector('div')
-let ul = document.querySelector('ul');
-let lis = document.querySelectorAll('li');
+// let div = document.querySelector('div')
+// let ul = document.querySelector('ul');
+// let lis = document.querySelectorAll('li');
 
 
-div.addEventListener('click', () => {
-    console.log("Div was clicked");
-});
+// div.addEventListener('click', () => {
+//     console.log("Div was clicked");
+// });
 
-ul.addEventListener('click', (e) => {
-    e.stopPropagation();
-    console.log('Ul was clicked');
-});
+// ul.addEventListener('click', (e) => {
+//     e.stopPropagation();
+//     console.log('Ul was clicked');
+// });
 
 
-for(let li of lis){
-    li.addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log("Li was clicked");
-    });
+// for(let li of lis){
+//     li.addEventListener('click', (e) => {
+//         e.stopPropagation();
+//         console.log("Li was clicked");
+//     });
+// }
+
+
+
+
+
+
+
+
+
+h1 = document.querySelector('h1');
+
+// function changeColor(color, delay){
+//     setTimeout(() => {
+//         h1.style.color = color;
+//     }, delay);
+// }
+
+// changeColor('red', 1000);
+// changeColor('green', 1000);
+// changeColor('yellow', 1000);
+
+
+
+
+function changeColor(color, delay, nextColorChange){
+    setTimeout(() =>{
+        h1.style.color = color;
+        if(nextColorChange) nextColorChange();
+    }, delay);
 }
+
+
+
+changeColor('red', 1000, () => {
+    changeColor('orange', 1000, () => {
+        changeColor('green', 1000, () => {
+            changeColor('yellow', 1000, () => {
+                changeColor('blue', 1000);
+            });
+        });
+    });
+});
