@@ -692,7 +692,7 @@
 
 
 
-h1 = document.querySelector('h1');
+// h1 = document.querySelector('h1');
 
 // function changeColor(color, delay){
 //     setTimeout(() => {
@@ -707,21 +707,54 @@ h1 = document.querySelector('h1');
 
 
 
-function changeColor(color, delay, nextColorChange){
-    setTimeout(() =>{
-        h1.style.color = color;
-        if(nextColorChange) nextColorChange();
-    }, delay);
+// function changeColor(color, delay, nextColorChange){
+//     setTimeout(() =>{
+//         h1.style.color = color;
+//         if(nextColorChange) nextColorChange();
+//     }, delay);
+// }
+
+
+
+// changeColor('red', 1000, () => {
+//     changeColor('orange', 1000, () => {
+//         changeColor('green', 1000, () => {
+//             changeColor('yellow', 1000, () => {
+//                 changeColor('blue', 1000);
+//             });
+//         });
+//     });
+// });
+
+
+
+
+
+
+function savetoDB(data, success, failure) {
+  let internetSpeed = Math.floor(Math.random() * 11);
+  if (internetSpeed > 4) {
+    success();
+  } else {
+    failure();
+  }
 }
 
-
-
-changeColor('red', 1000, () => {
-    changeColor('orange', 1000, () => {
-        changeColor('green', 1000, () => {
-            changeColor('yellow', 1000, () => {
-                changeColor('blue', 1000);
-            });
-        });
-    });
-});
+savetoDB(
+  "apna College",
+  () => {
+    console.log("success1: your data was saved");
+    savetoDB(
+      "hello",
+      () => {
+        console.log("success2: data2 was saved");
+      },
+      () => {
+        console.log("failure2: weak connection, data2 not saved");
+      }
+    );
+  },
+  () => {
+    console.log("failure1: weak connection, data not saved");
+  }
+);
