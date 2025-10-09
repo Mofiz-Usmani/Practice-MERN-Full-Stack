@@ -731,30 +731,55 @@
 
 
 
-function savetoDB(data, success, failure) {
-  let internetSpeed = Math.floor(Math.random() * 11);
-  if (internetSpeed > 4) {
-    success();
-  } else {
-    failure();
-  }
+// function savetoDB(data, success, failure) {
+//   let internetSpeed = Math.floor(Math.random() * 11);
+//   if (internetSpeed > 4) {
+//     success();
+//   } else {
+//     failure();
+//   }
+// }
+
+// savetoDB(
+//   "apna College",
+//   () => {
+//     console.log("success1: your data was saved");
+//     savetoDB(
+//       "hello",
+//       () => {
+//         console.log("success2: data2 was saved");
+//       },
+//       () => {
+//         console.log("failure2: weak connection, data2 not saved");
+//       }
+//     );
+//   },
+//   () => {
+//     console.log("failure1: weak connection, data not saved");
+//   }
+// );
+
+
+
+
+
+
+
+
+
+
+function savetoDb(data) {
+  return new Promise((resolve, reject) => {
+    let internetSpeed = Math.floor(Math.random()*11);
+    if(internetSpeed > 4){
+      resolve("Success : data was saved");
+      console.log(internetSpeed);
+    } else {
+      reject("Failure : weak connection");
+      console.log(internetSpeed);
+    }
+  });
 }
 
-savetoDB(
-  "apna College",
-  () => {
-    console.log("success1: your data was saved");
-    savetoDB(
-      "hello",
-      () => {
-        console.log("success2: data2 was saved");
-      },
-      () => {
-        console.log("failure2: weak connection, data2 not saved");
-      }
-    );
-  },
-  () => {
-    console.log("failure1: weak connection, data not saved");
-  }
-);
+console.log(savetoDb("apna college"));
+console.log(savetoDb("Mofiz"));
