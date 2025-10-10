@@ -791,6 +791,33 @@
 
 
 
+// function savetoDB(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 11);
+//     if(internetSpeed > 4) {
+//       resolve("Success : data was saved");
+//     }else {
+//       reject("Failure : weak connection");
+//     }
+//   });
+// }
+
+// savetoDB("apna college")
+// .then((result) => {
+//   console.log(result);
+// })
+// .catch((result) => {
+//   console.log(result);
+// });
+
+
+
+
+
+
+
+
+
 function savetoDB(data) {
   return new Promise((resolve, reject) => {
     let internetSpeed = Math.floor(Math.random() * 11);
@@ -803,9 +830,17 @@ function savetoDB(data) {
 }
 
 savetoDB("apna college")
-.then((result) => {
-  console.log(result);
+.then(() => {
+  console.log("data1 saved");
+  return savetoDB("Hello");
 })
-.catch((result) => {
-  console.log(result);
+.then(() => {
+  console.log("data2 saved");
+  return savetoDB("alex");
+})
+.then(() => {
+  console.log("data3 saved");
+})
+.catch(() => {
+  console.log("promise was rejected");
 });
