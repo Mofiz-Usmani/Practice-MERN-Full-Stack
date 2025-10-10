@@ -892,18 +892,31 @@
 
 
 
-async function greet() {
-  // return "hello";
-  throw "some random error";
+// async function greet() {
+//   // return "hello";
+//   throw "some random error";
+// }
+
+// // console.log(greet());
+
+// greet()
+// .then((result) => {
+//   console.log("Promise was resolved");
+//   console.log("Result was : ", result);
+// })
+// .catch((err) => {
+//   console.log("promise was rejected with err : ",err);
+// })
+
+
+
+
+
+
+
+
+let demo = async() => {
+  return 5;
 }
 
-// console.log(greet());
-
-greet()
-.then((result) => {
-  console.log("Promise was resolved");
-  console.log("Result was : ", result);
-})
-.catch((err) => {
-  console.log("promise was rejected with err : ",err);
-})
+console.log(demo());
