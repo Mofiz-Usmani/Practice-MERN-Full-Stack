@@ -768,18 +768,44 @@
 
 
 
-function savetoDb(data) {
+// function savetoDb(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random()*11);
+//     if(internetSpeed > 4){
+//       resolve("Success : data was saved");
+//       console.log(internetSpeed);
+//     } else {
+//       reject("Failure : weak connection");
+//       console.log(internetSpeed);
+//     }
+//   });
+// }
+
+// console.log(savetoDb("apna college"));
+// console.log(savetoDb("Mofiz"));
+
+
+
+
+
+
+
+
+function savetoDB(data) {
   return new Promise((resolve, reject) => {
-    let internetSpeed = Math.floor(Math.random()*11);
-    if(internetSpeed > 4){
+    let internetSpeed = Math.floor(Math.random() * 11);
+    if(internetSpeed > 4) {
       resolve("Success : data was saved");
-      console.log(internetSpeed);
-    } else {
+    }else {
       reject("Failure : weak connection");
-      console.log(internetSpeed);
     }
   });
 }
 
-console.log(savetoDb("apna college"));
-console.log(savetoDb("Mofiz"));
+savetoDB("apna college")
+.then((result) => {
+  console.log(result);
+})
+.catch((result) => {
+  console.log(result);
+});
