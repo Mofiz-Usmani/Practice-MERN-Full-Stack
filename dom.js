@@ -893,7 +893,8 @@
 
 
 async function greet() {
-  return "hello";
+  // return "hello";
+  throw "some random error";
 }
 
 // console.log(greet());
