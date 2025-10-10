@@ -896,4 +896,13 @@ async function greet() {
   return "hello";
 }
 
-console.log(greet());
+// console.log(greet());
+
+greet()
+.then((result) => {
+  console.log("Promise was resolved");
+  console.log("Result was : ", result);
+})
+.catch((err) => {
+  console.log("promise was rejected with err : ",err);
+})
