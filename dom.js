@@ -818,29 +818,68 @@
 
 
 
-function savetoDB(data) {
+// function savetoDB(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 11);
+//     if(internetSpeed > 4) {
+//       resolve("Success : data was saved");
+//     }else {
+//       reject("Failure : weak connection");
+//     }
+//   });
+// }
+
+// savetoDB("apna college")
+// .then(() => {
+//   console.log("data1 saved");
+//   return savetoDB("Hello");
+// })
+// .then(() => {
+//   console.log("data2 saved");
+//   return savetoDB("alex");
+// })
+// .then(() => {
+//   console.log("data3 saved");
+// })
+// .catch(() => {
+//   console.log("promise was rejected");
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+let h1 = document.querySelector('h1');
+
+function changeColor(color, delay){
   return new Promise((resolve, reject) => {
-    let internetSpeed = Math.floor(Math.random() * 11);
-    if(internetSpeed > 4) {
-      resolve("Success : data was saved");
-    }else {
-      reject("Failure : weak connection");
-    }
+    setTimeout(() =>{
+      h1.style.color = color;
+      resolve("color changed!");
+    }, delay);
   });
 }
 
-savetoDB("apna college")
+changeColor('red', 1000)
 .then(() => {
-  console.log("data1 saved");
-  return savetoDB("Hello");
+  console.log("red color applied");
+  return changeColor('orange', 1000);
 })
 .then(() => {
-  console.log("data2 saved");
-  return savetoDB("alex");
+  console.log("orange color applied");
+  return changeColor('green', 1000);
 })
 .then(() => {
-  console.log("data3 saved");
+  console.log("green color applied");
+  return changeColor('yellow', 1000);
 })
-.catch(() => {
-  console.log("promise was rejected");
+.then(() => {
+  console.log("yellow color applied");
 });
