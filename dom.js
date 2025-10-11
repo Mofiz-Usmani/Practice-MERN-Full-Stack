@@ -1032,10 +1032,28 @@
 
 
 
-let student = {
-    name : "Mofiz",
-    roll : 15,
-};
+// let student = {
+//     name : "Mofiz",
+//     roll : 15,
+// };
 
-// It converts a JavaScript object into a JSON string (plain text).
-console.log(JSON.stringify(student));
+// // It converts a JavaScript object into a JSON string (plain text).
+// console.log(JSON.stringify(student));
+
+
+
+
+
+
+
+
+
+let url = "https://catfact.ninja/fact";
+
+async function getFacts() {
+    let res = await fetch(url);      // fetch the response
+    let data = await res.json();     // convert response to JS object
+    console.log(data.fact);          // print the fact
+}
+
+getFacts();
