@@ -1048,12 +1048,32 @@
 
 
 
+// let url = "https://catfact.ninja/fact";
+
+// async function getFacts() {
+//     let res = await fetch(url);      // fetch the response
+//     let data = await res.json();     // convert response to JS object
+//     console.log(data.fact);          // print the fact
+// }
+
+// getFacts();
+
+
+
+
+
+
+
 let url = "https://catfact.ninja/fact";
 
+
 async function getFacts() {
-    let res = await fetch(url);      // fetch the response
-    let data = await res.json();     // convert response to JS object
-    console.log(data.fact);          // print the fact
+    try {
+        let res = await axios.get(url);
+        console.log(res.data.fact);
+    } catch(e) {
+        console.log("Error : ",e);
+    }
 }
 
 getFacts();
