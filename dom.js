@@ -929,25 +929,56 @@
 
 
 
-let h1 = document.querySelector('h1');
+// let h1 = document.querySelector('h1');
 
-function changeColor(color, delay) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      h1.style.color = color;
-      console.log(`Color changed to ${color}`);
-      resolve("Color changed!");
-    }, delay);
-  });
-}
+// function changeColor(color, delay) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       h1.style.color = color;
+//       console.log(`Color changed to ${color}`);
+//       resolve("Color changed!");
+//     }, delay);
+//   });
+// }
 
-let demo = async() => {
-  await changeColor('red', 1000);
-  await changeColor('green', 1000);
-  await changeColor('yellow', 1000);
-  await changeColor('pink', 1000);
-  await changeColor('orange', 1000);
-  changeColor('brown', 1000);
-}
+// let demo = async() => {
+//   await changeColor('red', 1000);
+//   await changeColor('green', 1000);
+//   await changeColor('yellow', 1000);
+//   await changeColor('pink', 1000);
+//   await changeColor('orange', 1000);
+//   changeColor('brown', 1000);
+// }
 
-demo();
+// demo();
+
+
+
+
+
+
+// generateOtp = () => {
+//   let otp = '';
+//   for(let i=0; i<=5; i++){
+//     otp += Math.floor(Math.random() * 10);
+//   }
+//   console.log(otp);
+// }
+
+// generateOtp();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
