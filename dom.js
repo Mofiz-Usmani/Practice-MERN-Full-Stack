@@ -974,47 +974,56 @@
 
 
 
-let h1 = document.querySelector('h1');
+// let h1 = document.querySelector('h1');
 
-function changeColor(color, delay){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            let num = Math.floor(Math.random() *6);
-            if(num>3) {
-                reject("Promise Rejected");
-            }
-            h1.style.color = color;
-            console.log(`Color changed to ${color}`);
-            resolve("Color Changed");
-        }, delay);
-    });
-}
+// function changeColor(color, delay){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let num = Math.floor(Math.random() *6);
+//             if(num>3) {
+//                 reject("Promise Rejected");
+//             }
+//             h1.style.color = color;
+//             console.log(`Color changed to ${color}`);
+//             resolve("Color Changed");
+//         }, delay);
+//     });
+// }
 
-async function demo() {
-    try {
-        await changeColor('red', 1000);
-        await changeColor('green', 1000);
-        await changeColor('yellow', 1000);
-        await changeColor('pink', 1000);
-        await changeColor('orange', 1000);
-        changeColor('brown', 1000);
-    } catch(err) {
-        console.log("Error caught");
-        console.log(err);
-    }
-    let a = 5;
-    console.log(a);
-    console.log("new number = ", a);
-}
+// async function demo() {
+//     try {
+//         await changeColor('red', 1000);
+//         await changeColor('green', 1000);
+//         await changeColor('yellow', 1000);
+//         await changeColor('pink', 1000);
+//         await changeColor('orange', 1000);
+//         changeColor('brown', 1000);
+//     } catch(err) {
+//         console.log("Error caught");
+//         console.log(err);
+//     }
+//     let a = 5;
+//     console.log(a);
+//     console.log("new number = ", a);
+// }
 
-demo();
-
-
+// demo();
 
 
 
 
 
 
+
+
+
+
+let jsonRes = `{
+  "fact": "Cats are the world's most popular pets, outnumbering dogs by as many as three to one",
+  "length": 84
+}`;
+
+let validRes = JSON.parse(jsonRes); //This line converts a JSON string into a real JavaScript object.
+console.log(validRes.fact);
 
 
