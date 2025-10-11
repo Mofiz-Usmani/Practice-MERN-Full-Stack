@@ -1018,12 +1018,24 @@
 
 
 
-let jsonRes = `{
-  "fact": "Cats are the world's most popular pets, outnumbering dogs by as many as three to one",
-  "length": 84
-}`;
+// let jsonRes = `{
+//   "fact": "Cats are the world's most popular pets, outnumbering dogs by as many as three to one",
+//   "length": 84
+// }`;
 
-let validRes = JSON.parse(jsonRes); //This line converts a JSON string into a real JavaScript object.
-console.log(validRes.fact);
+// let validRes = JSON.parse(jsonRes); //This line converts a JSON string into a real JavaScript object.
+// console.log(validRes.fact);
 
 
+
+
+
+
+
+let student = {
+    name : "Mofiz",
+    roll : 15,
+};
+
+// It converts a JavaScript object into a JSON string (plain text).
+console.log(JSON.stringify(student));
