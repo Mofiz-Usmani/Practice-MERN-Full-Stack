@@ -15,10 +15,33 @@
 
 
 
-function higherOrder() {
-    return function() {
-        console.log("Hello");
-    }
-}
+// function higherOrder() {
+//     return function() {
+//         console.log("Hello");
+//     }
+// }
 
-higherOrder()();
+// higherOrder()();
+
+
+
+
+
+
+
+
+
+// setTimeout(() => {
+//     console.log("Hello");
+// },2000);
+
+
+
+
+let interval = setInterval(() => {
+    console.log("Hello");
+}, 1);
+
+setTimeout(() => {
+    clearInterval(interval);
+},5000);
