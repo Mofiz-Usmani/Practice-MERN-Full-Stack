@@ -115,6 +115,20 @@
 
 
 
-let arr = [2,4,6];
+// let arr = [2,4,6];
 
-console.log(arr.every((num) => num%2 === 0));
+// console.log(arr.every((num) => num%2 === 0));
+
+// let isAllEven = arr.every((num) => num%2 === 0);
+
+// console.log(isAllEven);
+
+
+
+
+
+
+let arr = [1,3,5,7,9];
+
+let some = arr.some((num) => num%2 === 0);
+console.log(some);
