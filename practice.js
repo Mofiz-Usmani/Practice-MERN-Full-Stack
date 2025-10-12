@@ -38,10 +38,38 @@
 
 
 
-let interval = setInterval(() => {
-    console.log("Hello");
-}, 1);
+// let interval = setInterval(() => {
+//     console.log("Hello");
+// }, 1);
 
-setTimeout(() => {
-    clearInterval(interval);
-},5000);
+// setTimeout(() => {
+//     clearInterval(interval);
+// },5000);
+
+
+
+
+
+
+// let arr = [1,2,3,4,5];
+
+// arr.forEach((el) => {
+//     console.log(el);
+// });
+
+
+// let arr = [1,2,3,4,5];
+
+// arr.forEach((el, i) => {
+//     console.log(el, i);
+// });
+
+
+let arr = [1,2,3,4,5];
+
+arr.forEach((num, i) => {
+    arr[i] = num*2;
+});
+
+console.log(arr);
+// changes the orignal array
