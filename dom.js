@@ -1089,38 +1089,61 @@
 
 
 
-let url = "https://catfact.ninja/fact";
+// let url = "https://catfact.ninja/fact";
 
 
-let h3 = document.createElement('h3');
-let btn = document.createElement('button');
-let body = document.querySelector('body');
-
-
-
-body.append(h3);
-body.append(btn);
-
-
-h3.innerText = "Random Cat Facts";
-h3.style.height = "250px";
-h3.style.width = "500px"
-h3.style.border = "2px solid grey";
-h3.style.padding = "20px";
-h3.style.margin = "0 auto";
-btn.innerText = "New Fact";
-
-btn.style.marginTop = "100px";
-btn.style.backgroundColor = "pink";
+// let h3 = document.createElement('h3');
+// let btn = document.createElement('button');
+// let body = document.querySelector('body');
 
 
 
-btn.addEventListener('click', async() => {
+// body.append(h3);
+// body.append(btn);
+
+
+// h3.innerText = "Random Cat Facts";
+// h3.style.height = "250px";
+// h3.style.width = "500px"
+// h3.style.border = "2px solid grey";
+// h3.style.padding = "20px";
+// h3.style.margin = "0 auto";
+// btn.innerText = "New Fact";
+
+// btn.style.marginTop = "100px";
+// btn.style.backgroundColor = "pink";
+
+
+
+// btn.addEventListener('click', async() => {
+//     try {
+//         let res = await axios.get(url);
+//         h3.innerText = res.data.fact;
+//     } catch(e) {
+//         console.log(e);
+//     }
+// });
+
+
+
+
+
+
+
+
+
+let url = "https://icanhazdadjoke.com";
+
+
+async function getFacts() {
     try {
-        let res = await axios.get(url);
-        h3.innerText = res.data.fact;
-    } catch(e) {
+        // const config = {headers : {Accept: "application/json"}};
+        const config = { headers: { Accept: "text/plain" } };
+        let res = await axios.get(url,config);
+        console.log(res.data);
+    } catch(e){
         console.log(e);
     }
-})
+}
 
+getFacts();
