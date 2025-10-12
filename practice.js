@@ -1,10 +1,24 @@
-function callBackFunc(func) {
-    console.log("Function 1");
-    func();
+// function callBackFunc(func) {
+//     console.log("Function 1");
+//     func();
+// }
+
+// function func() {
+//     console.log("Function 2");
+// }
+
+// callBackFunc(func);
+
+
+
+
+
+
+
+function higherOrder() {
+    return function() {
+        console.log("Hello");
+    }
 }
 
-function func() {
-    console.log("Function 2");
-}
-
-callBackFunc(func);
+higherOrder()();
