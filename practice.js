@@ -95,7 +95,7 @@
 
 
 
-let nums = [1,2,3,4,5,6,7,8,9];
+// let nums = [1,2,3,4,5,6,7,8,9];
 
 // let even = nums.filter((num) => {
 //     return num%2 == 0;
@@ -103,6 +103,18 @@ let nums = [1,2,3,4,5,6,7,8,9];
 
 // console.log(even);
 
-let even = nums.filter((num) => (num%2 == 0));
+// let even = nums.filter((num) => (num%2 == 0));
 
-console.log(even);
+// console.log(even);
+
+
+
+
+
+
+
+
+
+let arr = [2,4,6];
+
+console.log(arr.every((num) => num%2 === 0));
