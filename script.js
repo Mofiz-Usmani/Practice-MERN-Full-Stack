@@ -656,16 +656,16 @@
 
 
 // Callback Function : 
-// function greet(callback) {
-//     console.log("Hello ");
-//     callback();
-// }
+function greet(callback) {
+    console.log("Hello ");
+    callback();
+}
 
-// function sayGoodbye() {
-//     console.log("Goodbye!");
-// }
+function sayGoodbye() {
+    console.log("Goodbye!");
+}
 
-// greet(sayGoodbye);
+greet(sayGoodbye);
 // Use : Make sure some code runs only after something else finishes.
 
 
