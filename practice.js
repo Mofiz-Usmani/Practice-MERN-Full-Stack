@@ -165,8 +165,40 @@
 
 
 
-function sum(...nums) {
-    return nums.reduce((a,b) => a+b);
-}
+// function sum(...nums) {
+//     return nums.reduce((a,b) => a+b);
+// }
 
-console.log(sum(1,2,3,4,5));
+// console.log(sum(1,2,3,4,5));
+
+
+
+
+
+
+
+
+let nums = [1,2,3,4,5,6,7,8,9,10];
+
+let [a,b,c] = nums;
+
+console.log(a)
+console.log(b)
+console.log(c)
+
+
+
+let student = {
+    name : 'Mofiz', 
+    roll_no : 15,
+    age : 24,
+    city : 'Mumbai'
+};
+
+
+
+console.log(student.name);
+// let {name, age} = student;
+
+// console.log(name);
+// console.log(age);
