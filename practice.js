@@ -128,7 +128,16 @@
 
 
 
-let arr = [1,3,5,7,9];
+// let arr = [1,3,5,7,9];
 
-let some = arr.some((num) => num%2 === 0);
-console.log(some);
+// let some = arr.some((num) => num%2 === 0);
+// console.log(some);
+
+
+
+
+
+let arr = [1,2,3,4,5];
+
+let total = arr.reduce((a,b) => a*b);
+console.log(total);
