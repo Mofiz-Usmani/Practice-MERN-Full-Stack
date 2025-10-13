@@ -83,12 +83,15 @@
 
     <script>
         function submitForm() {
-            let newTable = document.querySelector('#newTable'); 
-
+            let newTable = document.querySelector('#newTable');
+            let existingTable = document.querySelector('#existingTable');
             let name = document.querySelector('#name');
             let email = document.querySelector('#email');
             let type = document.querySelector('#csType');
 
+
+            if(type.value == 'new'){
+                
             let newRow = document.createElement('tr');
 
             let nameData = document.createElement("td");
@@ -106,6 +109,25 @@
             newRow.appendChild(typeData)
 
             newTable.appendChild(newRow);
+            } else {
+                let newRow = document.createElement('tr');
+
+            let nameData = document.createElement("td");
+            let emailData = document.createElement("td");
+            let typeData = document.createElement("td");
+
+
+            nameData.textContent = name.value;
+            emailData.textContent = email.value;
+            typeData.textContent = type.value;
+
+
+            newRow.appendChild(nameData)
+            newRow.appendChild(emailData)
+            newRow.appendChild(typeData)
+
+            existingTable.appendChild(newRow);
+            }
         }
     </script>
 </body>
