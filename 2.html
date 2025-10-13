@@ -108,7 +108,7 @@
             nameData.textContent = name.value;
             emailData.textContent = email.value;
             btnNew.innerText = "Approve";
-            btnNew.classList.add('btn btn-primary');
+            btnNew.className = 'btn btn-primary';
 
 
             newRow.appendChild(nameData)
@@ -126,17 +126,24 @@
             let emailData = document.createElement("td");
             let typeData = document.createElement("td");
             let amountData = document.createElement("td");
+            let btnExist = document.createElement('button');
 
 
             nameData.textContent = name.value;
             emailData.textContent = email.value;
             amountData.textContent = amount.value;
+            btnExist.innerText = 'Remove';
             
+            btnExist.className = 'btn btn-danger';
 
+            btnExist.addEventListener('click' , () => {
+                newRow.remove();
+            })
 
             newRow.appendChild(nameData)
             newRow.appendChild(emailData)
             newRow.appendChild(amountData)
+            newRow.appendChild(btnExist)
 
             existingTable.appendChild(newRow);
             }
