@@ -178,27 +178,38 @@
 
 
 
-let nums = [1,2,3,4,5,6,7,8,9,10];
+// let nums = [1,2,3,4,5,6,7,8,9,10];
 
-let [a,b,c] = nums;
+// let [a,b,c] = nums;
 
-console.log(a)
-console.log(b)
-console.log(c)
-
-
-
-let student = {
-    name : 'Mofiz', 
-    roll_no : 15,
-    age : 24,
-    city : 'Mumbai'
-};
+// console.log(a)
+// console.log(b)
+// console.log(c)
 
 
 
-console.log(student.name);
+// let student = {
+//     name : 'Mofiz', 
+//     roll_no : 15,
+//     age : 24,
+//     city : 'Mumbai'
+// };
+
+
+
 // let {name, age} = student;
 
 // console.log(name);
 // console.log(age);
+
+
+
+
+
+
+
+
+
+
+
+let h1 = document.getElementById('head1')
