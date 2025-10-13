@@ -54,17 +54,51 @@
 
     <script>
         let otp = "";
-        function getOtp() {
-            for(let i=0; i<=3; i++){
-                otp+=Math.floor(Math.random()*10);
-            }
-            alert("Generated OTP: "+otp);
+        let countdown;
+        let time;
+
+
+         function getOtp() {
+      otp = "";
+      clearInterval(countdown);
+      document.getElementById("timer").textContent = "";
+
+      // Generate 4-digit OTP
+      for (let i = 0; i < 4; i++) {
+        otp += Math.floor(Math.random() * 10);
+      }
+      alert("Generated OTP: " + otp);
+
+      // Start 2-minute timer (120 seconds)
+      time = 120;
+      let timerEl = document.getElementById("timer");
+
+      countdown = setInterval(() => {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        // Simpler formatting
+        if (seconds < 10) seconds = "0" + seconds;
+        if (minutes < 10) minutes = "0" + minutes;
+
+        timerEl.textContent = minutes + ":" + seconds;
+
+        time--;
+
+        if (time < 0) {
+          clearInterval(countdown);
+          otp = "";
+          timerEl.textContent = "Timeout: OTP expired. Generate a new one.";
         }
+      }, 1000);
+    }
 
         function checkOtp() {
             let input = document.querySelector('input');
             if(otp === input.value) {
                 alert("OTP Matched");
+                clearInterval(countdown);
+                input.value = "";
             }else {
                 alert("OTP not Matched, Please try again.")
             }
