@@ -115,6 +115,39 @@
             newRow.appendChild(emailData)
             newRow.appendChild(btnNew)
 
+
+            btnNew.addEventListener('click', () => {
+                let amtRow = document.getElementById("amt");
+                amtRow.style.display = "table-row";
+
+                let newRow = document.createElement('tr');
+
+            let nameData = document.createElement("td");
+            let emailData = document.createElement("td");
+            let typeData = document.createElement("td");
+            let amountData = document.createElement("td");
+            let btnExist = document.createElement('button');
+
+
+            nameData.textContent = name.value;
+            emailData.textContent = email.value;
+            amountData.textContent = "Approve";
+            btnExist.innerText = 'Remove';
+            
+            btnExist.className = 'btn btn-danger';
+
+            btnExist.addEventListener('click' , () => {
+                newRow.remove();
+            })
+
+            newRow.appendChild(nameData)
+            newRow.appendChild(emailData)
+            newRow.appendChild(amountData)
+            newRow.appendChild(btnExist)
+
+            existingTable.appendChild(newRow);
+            })
+
             newTable.appendChild(newRow);
             } else {
                 let amtRow = document.getElementById("amt");
