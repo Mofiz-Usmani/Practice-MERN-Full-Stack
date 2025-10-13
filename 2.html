@@ -13,14 +13,13 @@
 <body>
     <div class="container">
         <div class="row">
+            <!-- Form Section -->
             <div class="col-md-4">
                 <h2>Form</h2>
                 <form name="myF" onsubmit="return validateForm()">
                     <table class="table">
                         <tr>
-                            <td>
-                                <label for="name">Name</label>
-                            </td>
+                            <td><label for="name">Name</label></td>
                             <td><input type="text" name="name" id="name" required></td>
                         </tr>
                         <tr>
@@ -28,9 +27,7 @@
                             <td><input type="email" name="email" id="email" required></td>
                         </tr>
                         <tr>
-                            <td>
-                                <label for="csType">Customer Type</label>
-                            </td>
+                            <td><label for="csType">Customer Type</label></td>
                             <td>
                                 <select name="csType" id="csType" onchange="changCT()">
                                     <option value=""></option>
@@ -40,17 +37,20 @@
                             </td>
                         </tr>
                         <tr id="amt" style="display: none;">
-                            <td id="amtL"><label for="amount">Amount</label></td>
-                            <td id="amtI"><input type="text" name="amount" id="amount"></td>
+                            <td><label for="amount">Amount</label></td>
+                            <td><input type="text" name="amount" id="amount"></td>
                         </tr>
                         <tr>
-                            <td><button type="button" class="btn btn-success" onclick="submitForm()">Submit</button>
+                            <td>
+                                <button type="button" class="btn btn-success" onclick="submitForm()">Submit</button>
                             </td>
                             <td></td>
                         </tr>
                     </table>
                 </form>
             </div>
+
+            <!-- Existing Customers -->
             <div class="col-md-4" id="exC">
                 <h2>Existing Customers</h2>
                 <table class="table" id="existingTable">
@@ -65,6 +65,8 @@
                     <tbody></tbody>
                 </table>
             </div>
+
+            <!-- New Customers -->
             <div class="col-md-4" id="neC">
                 <h2>New Customers</h2>
                 <table class="table" id="newTable">
@@ -86,7 +88,6 @@
             const type = document.getElementById("csType").value;
             const amtRow = document.getElementById("amt");
             amtRow.style.display = type === "existing" ? "table-row" : "none";
-            
         }
 
         function submitForm() {
@@ -97,88 +98,80 @@
             let type = document.querySelector('#csType');
             let amount = document.getElementById("amount");
 
-
-            if(type.value == 'new'){
-            let newRow = document.createElement('tr');
-            let nameData = document.createElement("td");
-            let emailData = document.createElement("td");
-            let btnNew = document.createElement('button');
-
-
-            nameData.textContent = name.value;
-            emailData.textContent = email.value;
-            btnNew.innerText = "Approve";
-            btnNew.className = 'btn btn-primary';
-
-
-            newRow.appendChild(nameData)
-            newRow.appendChild(emailData)
-            newRow.appendChild(btnNew)
-
-
-            btnNew.addEventListener('click', () => {
-                let amtRow = document.getElementById("amt");
-                amtRow.style.display = "table-row";
-
+            if (type.value == 'new') {
                 let newRow = document.createElement('tr');
+                let nameData = document.createElement("td");
+                let emailData = document.createElement("td");
+                let actionData = document.createElement("td");
+                let btnNew = document.createElement('button');
 
-            let nameData = document.createElement("td");
-            let emailData = document.createElement("td");
-            let typeData = document.createElement("td");
-            let amountData = document.createElement("td");
-            let btnExist = document.createElement('button');
+                nameData.textContent = name.value;
+                emailData.textContent = email.value;
+                btnNew.innerText = "Approve";
+                btnNew.className = 'btn btn-primary';
 
+                actionData.appendChild(btnNew);
+                newRow.appendChild(nameData);
+                newRow.appendChild(emailData);
+                newRow.appendChild(actionData);
+                newTable.querySelector('tbody').appendChild(newRow);
 
-            nameData.textContent = name.value;
-            emailData.textContent = email.value;
-            amountData.textContent = "Approve";
-            btnExist.innerText = 'Remove';
-            
-            btnExist.className = 'btn btn-danger';
+                btnNew.addEventListener('click', () => {
+                    // Move to existing table
+                    let existRow = document.createElement('tr');
 
-            btnExist.addEventListener('click' , () => {
-                newRow.remove();
-            })
+                    let nameData = document.createElement("td");
+                    let emailData = document.createElement("td");
+                    let amountData = document.createElement("td");
+                    let actionData = document.createElement("td");
+                    let btnExist = document.createElement('button');
 
-            newRow.appendChild(nameData)
-            newRow.appendChild(emailData)
-            newRow.appendChild(amountData)
-            newRow.appendChild(btnExist)
+                    nameData.textContent = name.value;
+                    emailData.textContent = email.value;
+                    amountData.textContent = amount.value || '—';
+                    btnExist.innerText = 'Remove';
+                    btnExist.className = 'btn btn-danger';
 
-            existingTable.appendChild(newRow);
-            })
+                    btnExist.addEventListener('click', () => {
+                        existRow.remove();
+                    });
 
-            newTable.appendChild(newRow);
+                    actionData.appendChild(btnExist);
+                    existRow.appendChild(nameData);
+                    existRow.appendChild(emailData);
+                    existRow.appendChild(amountData);
+                    existRow.appendChild(actionData);
+
+                    existingTable.querySelector('tbody').appendChild(existRow);
+
+                    // Remove from new table
+                    newRow.remove();
+                });
             } else {
-                let amtRow = document.getElementById("amt");
-                amtRow.style.display = "table-row";
-
                 let newRow = document.createElement('tr');
+                let nameData = document.createElement("td");
+                let emailData = document.createElement("td");
+                let amountData = document.createElement("td");
+                let actionData = document.createElement("td");
+                let btnExist = document.createElement('button');
 
-            let nameData = document.createElement("td");
-            let emailData = document.createElement("td");
-            let typeData = document.createElement("td");
-            let amountData = document.createElement("td");
-            let btnExist = document.createElement('button');
+                nameData.textContent = name.value;
+                emailData.textContent = email.value;
+                amountData.textContent = amount.value;
+                btnExist.innerText = 'Remove';
+                btnExist.className = 'btn btn-danger';
 
+                btnExist.addEventListener('click', () => {
+                    newRow.remove();
+                });
 
-            nameData.textContent = name.value;
-            emailData.textContent = email.value;
-            amountData.textContent = amount.value;
-            btnExist.innerText = 'Remove';
-            
-            btnExist.className = 'btn btn-danger';
+                actionData.appendChild(btnExist);
+                newRow.appendChild(nameData);
+                newRow.appendChild(emailData);
+                newRow.appendChild(amountData);
+                newRow.appendChild(actionData);
 
-            btnExist.addEventListener('click' , () => {
-                newRow.remove();
-            })
-
-            newRow.appendChild(nameData)
-            newRow.appendChild(emailData)
-            newRow.appendChild(amountData)
-            newRow.appendChild(btnExist)
-
-            existingTable.appendChild(newRow);
+                existingTable.querySelector('tbody').appendChild(newRow);
             }
         }
     </script>
