@@ -63,13 +63,11 @@
       clearInterval(countdown);
       document.getElementById("timer").textContent = "";
 
-      // Generate 4-digit OTP
       for (let i = 0; i < 4; i++) {
         otp += Math.floor(Math.random() * 10);
       }
       alert("Generated OTP: " + otp);
 
-      // Start 2-minute timer (120 seconds)
       time = 120;
       let timerEl = document.getElementById("timer");
 
@@ -77,7 +75,6 @@
         let minutes = Math.floor(time / 60);
         let seconds = time % 60;
 
-        // Simpler formatting
         if (seconds < 10) seconds = "0" + seconds;
         if (minutes < 10) minutes = "0" + minutes;
 

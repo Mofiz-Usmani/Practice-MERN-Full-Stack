@@ -211,5 +211,3 @@
 
 
 
-
-let h1 = document.getElementById('head1')
