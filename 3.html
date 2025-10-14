@@ -164,7 +164,9 @@
             console.log(removeBtn.classList);
 
 
-            removeBtn.onclick = table.remove();
+            removeBtn.addEventListener("click", () => {
+                table.remove();
+            })
         }
     </script>
 </body>
