@@ -50,7 +50,7 @@
                             <option value="0" selected>select budget</option>
                             <option value="budget1">Microsoft 365 license</option>
                             <option value="budget2">Harware Update</option>
-                            <option value="budget2">Offshore Support</option>
+                            <option value="budget3">Offshore Support</option>
                         </select>
                     </div>
                     <div class="col-12">
@@ -98,23 +98,30 @@
             let remainingAmount = document.querySelector("#remaining");
             let amount = document.querySelector("#amount");
             let balanceAmount = document.querySelector("#balance");
-            const budget = document.querySelector("#budget").value;
 
         function select() {
-            
+            const budget = document.querySelector("#budget").value;
+
             switch(budget) {
+
             case 'budget1':
                 budgetAmount.value = "25000";
                 remainingAmount.value = "25000";
                 break;
+
             case 'budget2':
                 budgetAmount.value = "50000";
                 remainingAmount.value = "50000";
                 break;
+
             case 'budget3':
                 budgetAmount.value = "30000";
                 remainingAmount.value = "30000";
                 break;
+
+            default:
+                budgetAmount.value = "";
+                remainingAmount.value = "";
             }
         }
 
