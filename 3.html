@@ -94,20 +94,33 @@
     </div>
 
     <script>
-         let budgetAmount = document.querySelector("#budgetamt");
+            let budgetAmount = document.querySelector("#budgetamt");
             let remainingAmount = document.querySelector("#remaining");
             let amount = document.querySelector("#amount");
             let balanceAmount = document.querySelector("#balance");
+            const budget = document.querySelector("#budget").value;
 
         function select() {
-
-            budgetAmount.value = "25000";
-            remainingAmount.value = "25000";
+            
+            switch(budget) {
+            case 'budget1':
+                budgetAmount.value = "25000";
+                remainingAmount.value = "25000";
+                break;
+            case 'budget2':
+                budgetAmount.value = "50000";
+                remainingAmount.value = "50000";
+                break;
+            case 'budget3':
+                budgetAmount.value = "30000";
+                remainingAmount.value = "30000";
+                break;
+            }
         }
 
-         function updateBalance() {
-                balanceAmount.value = budgetAmount.value-amount.value;
-            }
+        function updateBalance() {
+            balanceAmount.value = budgetAmount.value-amount.value;
+        }
     </script>
 </body>
 
