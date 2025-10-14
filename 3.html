@@ -98,8 +98,7 @@
             let remainingAmount = document.querySelector("#remaining");
             let amount = document.querySelector("#amount");
             let balanceAmount = document.querySelector("#balance");
-            let table = document.querySelector("#viewtable");
-
+    
         function select() {
             const budget = document.querySelector("#budget").value;
 
@@ -128,6 +127,31 @@
 
         function updateBalance() {
             balanceAmount.value = budgetAmount.value-amount.value;
+        }
+
+
+        function submitForm(event) {
+            event.preventDefault();
+
+
+            let table = document.querySelector("#viewtable");
+            let subjectData = document.createElement('td');
+            let budgetData = document.createElement('td');
+            let amountData = document.createElement('td');
+            let balanceData = document.createElement('td');
+            let actionData = document.createElement('button');
+            let subject = document.querySelector('#subject');
+
+
+            subjectData.innerText = this.options[this.selectedIndex].text;
+            budgetData.innerText = this.options[this.selectedIndex].text;
+            amountData.innerText = budgetAmount.value;
+            balanceData.innerText = remainingAmount.value;
+
+            table.appendChild(subjectData);
+            table.appendChild(budgetData);
+            table.appendChild(amountData);
+            table.appendChild(balanceData);
         }
     </script>
 </body>
