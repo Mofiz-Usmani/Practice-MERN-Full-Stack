@@ -141,10 +141,11 @@
             let balanceData = document.createElement('td');
             let actionData = document.createElement('button');
             let subject = document.querySelector('#subject');
+            let budget = document.querySelector("#budget");
 
 
-            subjectData.innerText = this.options[this.selectedIndex].text;
-            budgetData.innerText = this.options[this.selectedIndex].text;
+            subjectData.innerText = subject.value;
+            budgetData.innerText = budget.value;
             amountData.innerText = budgetAmount.value;
             balanceData.innerText = remainingAmount.value;
 
