@@ -94,10 +94,20 @@
     </div>
 
     <script>
+         let budgetAmount = document.querySelector("#budgetamt");
+            let remainingAmount = document.querySelector("#remaining");
+            let amount = document.querySelector("#amount");
+            let balanceAmount = document.querySelector("#balance");
+
         function select() {
-            let budgetAmount = document.querySelector("#budgetamt");
-            budgetAmount.value = "25000"
+
+            budgetAmount.value = "25000";
+            remainingAmount.value = "25000";
         }
+
+         function updateBalance() {
+                balanceAmount.value = budgetAmount.value-amount.value;
+            }
     </script>
 </body>
 
