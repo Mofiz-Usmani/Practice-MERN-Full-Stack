@@ -129,7 +129,15 @@ button.delete {
         let p = document.createElement("p");
         p.innerText = task[0];
 
+        let btnDelete = document.createElement('button');
+        btnDelete.innerText = "Delete";
+
+        let btnEdit = document.querySelector("button");
+        btnEdit.innerText = "Edit";
+
         container.appendChild(p);
+        p.appendChild(btnDelete);
+        p.appendChild(btnEdit);
 
         switch(priority.value){
             case 'low':
