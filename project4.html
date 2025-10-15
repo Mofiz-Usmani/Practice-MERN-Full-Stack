@@ -131,7 +131,17 @@ button.delete {
 
         container.appendChild(p);
 
-        console.log(priority.value);
+        switch(priority.value){
+            case 'low':
+                p.classList.add("low-priority");
+                break;
+            case 'medium':
+                p.classList.add("medium-priority");
+                break;
+            case 'high':
+                p.classList.add("high-priority");
+                break;
+        }
     }
 </script>
 
