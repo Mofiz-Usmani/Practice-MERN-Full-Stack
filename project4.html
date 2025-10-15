@@ -119,13 +119,17 @@ button.delete {
     let taskName = document.querySelector("#taskName");
     let dueDate = document.querySelector("#dueDate");
     let priority = document.querySelector("#priority");
+    let container = document.querySelector(".container");
 
     function addTask() {
         let task = [];
         task.push(taskName.value);
         task.push(dueDate.value);
-        console.log(task[0]);
-        console.log(task[1]);
+
+        let p = document.createElement("p");
+        p.innerText = task[0];
+
+        container.appendChild(p);
     }
 </script>
 
