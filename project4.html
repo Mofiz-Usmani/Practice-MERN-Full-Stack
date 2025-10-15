@@ -127,8 +127,8 @@ button.delete {
         task.push(dueDate.value);
 
         let p = document.createElement("p");
-        p.innerText = task[0];
-
+        p.innerText = `${task[0]} - Due: ${task[1]}`;
+        
         let btnDelete = document.createElement('button');
         btnDelete.innerText = "Delete";
         btnDelete.classList.add("delete");
