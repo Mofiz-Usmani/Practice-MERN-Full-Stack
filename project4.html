@@ -124,7 +124,8 @@ button.delete {
 
     function addTask() {
         let li = document.createElement("li");
-        li.innerHTML = `<span>${taskName.value} — Due: ${dueDate.value} — Priority: ${priority.value}</span>`;
+        li.innerHTML = `<span class="task-name">${taskName.value}</span> — Due: <span class="task-date">${dueDate.value}</span>`;
+
 
         switch (priority.value) {
           case 'low': 
@@ -137,10 +138,39 @@ button.delete {
                 li.classList.add("high-priority"); 
                 break;
 
-            
-            container.appendChild(taskList)
-            taskList.appendChild(li);
         }
+
+
+        let btnContainer = document.createElement("div");
+        btnContainer.classList.add("buttons");
+
+        let btnEdit = document.createElement("button");
+        btnEdit.innerText = "Edit";
+        btnEdit.classList.add("edit");
+        btnEdit.onclick = () => {
+            let newTaskName = prompt("Enter new task name:");
+            li.querySelector("span").innerText = newTaskName;
+        }
+
+
+
+        let btnDelete = document.createElement("button");
+        btnDelete.innerText = "Delete";
+        btnDelete.classList.add("delete");
+        btnDelete.onclick = () => {
+            li.remove();
+        }
+
+
+        btnContainer.appendChild(btnEdit);
+        btnContainer.appendChild(btnDelete);
+        li.appendChild(btnContainer);
+        taskList.appendChild(li);
+
+
+        taskName.value = "";
+        dueDate.value = "";
+        priority.value = "low";
     }
 </script>
 
