@@ -116,7 +116,17 @@ button.delete {
 </div>
 
 <script>
-    
+    let taskName = document.querySelector("#taskName");
+    let dueDate = document.querySelector("#dueDate");
+    let priority = document.querySelector("#priority");
+
+    function addTask() {
+        let task = [];
+        task.push(taskName.value);
+        task.push(dueDate.value);
+        console.log(task[0]);
+        console.log(task[1]);
+    }
 </script>
 
 </body>
