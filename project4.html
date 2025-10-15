@@ -152,7 +152,11 @@ button.delete {
                 p.classList.add("high-priority");
                 break;
         }
+        
 
+        btnDelete.onclick = () => {
+            p.remove();
+        }
 
 
         btnEdit.onclick = () => {
