@@ -126,8 +126,19 @@
         }
 
         function updateBalance() {
-            balanceAmount.value = budgetAmount.value-amount.value;
-        }
+            let amtSpent = parseFloat(amount.value) || 0;
+            let budgetVal = parseFloat(budgetAmount.value) || 0;
+
+            let remaining = budgetVal - amtSpent;
+
+            if (remaining < 0) {
+                alert("Amount exceeds budget! Please enter a valid amount.");
+                amount.value = "";       
+                balanceAmount.value = budgetVal
+            } else {
+                balanceAmount.value = remaining;
+            }
+}
 
 
         function submitForm(event) {
@@ -161,12 +172,15 @@
             table.appendChild(amountData);
             table.appendChild(balanceData);
             table.appendChild(removeBtn);
-            console.log(removeBtn.classList);
 
 
             removeBtn.addEventListener("click", () => {
-                table.remove();
-            })
+                subjectData.remove();
+                budgetData.remove();
+                amountData.remove();
+                balanceData.remove();
+                actionData.remove();
+            });
         }
     </script>
 </body>
