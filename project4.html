@@ -152,7 +152,8 @@ button.delete {
                 p.classList.add("high-priority");
                 break;
 
-            task = [];
+
+
         }
 
 
@@ -165,6 +166,11 @@ button.delete {
             let newTask = prompt("Enter the new task name: ");
             p.firstChild.textContent = `${newTask}`;
         }
+
+
+        taskName.value = "";
+        dueDate.value = "";
+        priority.value = "low";
     }
 </script>
 
