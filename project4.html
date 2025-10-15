@@ -116,61 +116,31 @@ button.delete {
 </div>
 
 <script>
+    let taskList = document.querySelector("#taskList");
     let taskName = document.querySelector("#taskName");
     let dueDate = document.querySelector("#dueDate");
     let priority = document.querySelector("#priority");
     let container = document.querySelector(".container");
 
     function addTask() {
-        let task = [];
-        task.push(taskName.value);
-        task.push(dueDate.value);
+        let li = document.createElement("li");
+        li.innerHTML = `<span>${taskName.value} — Due: ${dueDate.value} — Priority: ${priority.value}</span>`;
 
-        let p = document.createElement("p");
-        p.innerText = `${task[0]} - Due: ${task[1]}`;
-        
-        let btnDelete = document.createElement('button');
-        btnDelete.innerText = "Delete";
-        btnDelete.classList.add("delete");
-
-        let btnEdit = document.createElement("button");
-        btnEdit.innerText = "Edit";
-        btnEdit.classList.add("edit");
-
-        container.appendChild(p);
-        p.appendChild(btnDelete);
-        p.appendChild(btnEdit);
-
-        switch(priority.value){
-            case 'low':
-                p.classList.add("low-priority");
+        switch (priority.value) {
+          case 'low': 
+                li.classList.add("low-priority"); 
+            break;
+          case 'medium': 
+                li.classList.add("medium-priority"); 
                 break;
-            case 'medium':
-                p.classList.add("medium-priority");
-                break;
-            case 'high':
-                p.classList.add("high-priority");
+          case 'high': 
+                li.classList.add("high-priority"); 
                 break;
 
-
-
+            
+            container.appendChild(taskList)
+            taskList.appendChild(li);
         }
-
-
-        btnDelete.onclick = () => {
-            p.remove();
-        }
-
-
-        btnEdit.onclick = () => {
-            let newTask = prompt("Enter the new task name: ");
-            p.firstChild.textContent = `${newTask}`;
-        }
-
-
-        taskName.value = "";
-        dueDate.value = "";
-        priority.value = "low";
     }
 </script>
 
