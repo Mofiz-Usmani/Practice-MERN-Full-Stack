@@ -131,9 +131,11 @@ button.delete {
 
         let btnDelete = document.createElement('button');
         btnDelete.innerText = "Delete";
+        btnDelete.classList.add("delete");
 
         let btnEdit = document.querySelector("button");
         btnEdit.innerText = "Edit";
+        btnEdit.classList.add("edit");
 
         container.appendChild(p);
         p.appendChild(btnDelete);
