@@ -74,20 +74,85 @@ li {
 </div>
 
 <script>
-    let UnorderedList = document.querySelector("#itemList");
-    let listItem = document.createElement("li");
-    listItem.innerText = "Item 1";
-    listItem.innerText = "Item 2";
-    listItem.innerText = "Item 3";
-    listItem.innerText = "Item 4";
-    listItem.innerText = "Item 5";
-    listItem.innerText = "Item 6";
-    listItem.innerText = "Item 7";
-    listItem.innerText = "Item 8";
-    listItem.innerText = "Item 9";
-    listItem.innerText = "Item 10";
-    UnorderedList.appendChild(listItem);
+  // create dummy items
+  let items = [];
+  for (let i = 1; i <= 100; i++) {
+    items.push("Item " + i);
+  }
+
+  let currentPage = 1;
+  let itemsPerPage = 5;
+
+  let itemList = document.getElementById("itemList");
+  let pageNumbers = document.getElementById("pageNumbers");
+  let prevBtn = document.getElementById("prevBtn");
+  let nextBtn = document.getElementById("nextBtn");
+
+  function showItems(page) {
+    itemList.innerHTML = "";
+    let start = (page - 1) * itemsPerPage;
+    let end = start + itemsPerPage;
+
+    for (let i = start; i < end && i < items.length; i++) {
+      let li = document.createElement("li");
+      li.textContent = items[i];
+      itemList.appendChild(li);
+    }
+  }
+
+  function makePageButtons() {
+    pageNumbers.innerHTML = "";
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+      let btn = document.createElement("button");
+      btn.textContent = i;
+
+      btn.onclick = function () {
+        currentPage = i;
+        showItems(currentPage);
+        updateButtons();
+      };
+
+      pageNumbers.appendChild(btn);
+    }
+  }
+
+  function updateButtons() {
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+    let allBtns = pageNumbers.querySelectorAll("button");
+
+    allBtns.forEach((btn, index) => {
+      btn.classList.toggle("active-page", index + 1 === currentPage);
+    });
+
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+  }
+
+  prevBtn.onclick = function () {
+    if (currentPage > 1) {
+      currentPage--;
+      showItems(currentPage);
+      updateButtons();
+    }
+  };
+
+  nextBtn.onclick = function () {
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+    if (currentPage < totalPages) {
+      currentPage++;
+      showItems(currentPage);
+      updateButtons();
+    }
+  };
+
+  // initialize
+  showItems(currentPage);
+  makePageButtons();
+  updateButtons();
 </script>
+
 
 </body>
 </html>
