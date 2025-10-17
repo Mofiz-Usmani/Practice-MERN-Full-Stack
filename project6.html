@@ -46,7 +46,6 @@ h2, h3 {
 }
 
 button {
-    
     padding: 10px 20px;
     font-size: 16px;
     background-color: #2b3d68;
@@ -129,8 +128,82 @@ th {
     </div>
 
 <script>
-    
+let btn1 = document.querySelector(".btn1");
+let emplName = document.querySelector("#name");
+let emplAge = document.querySelector("#age");
+let emplEmail = document.querySelector("#email");
+let emplDepartment = document.querySelector("#department");
+let table = document.querySelector("#employeeTableBody");
+
+btn1.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    let tableRow = document.createElement("tr");
+    let emplNames = document.createElement("td");
+    let emplAges = document.createElement("td");
+    let emplEmails = document.createElement("td");
+    let emplDepartments = document.createElement("td");
+    let actionTd = document.createElement("td");
+
+    emplNames.innerText = emplName.value;
+    emplAges.innerText = emplAge.value;
+    emplEmails.innerText = emplEmail.value;
+    emplDepartments.innerText = emplDepartment.value;
+
+    let editBtn = document.createElement("button");
+    editBtn.innerText = "Edit";
+
+    let delBtn = document.createElement("button");
+    delBtn.innerText = "Delete";
+
+    actionTd.appendChild(editBtn);
+    actionTd.appendChild(delBtn);
+
+    tableRow.appendChild(emplNames);
+    tableRow.appendChild(emplAges);
+    tableRow.appendChild(emplEmails);
+    tableRow.appendChild(emplDepartments);
+    tableRow.appendChild(actionTd);
+
+    table.appendChild(tableRow);
+
+    delBtn.addEventListener("click", () => {
+        tableRow.remove();
+    });
+
+       editBtn.addEventListener("click", () => {
+        emplName.value = emplNames.innerText;
+        emplAge.value = emplAges.innerText;
+        emplEmail.value = emplEmails.innerText;
+        emplDepartment.value = emplDepartments.innerText;
+
+        tableRow.remove();
+    });
+
+    emplName.value = "";
+    emplAge.value = "";
+    emplEmail.value = "";
+    emplDepartment.value = "";
+});
+
+
+searchInput.addEventListener("input", () => {
+    const filter = searchInput.value.toLowerCase();
+    const rows = table.getElementsByTagName("tr");
+
+    for (let row of rows) {
+        const name = row.cells[0].innerText.toLowerCase();
+        const department = row.cells[3].innerText.toLowerCase();
+
+        if (name.includes(filter) || department.includes(filter)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    }
+});
 </script>
+
 
 </body>
 </html>
