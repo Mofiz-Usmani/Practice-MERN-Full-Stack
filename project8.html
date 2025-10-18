@@ -88,6 +88,8 @@ form input, form button {
     let description = document.querySelector("#description");
     let submitBtn = document.querySelector('button');
     let tableBody = document.querySelector("#expenseList");
+    let totalExpenses = document.querySelector("#totalExpenses");
+    let totalAmount = [];
 
     
     submitBtn.addEventListener('click', (event) => {
@@ -103,9 +105,13 @@ form input, form button {
         descriptionData.innerText = description.value;
 
         tableBody.appendChild(tableRow);
-        tableRow.appendChild(nameData);
+        tableRow.appendChild(amountData);
         tableRow.appendChild(categoryData);
         tableRow.appendChild(descriptionData);
+
+        totalAmount.push(amount.value);
+        console.log(totalAmount);
+        // totalExpenses.innerText = `${amount.value}`;
     });
     
 </script>
