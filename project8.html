@@ -110,14 +110,12 @@ form input, form button {
         tableRow.appendChild(descriptionData);
 
         totalAmount.push(Number(amount.value));
-        console.log(totalAmount);
-        let total=0;
-        for(let i=0; i<totalAmount.length; i++){
-            total = total + totalAmount[i];
-        }
-        console.log(total);
-        // console.log(total);
-        // totalExpenses.innerText = `${amount.value}`;
+
+        let total = totalAmount.reduce((sum, el) => {
+            return sum + el;
+        });
+
+        totalExpenses.innerText = `${total}`;
     });
     
 </script>
