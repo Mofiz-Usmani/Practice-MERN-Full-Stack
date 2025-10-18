@@ -87,10 +87,15 @@ form input, form button {
     let category = document.querySelector("#category");
     let description = document.querySelector("#description");
     let submitBtn = document.querySelector('button');
+    let tableBody = document.querySelector("#expenseList");
+
     
     submitBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        console.log("submit");
+        
+        let tableRow = document.createElement("tr");
+        let nameData = document.createElement("td");
+        let categoryData = document.createElement("td");
     })
     
 </script>
