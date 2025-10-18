@@ -96,7 +96,17 @@ form input, form button {
         let tableRow = document.createElement("tr");
         let nameData = document.createElement("td");
         let categoryData = document.createElement("td");
-    })
+        let descriptionData = document.createElement("td");
+
+        nameData.innerText = name.value;
+        categoryData.innerText = category.value;
+        descriptionData.innerText = description.value;
+
+        tableBody.appendChild(tableRow);
+        tableRow.appendChild(nameData);
+        tableRow.appendChild(categoryData);
+        tableRow.appendChild(descriptionData);
+    });
     
 </script>
 
