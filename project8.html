@@ -83,6 +83,15 @@ form input, form button {
 </div>
 
 <script>
+    let amount = document.querySelector("#amount");
+    let category = document.querySelector("#category");
+    let description = document.querySelector("#description");
+    let submitBtn = document.querySelector('button');
+    
+    submitBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log("submit");
+    })
     
 </script>
 
