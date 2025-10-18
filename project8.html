@@ -111,6 +111,10 @@ form input, form button {
 
         totalAmount.push(amount.value);
         console.log(totalAmount);
+        let total = totalAmount.forEach((el) => {
+            el+el;
+        });
+        console.log(total);
         // totalExpenses.innerText = `${amount.value}`;
     });
     
