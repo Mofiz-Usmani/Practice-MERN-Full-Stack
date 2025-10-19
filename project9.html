@@ -132,7 +132,16 @@ button {
     let phoneNumberError = document.querySelector("#phoneNumberError");
     let emailError = document.querySelector("#emailError");
 
-    
+    let form = document.querySelector("#registrationForm");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let valid = true;
+
+        if(fullName.value.trim() === ""){
+            fullNameError.innerText = "Full Name is required";
+        }
+    })
 </script>
 
 </body>
