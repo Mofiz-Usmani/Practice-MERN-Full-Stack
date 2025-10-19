@@ -126,7 +126,6 @@ button {
     let country = document.querySelector("#country");
     let currency = document.querySelector("#currency");
 
-
     let fullNameError = document.querySelector("#fullNameError");
     let passwordError = document.querySelector("#passwordError");
     let phoneNumberError = document.querySelector("#phoneNumberError");
@@ -138,32 +137,33 @@ button {
         event.preventDefault();
         let valid = true;
 
-        if(fullName.value.trim() === ""){
+        // Full Name Validation
+        if (fullName.value.trim() === "") {
             fullNameError.innerText = "Full Name is required";
             valid = false;
         } else {
             fullNameError.innerText = "";
         }
 
-
+        // Password Validation
         const passPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
-         if (!passPattern.test(password.value)) {
-            passwordError.innerText = "Password must be atleast 6 characters long and include atleast one number, one letter, and one special character";
+        if (!passPattern.test(password.value)) {
+            passwordError.innerText = "Password must be at least 6 characters long and include one number, one letter, and one special character.";
             valid = false;
         } else {
             passwordError.innerText = "";
         }
 
-
+        // Phone Validation
         const phonePattern = /^[0-9]+$/;
         if (!phonePattern.test(phoneNumber.value)) {
-            phoneError.innerText = "Phone Number must contain only numerical digits.";
+            phoneNumberError.innerText = "Phone Number must contain only numerical digits.";
             valid = false;
         } else {
-            phoneError.innerText = "";
+            phoneNumberError.innerText = "";
         }
 
-
+        // Email Validation
         let emailValue = email.value.trim();
 
         if (emailValue === "") {
@@ -176,43 +176,51 @@ button {
             emailError.innerText = `Please include a '.' after the domain part. "${emailValue}" seems incomplete.`;
             valid = false;
         } else {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailValue)) {
-            emailError.innerText = "Please enter a valid email address format.";
-            valid = false;
-        } else {
-            emailError.innerText = "";
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailValue)) {
+                emailError.innerText = "Please enter a valid email address format.";
+                valid = false;
+            } else {
+                emailError.innerText = "";
+            }
         }
 
-
+        // Country and Currency Mapping
         const countryCurrency = {
-        "Afghanistan": "Afghani (AFN)",
-        "Armenia": "Dram (AMD)",
-        "Australia": "Australian Dollar (AUD)",
-        "Austria": "Euro (EUR)",
-        "Bahrain": "Bahraini Dinar (BHD)",
-        "Brazil": "Brazilian Real (BRL)",
-        "Canada": "Canadian Dollar (CAD)",
-        "Egypt": "Egyptian Pound (EGP)",
-        "India": "Indian Rupee (INR)",
-        "Kuwait": "Kuwaiti Dinar (KWD)",
-        "Qatar": "Qatari Riyal (QAR)",
-        "SaudiArabia": "Saudi Riyal (SAR)",
-        "SouthAfrica": "Rand (ZAR)",
-        "UAE": "Dirham (AED)",
-        "UK": "Pound Sterling (GBP)",
-        "USA": "US Dollar (USD)",
-        "Yemen": "Yemeni Rial (YER)"
+            "Afghanistan": "Afghani (AFN)",
+            "Armenia": "Dram (AMD)",
+            "Australia": "Australian Dollar (AUD)",
+            "Austria": "Euro (EUR)",
+            "Bahrain": "Bahraini Dinar (BHD)",
+            "Brazil": "Brazilian Real (BRL)",
+            "Canada": "Canadian Dollar (CAD)",
+            "Egypt": "Egyptian Pound (EGP)",
+            "India": "Indian Rupee (INR)",
+            "Kuwait": "Kuwaiti Dinar (KWD)",
+            "Qatar": "Qatari Riyal (QAR)",
+            "SaudiArabia": "Saudi Riyal (SAR)",
+            "SouthAfrica": "Rand (ZAR)",
+            "UAE": "Dirham (AED)",
+            "UK": "Pound Sterling (GBP)",
+            "USA": "US Dollar (USD)",
+            "Yemen": "Yemeni Rial (YER)"
         };
 
-        if(country.value === "") {
+        if (country.value === "") {
             alert("Please select a country.");
             valid = false;
+        } else {
+            currency.value = countryCurrency[country.value] || "";
         }
-        currency.innerText = country
-}
-    })
+        let countryValue = country.value;
+        currency.innerText = countryCurrency.countryValue;
+
+        if (valid) {
+            alert("Form submitted successfully!");
+        }
+    }); 
 </script>
+
 
 </body>
 </html>
