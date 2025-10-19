@@ -164,13 +164,26 @@ button {
         }
 
 
-         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email.value)) {
-            emailError.innerText = `Please include an '@' in the email address. ${email.value} is missing an @`;
+        let emailValue = email.value.trim();
+
+        if (emailValue === "") {
+            emailError.innerText = "Email cannot be empty.";
+            valid = false;
+        } else if (!emailValue.includes("@")) {
+            emailError.innerText = `Please include an '@' in the email address. "${emailValue}" is missing an '@'.`;
+            valid = false;
+        } else if (!emailValue.includes(".")) {
+            emailError.innerText = `Please include a '.' after the domain part. "${emailValue}" seems incomplete.`;
+            valid = false;
+        } else {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailValue)) {
+            emailError.innerText = "Please enter a valid email address format.";
             valid = false;
         } else {
             emailError.innerText = "";
         }
+}
     })
 </script>
 
