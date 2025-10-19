@@ -153,6 +153,15 @@ button {
         } else {
             passwordError.innerText = "";
         }
+
+
+        const phonePattern = /^[0-9]+$/;
+        if (!phonePattern.test(phoneNumber.value)) {
+            phoneError.innerText = "Phone Number must contain only numerical digits.";
+            valid = false;
+        } else {
+            phoneError.innerText = "";
+        }
     })
 </script>
 
