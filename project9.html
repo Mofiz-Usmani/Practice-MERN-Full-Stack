@@ -210,10 +210,9 @@ button {
             alert("Please select a country.");
             valid = false;
         } else {
-            currency.value = countryCurrency[country.value] || "";
+           let countryValue = country.value;
+           currency.innerText = countryCurrency.countryValue;
         }
-        let countryValue = country.value;
-        currency.innerText = countryCurrency.countryValue;
 
         if (valid) {
             alert("Form submitted successfully!");
