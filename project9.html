@@ -146,6 +146,13 @@ button {
         }
 
 
+        const passPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+         if (!passPattern.test(password.value)) {
+            passwordError.innerText = "Password must be atleast 6 characters long and include atleast one number, one letter, and one special character";
+            valid = false;
+        } else {
+            passwordError.innerText = "";
+        }
     })
 </script>
 
