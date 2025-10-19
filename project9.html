@@ -140,7 +140,12 @@ button {
 
         if(fullName.value.trim() === ""){
             fullNameError.innerText = "Full Name is required";
+            valid = false;
+        } else {
+            fullNameError.innerText = "";
         }
+
+
     })
 </script>
 
