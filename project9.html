@@ -183,6 +183,33 @@ button {
         } else {
             emailError.innerText = "";
         }
+
+
+        const countryCurrency = {
+        "Afghanistan": "Afghani (AFN)",
+        "Armenia": "Dram (AMD)",
+        "Australia": "Australian Dollar (AUD)",
+        "Austria": "Euro (EUR)",
+        "Bahrain": "Bahraini Dinar (BHD)",
+        "Brazil": "Brazilian Real (BRL)",
+        "Canada": "Canadian Dollar (CAD)",
+        "Egypt": "Egyptian Pound (EGP)",
+        "India": "Indian Rupee (INR)",
+        "Kuwait": "Kuwaiti Dinar (KWD)",
+        "Qatar": "Qatari Riyal (QAR)",
+        "SaudiArabia": "Saudi Riyal (SAR)",
+        "SouthAfrica": "Rand (ZAR)",
+        "UAE": "Dirham (AED)",
+        "UK": "Pound Sterling (GBP)",
+        "USA": "US Dollar (USD)",
+        "Yemen": "Yemeni Rial (YER)"
+    };
+
+        if(country.value === "") {
+            alert("Please select a country.");
+            valid = false;
+        }
+        currency.innerText = country
 }
     })
 </script>
