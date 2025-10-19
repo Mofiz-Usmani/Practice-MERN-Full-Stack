@@ -162,6 +162,15 @@ button {
         } else {
             phoneError.innerText = "";
         }
+
+
+         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value)) {
+            emailError.innerText = `Please include an '@' in the email address. ${email.value} is missing an @`;
+            valid = false;
+        } else {
+            emailError.innerText = "";
+        }
     })
 </script>
 
