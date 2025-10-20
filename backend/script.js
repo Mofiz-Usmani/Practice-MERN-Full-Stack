@@ -19,4 +19,6 @@
 
 const someValue = require("./math");
 
-console.log(someValue);
+// console.log(someValue);
+console.log(someValue.sum(4,7));
+console.log(someValue.mul(4,5));
