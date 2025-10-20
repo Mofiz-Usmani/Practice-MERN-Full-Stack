@@ -185,7 +185,7 @@ button {
             }
         }
 
-        // Country and Currency Mapping
+        
         const countryCurrency = {
             "Afghanistan": "Afghani (AFN)",
             "Armenia": "Dram (AMD)",
@@ -206,18 +206,43 @@ button {
             "Yemen": "Yemeni Rial (YER)"
         };
 
-        if (country.value === "") {
-            alert("Please select a country.");
-            valid = false;
-        } else {
-           let countryValue = country.value;
-           currency.innerText = countryCurrency.countryValue;
-        }
 
         if (valid) {
             alert("Form submitted successfully!");
         }
     }); 
+
+
+    const countryCurrency = {
+            "Afghanistan": "Afghani (AFN)",
+            "Armenia": "Dram (AMD)",
+            "Australia": "Australian Dollar (AUD)",
+            "Austria": "Euro (EUR)",
+            "Bahrain": "Bahraini Dinar (BHD)",
+            "Brazil": "Brazilian Real (BRL)",
+            "Canada": "Canadian Dollar (CAD)",
+            "Egypt": "Egyptian Pound (EGP)",
+            "India": "Indian Rupee (INR)",
+            "Kuwait": "Kuwaiti Dinar (KWD)",
+            "Qatar": "Qatari Riyal (QAR)",
+            "SaudiArabia": "Saudi Riyal (SAR)",
+            "SouthAfrica": "Rand (ZAR)",
+            "UAE": "Dirham (AED)",
+            "UK": "Pound Sterling (GBP)",
+            "USA": "US Dollar (USD)",
+            "Yemen": "Yemeni Rial (YER)"
+        };
+
+
+    country.addEventListener('change', () => {
+            const selectedCountry = country.value;
+
+        if (selectedCountry === "") {
+            currency.value = "";
+        } else {
+            currency.value = countryCurrency[selectedCountry];
+        }
+        });
 </script>
 
 
