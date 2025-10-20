@@ -17,8 +17,20 @@
 
 
 
-const someValue = require("./math");
+// const someValue = require("./math");
 
-// console.log(someValue);
-console.log(someValue.sum(4,7));
-console.log(someValue.mul(4,5));
+// // console.log(someValue);
+// console.log(someValue.sum(4,7));
+// console.log(someValue.mul(4,5));
+
+
+
+
+import figlet from "figlet";
+
+async function doStuff() {
+  const text = await figlet.text("Ka Baau!!");
+  console.log(text);
+}
+
+doStuff();
