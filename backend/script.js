@@ -26,11 +26,17 @@
 
 
 
-import figlet from "figlet";
+// import figlet from "figlet";
 
-async function doStuff() {
-  const text = await figlet.text("Ka Baau!!");
-  console.log(text);
-}
+// async function doStuff() {
+//   const text = await figlet.text("Ka Baau!!");
+//   console.log(text);
+// }
 
-doStuff();
+// doStuff();
+
+
+import {sum, mul} from "./math.js";
+
+console.log(sum(2, 8));
+console.log(mul(8, 3));
