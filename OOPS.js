@@ -253,19 +253,19 @@
 
 
 // Module Example
-const mathModule = (() => {
-    function add(a, b) {
-        return a + b;
-    }
+// const mathModule = (() => {
+//     function add(a, b) {
+//         return a + b;
+//     }
 
-    function subtract(a, b) {
-        return a - b;
-    }
-    return {
-        add,
-        subtract
-    };
-})();
+//     function subtract(a, b) {
+//         return a - b;
+//     }
+//     return {
+//         add,
+//         subtract
+//     };
+// })();
 
-console.log("Addition:", mathModule.add(10, 5)); 
-console.log("Subtraction:", mathModule.subtract(10, 5));
+// console.log("Addition:", mathModule.add(10, 5)); 
+// console.log("Subtraction:", mathModule.subtract(10, 5));
