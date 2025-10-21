@@ -176,10 +176,34 @@
 
 
 // Static method Example
-class MathUtils {
-  static add(a, b) {
-    return a + b;
+// class MathUtils {
+//   static add(a, b) {
+//     return a + b;
+//   }
+// }
+
+// console.log("Sum:", MathUtils.add(5, 10));
+
+
+
+
+
+
+
+// Getter and Setter Example
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  get area() {
+    return this.width * this.height;
+  }
+  set dimensions({ width, height }) {
+    this.width = width;
+    this.height = height;
   }
 }
-
-console.log("Sum:", MathUtils.add(5, 10));
+const rect = new Rectangle(5, 10);
+console.log("Area:", rect.area);
