@@ -99,20 +99,52 @@
 
 
 // Encapsulation Example
-class BankAccount {
-  #balance;
-    constructor(initialBalance) {
-    this.#balance = initialBalance;
+// class BankAccount {
+//   #balance;
+//     constructor(initialBalance) {
+//     this.#balance = initialBalance;
+//   }
+//     deposit(amount) {
+//     if (amount > 0) {
+//         this.#balance += amount;
+//     }
+//   }
+//     getBalance() {
+//     return this.#balance;
+//   }
+// }
+// const myAccount = new BankAccount(1000);
+// myAccount.deposit(500);
+// console.log("Current Balance:", myAccount.getBalance()); 
+
+
+
+
+
+
+
+
+
+// Abstraction Example
+class CoffeeMachine {
+  #waterLevel;
+  constructor() {
+    this.#waterLevel = 0;
   }
-    deposit(amount) {
-    if (amount > 0) {
-        this.#balance += amount;
+
+  fillWater(amount) {
+    this.#waterLevel += amount;
+  }
+
+  brewCoffee() {
+    if (this.#waterLevel > 0) {
+      console.log("Brewing coffee...");
+      this.#waterLevel -= 1;
+    } else {
+      console.log("Please fill the water tank.");
     }
   }
-    getBalance() {
-    return this.#balance;
-  }
 }
-const myAccount = new BankAccount(1000);
-myAccount.deposit(500);
-console.log("Current Balance:", myAccount.getBalance()); 
+const myCoffeeMachine = new CoffeeMachine();
+myCoffeeMachine.fillWater(3);
+myCoffeeMachine.brewCoffee();
