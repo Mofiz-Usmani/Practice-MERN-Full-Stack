@@ -214,36 +214,58 @@
 
 
 // Chaining Example
-class Calculator {
-  constructor(value = 0) {
-    this.value = value;
-  }
+// class Calculator {
+//   constructor(value = 0) {
+//     this.value = value;
+//   }
 
-  add(amount) {
-    this.value += amount;
-    return this;
-  }
+//   add(amount) {
+//     this.value += amount;
+//     return this;
+//   }
 
-  subtract(amount) {
-    this.value -= amount;
-    return this;
-  }
+//   subtract(amount) {
+//     this.value -= amount;
+//     return this;
+//   }
 
-  multiply(factor) {
-    this.value *= factor;
-    return this;
-  }
+//   multiply(factor) {
+//     this.value *= factor;
+//     return this;
+//   }
 
-  getResult() {
-    return this.value;
-  }
-}
+//   getResult() {
+//     return this.value;
+//   }
+// }
 
-// Usage
-const result = new Calculator(5)
-  .add(10)
-  .subtract(3)
-  .multiply(2)
-  .getResult();
+// // Usage
+// const result = new Calculator(5)
+//   .add(10)
+//   .subtract(3)
+//   .multiply(2)
+//   .getResult();
 
-console.log("Final Result:", result);
+// console.log("Final Result:", result);
+
+
+
+
+
+// Module Example
+const mathModule = (() => {
+    function add(a, b) {
+        return a + b;
+    }
+
+    function subtract(a, b) {
+        return a - b;
+    }
+    return {
+        add,
+        subtract
+    };
+})();
+
+console.log("Addition:", mathModule.add(10, 5)); 
+console.log("Subtraction:", mathModule.subtract(10, 5));
