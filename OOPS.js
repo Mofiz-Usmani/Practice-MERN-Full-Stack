@@ -156,16 +156,30 @@
 
 
 // Method overriding Example
-class Parent {
-  greet() {
-    console.log("Hello from Parent");
-  }
-}
-class Child extends Parent {
-  greet() {
-    console.log("Hello from Child");
+// class Parent {
+//   greet() {
+//     console.log("Hello from Parent");
+//   }
+// }
+// class Child extends Parent {
+//   greet() {
+//     console.log("Hello from Child");
+//   }
+// }
+
+// const childInstance = new Child();
+// childInstance.greet(); 
+
+
+
+
+
+
+// Static method Example
+class MathUtils {
+  static add(a, b) {
+    return a + b;
   }
 }
 
-const childInstance = new Child();
-childInstance.greet(); 
+console.log("Sum:", MathUtils.add(5, 10));
