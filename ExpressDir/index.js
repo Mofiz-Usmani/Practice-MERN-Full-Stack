@@ -4,7 +4,9 @@ const app = express();
 app.use((req, res) => {
     console.log("request recieved");
     res.send("Ka Bau");
+    next();
 });
+
 
 app.get("/", (req, res) => {
     res.send("Hello World");
@@ -27,3 +29,5 @@ let port = 3000;
 app.listen(port, () => {
     console.log(`App is running on port ${port}`);
 });
+
+
