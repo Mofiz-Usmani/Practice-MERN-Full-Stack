@@ -22,7 +22,6 @@ app.get("/banana", (req, res) => {
 
 // Catch-all route for anything else
 app.use((req, res) => {
-    console.log("request received");
     res.send("Ka Bau");
 });
 
