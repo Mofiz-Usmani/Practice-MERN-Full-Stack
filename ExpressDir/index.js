@@ -18,6 +18,9 @@ app.get("/apple", (req, res) => {
     res.send("Apple Page");
 });
 
+app.get("/banana", (req, res) => {
+    res.send("Banana Page");
+});
 
 let port = 3000;
 
