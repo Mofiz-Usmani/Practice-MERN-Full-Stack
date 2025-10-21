@@ -15,3 +15,18 @@ const dog = new Animal("Buddy", "Dog");
 dog.makeSound(); // Output: Buddy makes a sound.
 const cat = new Animal("Whiskers", "Cat");
 cat.makeSound(); // Output: Whiskers makes a sound.
+
+
+
+class person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+    getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const john = new person("John", "Doe");
+console.log(john.getFullName()); // Output: John Doe
