@@ -1,13 +1,9 @@
 const express = require("express");
 const app = express();
 
-app.use((req, res) => {
-    console.log("request recieved");
-    res.send("Ka Bau");
-    next();
-});
+let port = 3000;
 
-
+// Define routes first
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
@@ -24,10 +20,12 @@ app.get("/banana", (req, res) => {
     res.send("Banana Page");
 });
 
-let port = 3000;
+// Catch-all route for anything else
+app.use((req, res) => {
+    console.log("request received");
+    res.send("Ka Bau");
+});
 
 app.listen(port, () => {
     console.log(`App is running on port ${port}`);
 });
-
-
