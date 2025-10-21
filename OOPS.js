@@ -63,33 +63,56 @@
 
 
 // Polymorphism Example
-class Shape {
-  area() {
-    return 0;
+// class Shape {
+//   area() {
+//     return 0;
+//   }
+// }
+
+// class Rectangle extends Shape {
+//   constructor(width, height) {
+//     super();
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//     area() {
+//     return this.width * this.height;
+//   }
+// }
+
+// class Circle extends Shape {
+//   constructor(radius) {
+//     super();
+//     this.radius = radius;
+//   }
+
+//   area() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+// }
+
+// console.log("Rectangle Area:", new Rectangle(5, 10).area());
+
+
+
+
+
+// Encapsulation Example
+class BankAccount {
+  #balance;
+    constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+    deposit(amount) {
+    if (amount > 0) {
+        this.#balance += amount;
+    }
+  }
+    getBalance() {
+    return this.#balance;
   }
 }
-
-class Rectangle extends Shape {
-  constructor(width, height) {
-    super();
-    this.width = width;
-    this.height = height;
-  }
-
-    area() {
-    return this.width * this.height;
-  }
-}
-
-class Circle extends Shape {
-  constructor(radius) {
-    super();
-    this.radius = radius;
-  }
-
-  area() {
-    return Math.PI * this.radius * this.radius;
-  }
-}
-
-console.log("Rectangle Area:", new Rectangle(5, 10).area());
+const myAccount = new BankAccount(1000);
+myAccount.deposit(500);
+console.log("Current Balance:", myAccount.getBalance()); 
