@@ -191,19 +191,59 @@
 
 
 // Getter and Setter Example
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+
+//   get area() {
+//     return this.width * this.height;
+//   }
+//   set dimensions({ width, height }) {
+//     this.width = width;
+//     this.height = height;
+//   }
+// }
+// const rect = new Rectangle(5, 10);
+// console.log("Area:", rect.area);
+
+
+
+
+
+
+// Chaining Example
+class Calculator {
+  constructor(value = 0) {
+    this.value = value;
   }
 
-  get area() {
-    return this.width * this.height;
+  add(amount) {
+    this.value += amount;
+    return this;
   }
-  set dimensions({ width, height }) {
-    this.width = width;
-    this.height = height;
+
+  subtract(amount) {
+    this.value -= amount;
+    return this;
+  }
+
+  multiply(factor) {
+    this.value *= factor;
+    return this;
+  }
+
+  getResult() {
+    return this.value;
   }
 }
-const rect = new Rectangle(5, 10);
-console.log("Area:", rect.area);
+
+// Usage
+const result = new Calculator(5)
+  .add(10)
+  .subtract(3)
+  .multiply(2)
+  .getResult();
+
+console.log("Final Result:", result);
