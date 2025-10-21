@@ -4,7 +4,15 @@ const app = express();
 app.use((req, res) => {
     console.log("request recieved");
     res.send("Ka Bau");
-})
+});
+
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
+
+app.get("/about", (req, res) => {
+    res.send("About Us");
+});
 
 let port = 3000;
 
