@@ -36,25 +36,60 @@
 
 
 // Inheritance Example
-class Vehicle {
-  constructor(brand) {
-    this.brand = brand;
+// class Vehicle {
+//   constructor(brand) {
+//     this.brand = brand;
+//   }
+//     honk() {
+//     console.log("Beep beep!");
+//     }
+// }
+
+// class Car extends Vehicle {
+//   constructor(brand, model) {
+//     super(brand);
+//     this.model = model;
+//   }
+
+//   displayInfo() {
+//     console.log(`Car Brand: ${this.brand}, Model: ${this.model}`);
+//   }
+// }
+
+// const myCar = new Car("Toyota", "Corolla");
+// myCar.honk();
+
+
+
+
+// Polymorphism Example
+class Shape {
+  area() {
+    return 0;
   }
-    honk() {
-    console.log("Beep beep!");
-    }
 }
 
-class Car extends Vehicle {
-  constructor(brand, model) {
-    super(brand);
-    this.model = model;
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
   }
 
-  displayInfo() {
-    console.log(`Car Brand: ${this.brand}, Model: ${this.model}`);
+    area() {
+    return this.width * this.height;
   }
 }
 
-const myCar = new Car("Toyota", "Corolla");
-myCar.honk();
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  area() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+console.log("Rectangle Area:", new Rectangle(5, 10).area());
