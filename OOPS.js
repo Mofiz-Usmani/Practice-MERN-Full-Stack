@@ -126,25 +126,46 @@
 
 
 // Abstraction Example
-class CoffeeMachine {
-  #waterLevel;
-  constructor() {
-    this.#waterLevel = 0;
-  }
+// class CoffeeMachine {
+//   #waterLevel;
+//   constructor() {
+//     this.#waterLevel = 0;
+//   }
 
-  fillWater(amount) {
-    this.#waterLevel += amount;
-  }
+//   fillWater(amount) {
+//     this.#waterLevel += amount;
+//   }
 
-  brewCoffee() {
-    if (this.#waterLevel > 0) {
-      console.log("Brewing coffee...");
-      this.#waterLevel -= 1;
-    } else {
-      console.log("Please fill the water tank.");
-    }
+//   brewCoffee() {
+//     if (this.#waterLevel > 0) {
+//       console.log("Brewing coffee...");
+//       this.#waterLevel -= 1;
+//     } else {
+//       console.log("Please fill the water tank.");
+//     }
+//   }
+// }
+// const myCoffeeMachine = new CoffeeMachine();
+// myCoffeeMachine.fillWater(3);
+// myCoffeeMachine.brewCoffee();
+
+
+
+
+
+
+
+// Method overriding Example
+class Parent {
+  greet() {
+    console.log("Hello from Parent");
   }
 }
-const myCoffeeMachine = new CoffeeMachine();
-myCoffeeMachine.fillWater(3);
-myCoffeeMachine.brewCoffee();
+class Child extends Parent {
+  greet() {
+    console.log("Hello from Child");
+  }
+}
+
+const childInstance = new Child();
+childInstance.greet(); 
