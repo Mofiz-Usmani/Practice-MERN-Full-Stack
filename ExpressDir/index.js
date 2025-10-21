@@ -14,6 +14,11 @@ app.get("/about", (req, res) => {
     res.send("About Us");
 });
 
+app.get("/apple", (req, res) => {
+    res.send("Apple Page");
+});
+
+
 let port = 3000;
 
 app.listen(port, () => {
