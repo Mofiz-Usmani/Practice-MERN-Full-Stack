@@ -472,7 +472,38 @@
 // }
 
 
-const circle = ShapeFactory.createShape("circle", { radius: 5 });
-console.log("Circle Area:", circle.area());
-const rectangle = ShapeFactory.createShape("rectangle", { width: 4, height: 6 });
-console.log("Rectangle Area:", rectangle.area());
+// const circle = ShapeFactory.createShape("circle", { radius: 5 });
+// console.log("Circle Area:", circle.area());
+// const rectangle = ShapeFactory.createShape("rectangle", { width: 4, height: 6 });
+// console.log("Rectangle Area:", rectangle.area());
+
+
+
+
+
+
+
+
+
+// Observer Pattern Example
+class Subject {
+  constructor() {
+    this.observers = [];
+  }
+    subscribe(observer) {
+    this.observers.push(observer);
+    }
+    unsubscribe(observer) {
+    this.observers = this.observers.filter(obs => obs !== observer);
+    }
+    notify(data) {
+        this.observers.forEach(observer => observer.update(data));
+    }
+}
+
+class Observer {
+    update(data) {
+        console.log("Observer received data:", data);
+    }
+}
+
