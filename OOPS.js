@@ -359,3 +359,37 @@
 //   console.log(`Hello, ${name}!`);
 // });
 // emitter.emit("greet", "Alice");
+
+
+
+
+
+
+
+
+
+
+// Decorator Example
+function logExecution(target, propertyKey, descriptor) {
+  const originalMethod = descriptor.value;
+    descriptor.value = function(...args) {
+    console.log(`Executing ${propertyKey} with arguments: ${JSON.stringify(args)}`);
+    const result = originalMethod.apply(this, args);
+    console.log(`Result of ${propertyKey}: ${JSON.stringify(result)}`);
+    return result;
+  };
+}
+class Calculator {
+  @logExecution
+  add(a, b) {
+    return a + b;
+  }
+    @logExecution
+    multiply(a, b) {
+    return a * b;
+    }
+}
+
+const calc = new Calculator();
+calc.add(5, 10);
+calc.multiply(3, 4);
