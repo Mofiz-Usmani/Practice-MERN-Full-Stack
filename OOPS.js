@@ -508,13 +508,20 @@
 // }
 
 
-const subject = new Subject();
-const observer1 = new Observer();
-const observer2 = new Observer();
+    // const subject = new Subject();
+    // const observer1 = new Observer();
+    // const observer2 = new Observer();
+
+subject.subscribe(observer1);
+subject.subscribe(observer2);
+subject.notify("Hello Observers!");
 
 
 
 
 
 
+
+
+// 
 
