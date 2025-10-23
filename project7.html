@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagination Example</title>
+<style>
+    .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#paginationContainer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#paginationContainer button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #2b3d68;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#paginationContainer button:hover {
+    background-color: #1c2850;
+}
+
+#pageNumbers button{
+    background-color: grey;
+    padding: 10px ;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>List of Items</h2>
+    <ul id="itemList">
+        <!-- Items will be dynamically added here -->
+    </ul>
+    <div id="paginationContainer">
+        <button id="prevBtn">&laquo; Prev</button>
+        <div id="pageNumbers"></div>
+        <button id="nextBtn">Next &raquo;</button>
+    </div>
+</div>
+
+<script>
+  // create dummy items
+  let items = [];
+  for (let i = 1; i <= 100; i++) {
+    items.push("Item " + i);
+  }
+
+  let currentPage = 1;
+  let itemsPerPage = 10;
+
+  let itemList = document.getElementById("itemList");
+  let pageNumbers = document.getElementById("pageNumbers");
+  let prevBtn = document.getElementById("prevBtn");
+  let nextBtn = document.getElementById("nextBtn");
+
+  function showItems(page) {
+    itemList.innerHTML = "";
+    let start = (page - 1) * itemsPerPage;
+    let end = start + itemsPerPage;
+
+    for (let i = start; i < end && i < items.length; i++) {
+      let li = document.createElement("li");
+      li.textContent = items[i];
+      itemList.appendChild(li);
+    }
+  }
+
+  function makePageButtons() {
+    pageNumbers.innerHTML = "";
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+
+    for (let i = 1; i <= totalPages; i++) {
+      let btn = document.createElement("button");
+      btn.textContent = i;
+
+      btn.onclick = function () {
+        currentPage = i;
+        showItems(currentPage);
+        updateButtons();
+      };
+
+      pageNumbers.appendChild(btn);
+    }
+  }
+
+  function updateButtons() {
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+    let allBtns = pageNumbers.querySelectorAll("button");
+
+    allBtns.forEach((btn, index) => {
+      btn.classList.toggle("active-page", index + 1 === currentPage);
+    });
+
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+  }
+
+  prevBtn.onclick = function () {
+    if (currentPage > 1) {
+      currentPage--;
+      showItems(currentPage);
+      updateButtons();
+    }
+  };
+
+  nextBtn.onclick = function () {
+    let totalPages = Math.ceil(items.length / itemsPerPage);
+    if (currentPage < totalPages) {
+      currentPage++;
+      showItems(currentPage);
+      updateButtons();
+    }
+  };
+
+  // initialize
+  showItems(currentPage);
+  makePageButtons();
+  updateButtons();
+</script>
+
+
+</body>
+</html>

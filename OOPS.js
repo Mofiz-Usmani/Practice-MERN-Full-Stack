@@ -269,3 +269,42 @@
 
 // console.log("Addition:", mathModule.add(10, 5)); 
 // console.log("Subtraction:", mathModule.subtract(10, 5));
+
+
+
+
+
+
+// Mixins Example
+const canFly = {
+  fly() {
+    console.log(`${this.name} is flying!`);
+  }
+};
+const canSwim = {
+  swim() {
+    console.log(`${this.name} is swimming!`);
+  }
+
+};
+
+class Duck {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Fish {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+Object.assign(Duck.prototype, canFly);
+Object.assign(Fish.prototype, canSwim);
+
+const donald = new Duck("Donald");
+const nemo = new Fish("Nemo");
+
+donald.fly();
+nemo.swim();

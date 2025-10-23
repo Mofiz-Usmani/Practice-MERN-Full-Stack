@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    .container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName">
+            <span class="error" id="fullNameError"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <span class="error" id="passwordError"></span>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber">
+            <span class="error" id="phoneNumberError"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Egypt">Egypt</option>
+                <option value="India">India</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Qatar">Qatar</option>
+                <option value="SaudiArabia">Saudi Arabia</option>
+                <option value="SouthAfrica">South Africa</option>
+                <option value="UAE">UAE</option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Yemen">Yemen</option>         
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="currency">Currency</label>
+            <input type="text" id="currency" name="currency" readonly>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    let fullName = document.querySelector("#fullName");
+    let password = document.querySelector("#password");
+    let phoneNumber = document.querySelector("#phoneNumber");
+    let email = document.querySelector("#email");
+    let country = document.querySelector("#country");
+    let currency = document.querySelector("#currency");
+
+    let fullNameError = document.querySelector("#fullNameError");
+    let passwordError = document.querySelector("#passwordError");
+    let phoneNumberError = document.querySelector("#phoneNumberError");
+    let emailError = document.querySelector("#emailError");
+
+    let form = document.querySelector("#registrationForm");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let valid = true;
+
+        // Full Name Validation
+        if (fullName.value.trim() === "") {
+            fullNameError.innerText = "Full Name is required";
+            valid = false;
+        } else {
+            fullNameError.innerText = "";
+        }
+
+        // Password Validation
+        const passPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+        if (!passPattern.test(password.value)) {
+            passwordError.innerText = "Password must be at least 6 characters long and include one number, one letter, and one special character.";
+            valid = false;
+        } else {
+            passwordError.innerText = "";
+        }
+
+        // Phone Validation
+        const phonePattern = /^[0-9]+$/;
+        if (!phonePattern.test(phoneNumber.value)) {
+            phoneNumberError.innerText = "Phone Number must contain only numerical digits.";
+            valid = false;
+        } else {
+            phoneNumberError.innerText = "";
+        }
+
+        // Email Validation
+        let emailValue = email.value.trim();
+
+        if (emailValue === "") {
+            emailError.innerText = "Email cannot be empty.";
+            valid = false;
+        } else if (!emailValue.includes("@")) {
+            emailError.innerText = `Please include an '@' in the email address. "${emailValue}" is missing an '@'.`;
+            valid = false;
+        } else if (!emailValue.includes(".")) {
+            emailError.innerText = `Please include a '.' after the domain part. "${emailValue}" seems incomplete.`;
+            valid = false;
+        } else {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailValue)) {
+                emailError.innerText = "Please enter a valid email address format.";
+                valid = false;
+            } else {
+                emailError.innerText = "";
+            }
+        }
+
+        
+        const countryCurrency = {
+            "Afghanistan": "Afghani (AFN)",
+            "Armenia": "Dram (AMD)",
+            "Australia": "Australian Dollar (AUD)",
+            "Austria": "Euro (EUR)",
+            "Bahrain": "Bahraini Dinar (BHD)",
+            "Brazil": "Brazilian Real (BRL)",
+            "Canada": "Canadian Dollar (CAD)",
+            "Egypt": "Egyptian Pound (EGP)",
+            "India": "Indian Rupee (INR)",
+            "Kuwait": "Kuwaiti Dinar (KWD)",
+            "Qatar": "Qatari Riyal (QAR)",
+            "SaudiArabia": "Saudi Riyal (SAR)",
+            "SouthAfrica": "Rand (ZAR)",
+            "UAE": "Dirham (AED)",
+            "UK": "Pound Sterling (GBP)",
+            "USA": "US Dollar (USD)",
+            "Yemen": "Yemeni Rial (YER)"
+        };
+
+
+        if (valid) {
+            alert("Form submitted successfully!");
+        }
+    }); 
+
+
+    const countryCurrency = {
+            "Afghanistan": "Afghani (AFN)",
+            "Armenia": "Dram (AMD)",
+            "Australia": "Australian Dollar (AUD)",
+            "Austria": "Euro (EUR)",
+            "Bahrain": "Bahraini Dinar (BHD)",
+            "Brazil": "Brazilian Real (BRL)",
+            "Canada": "Canadian Dollar (CAD)",
+            "Egypt": "Egyptian Pound (EGP)",
+            "India": "Indian Rupee (INR)",
+            "Kuwait": "Kuwaiti Dinar (KWD)",
+            "Qatar": "Qatari Riyal (QAR)",
+            "SaudiArabia": "Saudi Riyal (SAR)",
+            "SouthAfrica": "Rand (ZAR)",
+            "UAE": "Dirham (AED)",
+            "UK": "Pound Sterling (GBP)",
+            "USA": "US Dollar (USD)",
+            "Yemen": "Yemeni Rial (YER)"
+        };
+
+
+    country.addEventListener('change', () => {
+            const selectedCountry = country.value;
+
+        if (selectedCountry === "") {
+            currency.value = "";
+        } else {
+            currency.value = countryCurrency[selectedCountry];
+        }
+        });
+</script>
+
+
+</body>
+</html>
