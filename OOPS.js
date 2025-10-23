@@ -409,23 +409,65 @@
 
 
 // Singleton Example
-class Database {
-  constructor() {
-    if (Database.instance) {
-        return Database.instance;
+// class Database {
+//   constructor() {
+//     if (Database.instance) {
+//         return Database.instance;
+//     }
+//     this.connection = null;
+//     Database.instance = this;
+//   }
+//     connect(connectionString) {
+//     if (!this.connection) {
+//         this.connection = `Connected to ${connectionString}`;
+//     }
+//     return this.connection;
+//     }
+// }
+// const db1 = new Database();
+// const db2 = new Database();
+// console.log(db1 === db2); 
+// console.log(db1.connect("my-database-url"));
+// console.log(db2.connect("another-database-url"));
+
+
+
+
+
+
+
+
+
+// Factory Pattern Example
+class ShapeFactory {
+  static createShape(type, dimensions) {
+    switch (type) {
+        case "circle":
+        return new Circle(dimensions.radius);
+        case "rectangle":
+        return new Rectangle(dimensions.width, dimensions.height);
+        default:
+        throw new Error("Unknown shape type");
     }
-    this.connection = null;
-    Database.instance = this;
-  }
-    connect(connectionString) {
-    if (!this.connection) {
-        this.connection = `Connected to ${connectionString}`;
-    }
-    return this.connection;
     }
 }
-const db1 = new Database();
-const db2 = new Database();
-console.log(db1 === db2); 
-console.log(db1.connect("my-database-url"));
-console.log(db2.connect("another-database-url"));
+
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+    area() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+  area() {
+    return this.width * this.height;
+  }
+}
+
