@@ -512,9 +512,9 @@
     // const observer1 = new Observer();
     // const observer2 = new Observer();
 
-subject.subscribe(observer1);
-subject.subscribe(observer2);
-subject.notify("Hello Observers!");
+// subject.subscribe(observer1);
+// subject.subscribe(observer2);
+// subject.notify("Hello Observers!");
 
 
 
@@ -523,5 +523,46 @@ subject.notify("Hello Observers!");
 
 
 
-// 
+// MVC Pattern Example
+// // Model
+// class Model {
+//   constructor() {
+//     this.data = [];
+//   }
+//   addData(item) {
+//     this.data.push(item);
+//   }
+//   getData() {
+//     return this.data;
+//   }
+// }
+
+// // View
+// class View {
+//   constructor() {
+//     this.app = document.getElementById("app");
+//   }
+//   render(data) {
+//     this.app.innerHTML = data.map(item => `<div>${item}</div>`).join("");
+//   }
+// }
+
+// // Controller
+// class Controller {
+//   constructor(model, view) {
+//     this.model = model;
+//     this.view = view;
+//   }
+//   addData(item) {
+//     this.model.addData(item);
+//     this.view.render(this.model.getData());
+//   }
+// }
+
+// const model = new Model();
+// const view = new View();
+// const controller = new Controller(model, view);
+
+// controller.addData("Item 1");
+// controller.addData("Item 2");    
 
