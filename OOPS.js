@@ -370,26 +370,62 @@
 
 
 // Decorator Example
-function logExecution(target, propertyKey, descriptor) {
-  const originalMethod = descriptor.value;
-    descriptor.value = function(...args) {
-    console.log(`Executing ${propertyKey} with arguments: ${JSON.stringify(args)}`);
-    const result = originalMethod.apply(this, args);
-    console.log(`Result of ${propertyKey}: ${JSON.stringify(result)}`);
-    return result;
-  };
-}
-class Calculator {
-  @logExecution
-  add(a, b) {
-    return a + b;
+// function logExecution(target, propertyKey, descriptor) {
+//   const originalMethod = descriptor.value;
+//     descriptor.value = function(...args) {
+//     console.log(`Executing ${propertyKey} with arguments: ${JSON.stringify(args)}`);
+//     const result = originalMethod.apply(this, args);
+//     console.log(`Result of ${propertyKey}: ${JSON.stringify(result)}`);
+//     return result;
+//   };
+// }
+// class Calculator {
+//   @logExecution
+//   add(a, b) {
+//     return a + b;
+//   }
+//     @logExecution
+//     multiply(a, b) {
+//     return a * b;
+//     }
+// }
+
+// const calc = new Calculator();
+// calc.add(5, 10);
+// calc.multiply(3, 4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Singleton Example
+class Database {
+  constructor() {
+    if (Database.instance) {
+        return Database.instance;
+    }
+    this.connection = null;
+    Database.instance = this;
   }
-    @logExecution
-    multiply(a, b) {
-    return a * b;
+    connect(connectionString) {
+    if (!this.connection) {
+        this.connection = `Connected to ${connectionString}`;
+    }
+    return this.connection;
     }
 }
-
-const calc = new Calculator();
-calc.add(5, 10);
-calc.multiply(3, 4);
+const db1 = new Database();
+const db2 = new Database();
+console.log(db1 === db2); 
+console.log(db1.connect("my-database-url"));
+console.log(db2.connect("another-database-url"));
