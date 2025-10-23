@@ -276,35 +276,53 @@
 
 
 // Mixins Example
-const canFly = {
-  fly() {
-    console.log(`${this.name} is flying!`);
-  }
-};
-const canSwim = {
-  swim() {
-    console.log(`${this.name} is swimming!`);
-  }
+// const canFly = {
+//   fly() {
+//     console.log(`${this.name} is flying!`);
+//   }
+// };
+// const canSwim = {
+//   swim() {
+//     console.log(`${this.name} is swimming!`);
+//   }
 
-};
+// };
 
-class Duck {
-  constructor(name) {
-    this.name = name;
-  }
+// class Duck {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class Fish {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// Object.assign(Duck.prototype, canFly);
+// Object.assign(Fish.prototype, canSwim);
+
+// const donald = new Duck("Donald");
+// const nemo = new Fish("Nemo");
+
+// donald.fly();
+// nemo.swim();
+
+
+
+
+
+
+// Prototype Example
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
+Person.prototype.greet = function() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    console.log("Nice to meet you!");
+};
 
-class Fish {
-  constructor(name) {
-    this.name = name;
-  }
-}
-
-Object.assign(Duck.prototype, canFly);
-Object.assign(Fish.prototype, canSwim);
-
-const donald = new Duck("Donald");
-const nemo = new Fish("Nemo");
-
-donald.fly();
-nemo.swim();
+const alice = new Person("Alice", 30);
+alice.greet();
