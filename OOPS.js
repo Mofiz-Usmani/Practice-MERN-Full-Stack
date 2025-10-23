@@ -439,35 +439,40 @@
 
 
 // Factory Pattern Example
-class ShapeFactory {
-  static createShape(type, dimensions) {
-    switch (type) {
-        case "circle":
-        return new Circle(dimensions.radius);
-        case "rectangle":
-        return new Rectangle(dimensions.width, dimensions.height);
-        default:
-        throw new Error("Unknown shape type");
-    }
-    }
-}
+// class ShapeFactory {
+//   static createShape(type, dimensions) {
+//     switch (type) {
+//         case "circle":
+//         return new Circle(dimensions.radius);
+//         case "rectangle":
+//         return new Rectangle(dimensions.width, dimensions.height);
+//         default:
+//         throw new Error("Unknown shape type");
+//     }
+//     }
+// }
 
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
-    area() {
-    return Math.PI * this.radius * this.radius;
-  }
-}
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//   }
+//     area() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+// }
 
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-  area() {
-    return this.width * this.height;
-  }
-}
+// class Rectangle {
+//   constructor(width, height) {
+//     this.width = width;
+//     this.height = height;
+//   }
+//   area() {
+//     return this.width * this.height;
+//   }
+// }
 
+
+const circle = ShapeFactory.createShape("circle", { radius: 5 });
+console.log("Circle Area:", circle.area());
+const rectangle = ShapeFactory.createShape("rectangle", { width: 4, height: 6 });
+console.log("Rectangle Area:", rectangle.area());
