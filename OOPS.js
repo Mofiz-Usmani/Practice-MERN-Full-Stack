@@ -315,14 +315,42 @@
 
 
 // Prototype Example
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
-Person.prototype.greet = function() {
-    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
-    console.log("Nice to meet you!");
-};
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+// Person.prototype.greet = function() {
+//     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+//     console.log("Nice to meet you!");
+// };
 
-const alice = new Person("Alice", 30);
-alice.greet();
+// const alice = new Person("Alice", 30);
+// alice.greet();
+
+
+
+
+
+
+
+
+// Event Emitter Example
+class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+    on(event, listener) {   
+    if (!this.events[event]) {
+        this.events[event] = [];    
+    }
+    this.events[event].push(listener);
+  }
+
+  emit(event, ...args) {
+    if (this.events[event]) {
+      this.events[event].forEach(listener => listener(...args));
+    }
+  }
+}
+
+
