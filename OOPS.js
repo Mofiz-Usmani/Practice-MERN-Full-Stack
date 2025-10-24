@@ -566,3 +566,50 @@
 // controller.addData("Item 1");
 // controller.addData("Item 2");    
 
+
+
+
+
+
+
+
+
+// Command Pattern Example
+
+class Command {
+  execute() {}
+    undo() {}
+}
+class Light {
+    turnOn() {
+    console.log("Light is ON");
+    }
+    turnOff() {
+    console.log("Light is OFF");
+    }
+}
+class LightOnCommand extends Command {
+  constructor(light) {
+    super();
+    this.light = light;
+  }
+    execute() {
+    this.light.turnOn();
+    }
+    undo() {
+    this.light.turnOff();
+    }
+}
+class LightOffCommand extends Command {
+    constructor(light) {
+        super();
+        this.light = light;
+    }
+    execute() {
+        this.light.turnOff();
+    }
+    undo() {
+        this.light.turnOn();
+    }
+}
+
