@@ -1057,14 +1057,14 @@
 
 
 // Date Object in JavaScript :
-let now = new Date();
-console.log(now.toString());
-console.log(now.toDateString());
-console.log(now.toTimeString());
-console.log(now.toISOString());
-console.log(now.getFullYear());
-console.log(now.getMonth());
-console.log(now.getDate());
-console.log(now.getDay());
+// let now = new Date();
+// console.log(now.toString());
+// console.log(now.toDateString());
+// console.log(now.toTimeString());
+// console.log(now.toISOString());
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
 
 
