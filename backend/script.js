@@ -36,7 +36,15 @@
 // doStuff();
 
 
-import {sum, mul} from "./math.js";
+// import {sum, mul} from "./math.js";
 
-console.log(sum(2, 8));
-console.log(mul(8, 3));
+// console.log(sum(2, 8));
+// console.log(mul(8, 3));
+
+
+
+
+
+
+
+
