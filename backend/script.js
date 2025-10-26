@@ -47,4 +47,19 @@
 
 
 
+// JSON - JavaScript Object Notation
+
+const fs = require("fs");
+
+let data = fs.readFileSync("data.json", "utf-8");
+let obj = JSON.parse(data);
+
+console.log(obj);
+obj.name = "New Name";
+
+let newData = JSON.stringify(obj);
+fs.writeFileSync("data.json", newData, "utf-8");
+
+console.log(newData);
+
 
