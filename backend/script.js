@@ -70,17 +70,34 @@
 
 
 // Asynchronous Programming in JS
+// const fs = require("fs");
 
-const fs = require("fs");
+// console.log("Start");
+// fs.readFile("data.txt", "utf-8", function(err, data){
+//     if(err){
+//         console.log("Error", err);
+//     } else {
+//         console.log("Data", data);
+//     }
+// });
+// console.log("End");
+
+
+
+
+
+
+
+
+// Promises in JS
+const fs = require("fs").promises;
 
 console.log("Start");
-fs.readFile("data.txt", "utf-8", function(err, data){
-    if(err){
-        console.log("Error", err);
-    } else {
+fs.readFile("data.txt", "utf-8")
+    .then(function(data){
         console.log("Data", data);
-    }
-});
+    })
+    .catch(function(err){
+        console.log("Error", err);
+    });
 console.log("End");
-
-
