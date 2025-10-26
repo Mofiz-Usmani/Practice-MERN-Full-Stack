@@ -49,17 +49,38 @@
 
 // JSON - JavaScript Object Notation
 
+// const fs = require("fs");
+
+// let data = fs.readFileSync("data.json", "utf-8");
+// let obj = JSON.parse(data);
+
+// console.log(obj);
+// obj.name = "New Name";
+
+// let newData = JSON.stringify(obj);
+// fs.writeFileSync("data.json", newData, "utf-8");
+
+// console.log(newData);
+
+
+
+
+
+
+
+
+// Asynchronous Programming in JS
+
 const fs = require("fs");
 
-let data = fs.readFileSync("data.json", "utf-8");
-let obj = JSON.parse(data);
-
-console.log(obj);
-obj.name = "New Name";
-
-let newData = JSON.stringify(obj);
-fs.writeFileSync("data.json", newData, "utf-8");
-
-console.log(newData);
+console.log("Start");
+fs.readFile("data.txt", "utf-8", function(err, data){
+    if(err){
+        console.log("Error", err);
+    } else {
+        console.log("Data", data);
+    }
+});
+console.log("End");
 
 
