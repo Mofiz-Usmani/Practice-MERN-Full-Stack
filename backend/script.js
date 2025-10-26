@@ -90,14 +90,40 @@
 
 
 // Promises in JS
-const fs = require("fs").promises;
+// const fs = require("fs").promises;
 
-console.log("Start");
-fs.readFile("data.txt", "utf-8")
-    .then(function(data){
+// console.log("Start");
+// fs.readFile("data.txt", "utf-8")
+//     .then(function(data){
+//         console.log("Data", data);
+//     })
+//     .catch(function(err){
+//         console.log("Error", err);
+//     });
+// console.log("End");
+
+
+
+
+
+
+
+
+
+
+
+
+// Async/Await in JS
+const fs = require("fs").promises;
+async function readFileAsync() {
+    console.log("Start");
+    try {
+        let data = await fs.readFile("data.txt", "utf-8");
         console.log("Data", data);
-    })
-    .catch(function(err){
+    } catch (err) {
         console.log("Error", err);
-    });
-console.log("End");
+    }
+    console.log("End");
+}
+readFileAsync();
+
