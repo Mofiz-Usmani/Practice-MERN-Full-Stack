@@ -114,16 +114,55 @@
 
 
 // Async/Await in JS
-const fs = require("fs").promises;
-async function readFileAsync() {
-    console.log("Start");
-    try {
-        let data = await fs.readFile("data.txt", "utf-8");
-        console.log("Data", data);
-    } catch (err) {
-        console.log("Error", err);
-    }
-    console.log("End");
+// const fs = require("fs").promises;
+// async function readFileAsync() {
+//     console.log("Start");
+//     try {
+//         let data = await fs.readFile("data.txt", "utf-8");
+//         console.log("Data", data);
+//     } catch (err) {
+//         console.log("Error", err);
+//     }
+//     console.log("End");
+// }
+// readFileAsync();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Callbacks, Promises, Async/Await together
+const fs = require("fs");
+const fsPromises = require("fs").promises;
+
+function readFileCallback(filename, callback) {
+    fs.readFile(filename, "utf-8", function(err, data){
+        if(err){
+            callback(err, null);
+        } else {
+            callback(null, data);
+        }
+    });
 }
-readFileAsync();
+
+function readFilePromise(filename) {
+    return fsPromises
+        .readFile(filename, "utf-8");
+}   
+async function readFileAsyncAwait(filename) {
+    let data = await fsPromises.readFile(filename, "utf-8");
+    return data;
+}   
+
+
+
 
