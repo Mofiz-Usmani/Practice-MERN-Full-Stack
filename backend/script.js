@@ -200,3 +200,17 @@ let evenArr = arr.filter(function(value){
     return value % 2 === 0;
 });
 console.log("Even Array:", evenArr);
+
+
+
+
+
+
+
+
+
+// reduce
+let sum = arr.reduce(function(accumulator, currentValue){
+    return accumulator + currentValue;
+}, 0);
+console.log("Sum of Array:", sum);
