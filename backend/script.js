@@ -181,3 +181,12 @@ arr.forEach(function(value, index){
 });
 
 
+
+
+
+// map
+let squaredArr = arr.map(function(value){
+    return value * value;
+});
+console.log("Squared Array:", squaredArr);
+
