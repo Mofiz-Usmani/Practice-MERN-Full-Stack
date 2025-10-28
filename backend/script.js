@@ -260,3 +260,14 @@ let allPositive = arr.every(function(value){
     return value > 0;
 });
 console.log("All values are positive:", allPositive);
+
+
+
+
+
+
+// findIndex
+let indexFirstGreaterThan4 = arr.findIndex(function(value){
+    return value > 4;
+});
+console.log("Index of first value greater than 4:", indexFirstGreaterThan4);
