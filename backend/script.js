@@ -290,3 +290,13 @@ let flattenedAndMappedArr = nestedArr.flatMap(function(value){
     }
 });
 console.log("Flattened and Mapped Array:", flattenedAndMappedArr);
+
+
+
+
+
+
+
+// includes
+let includes3 = arr.includes(3);
+console.log("Array includes 3:", includes3);
