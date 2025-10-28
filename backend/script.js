@@ -249,3 +249,14 @@ let hasEven = arr.some(function(value){
     return value % 2 === 0;
 });
 console.log("Array has even number:", hasEven);
+
+
+
+
+
+
+// every
+let allPositive = arr.every(function(value){
+    return value > 0;
+});
+console.log("All values are positive:", allPositive);
