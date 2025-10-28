@@ -271,3 +271,22 @@ let indexFirstGreaterThan4 = arr.findIndex(function(value){
     return value > 4;
 });
 console.log("Index of first value greater than 4:", indexFirstGreaterThan4);
+
+
+
+
+
+
+
+
+
+// flatMap
+let nestedArr = [1, 2, [3, 4], [5, 6]]; 
+let flattenedAndMappedArr = nestedArr.flatMap(function(value){
+    if(Array.isArray(value)){
+        return value.map(v => v * 2);
+    } else {
+        return value * 2;
+    }
+});
+console.log("Flattened and Mapped Array:", flattenedAndMappedArr);
