@@ -239,3 +239,13 @@ let sortedArr = arr.slice().sort(function(a, b){
     return a - b;
 });
 console.log("Sorted Array:", sortedArr);
+
+
+
+
+
+// some
+let hasEven = arr.some(function(value){
+    return value % 2 === 0;
+});
+console.log("Array has even number:", hasEven);
