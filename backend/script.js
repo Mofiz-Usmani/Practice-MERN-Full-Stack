@@ -166,3 +166,18 @@ async function readFileAsyncAwait(filename) {
 
 
 
+
+
+
+
+
+
+
+// Array Methods in JS
+let arr = [5, 3, 8, 1, 2];
+// forEach
+arr.forEach(function(value, index){
+    console.log("Value:", value, "Index:", index);
+});
+
+
