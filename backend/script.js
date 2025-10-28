@@ -227,3 +227,15 @@ let firstGreaterThan4 = arr.find(function(value){
     return value > 4;
 });
 console.log("First value greater than 4:", firstGreaterThan4);
+
+
+
+
+
+
+
+// sort
+let sortedArr = arr.slice().sort(function(a, b){
+    return a - b;
+});
+console.log("Sorted Array:", sortedArr);
