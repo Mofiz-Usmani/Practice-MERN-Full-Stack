@@ -190,3 +190,13 @@ let squaredArr = arr.map(function(value){
 });
 console.log("Squared Array:", squaredArr);
 
+
+
+
+
+
+// filter
+let evenArr = arr.filter(function(value){
+    return value % 2 === 0;
+});
+console.log("Even Array:", evenArr);
