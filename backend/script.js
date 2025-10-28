@@ -214,3 +214,16 @@ let sum = arr.reduce(function(accumulator, currentValue){
     return accumulator + currentValue;
 }, 0);
 console.log("Sum of Array:", sum);
+
+
+
+
+
+
+
+
+// find
+let firstGreaterThan4 = arr.find(function(value){
+    return value > 4;
+});
+console.log("First value greater than 4:", firstGreaterThan4);
