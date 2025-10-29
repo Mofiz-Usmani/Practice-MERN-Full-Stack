@@ -313,3 +313,16 @@ console.log("Array includes 3:", includes3);
 // join
 let joinedString = arr.join(", ");
 console.log("Joined String:", joinedString);
+
+
+
+
+
+
+
+
+
+
+// concat
+let newArr = arr.concat([9, 10]);
+console.log("Concatenated Array:", newArr);
