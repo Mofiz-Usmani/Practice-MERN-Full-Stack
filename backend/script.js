@@ -349,3 +349,6 @@ console.log("Spliced Array (removed index 2):", splicedArr);
 
 
 
+// indexOf
+let indexOf8 = arr.indexOf(8);
+console.log("Index of 8 in Array:", indexOf8);
