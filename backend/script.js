@@ -335,3 +335,17 @@ console.log("Concatenated Array:", newArr);
 // slice
 let slicedArr = arr.slice(1, 4);
 console.log("Sliced Array (index 1 to 3):", slicedArr);
+
+
+
+
+
+// splice
+let splicedArr = arr.slice();
+splicedArr.splice(2, 1); // remove 1 element at index 2
+console.log("Spliced Array (removed index 2):", splicedArr);
+
+
+
+
+
