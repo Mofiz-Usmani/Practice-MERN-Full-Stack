@@ -326,3 +326,12 @@ console.log("Joined String:", joinedString);
 // concat
 let newArr = arr.concat([9, 10]);
 console.log("Concatenated Array:", newArr);
+
+
+
+
+
+
+// slice
+let slicedArr = arr.slice(1, 4);
+console.log("Sliced Array (index 1 to 3):", slicedArr);
