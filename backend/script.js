@@ -363,3 +363,15 @@ console.log("Index of 8 in Array:", indexOf8);
 // lastIndexOf
 let lastIndexOf2 = arr.lastIndexOf(2);
 console.log("Last Index of 2 in Array:", lastIndexOf2);
+
+
+
+
+
+
+
+
+
+// reverse
+let reversedArr = arr.slice().reverse();
+console.log("Reversed Array:", reversedArr);
