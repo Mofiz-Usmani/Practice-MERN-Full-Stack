@@ -375,3 +375,11 @@ console.log("Last Index of 2 in Array:", lastIndexOf2);
 // reverse
 let reversedArr = arr.slice().reverse();
 console.log("Reversed Array:", reversedArr);
+
+
+
+
+
+
+
+
