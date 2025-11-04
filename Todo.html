@@ -7,5 +7,33 @@
 </head>
 <body>
     <h1 style="text-align: center;">ToDo App</h1>
+    <div style="text-align: center;" id="div">
+        <input type="text" id="todoInput" placeholder="Enter a new todo item">
+        <button onclick="addTodo()">Add Todo</button>
+    </div>
 </body>
 </html>
+
+<script>
+    let todoItems = [];
+
+    function addTodo() {
+        const input = document.getElementById('todoInput');
+        let div = document.querySelector('#div');
+        let todoText = input.value.trim();
+
+        let p = document.createElement('p');
+        let btn = document.createElement('button');
+        btn.innerText = 'Delete';
+        p.innerText = todoText;
+        div.appendChild(p);
+        p.appendChild(btn);
+        input.value = '';
+        todoItems.push(todoText);
+
+        btn.onclick = () => {
+            div.removeChild(p);
+        }
+
+    }
+</script>
