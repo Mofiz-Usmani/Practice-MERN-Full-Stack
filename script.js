@@ -752,12 +752,12 @@
 // Best used when you just need to perform an action on each element (like printing or modifying in-place).
 
 // For Each
-const numbers = [10, 20, 30, 40, 50];
+// const numbers = [10, 20, 30, 40, 50];
 
-numbers.forEach(nums => {
-    console.log(nums+10);
-});
-console.log(numbers);
+// numbers.forEach(nums => {
+//     console.log(nums+10);
+// });
+// console.log(numbers);
 
 
 // const fruits = ["apple", "banana", "mango"];
