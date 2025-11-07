@@ -1149,5 +1149,14 @@
 
 
 
+// let fruits = ['apple', 'banana', 'cherry'];
+// console.log(fruits.includes("apple"))
+
+
+
+
+
+
+
 let fruits = ['apple', 'banana', 'cherry'];
-console.log(fruits.includes("apple"))
+console.log(fruits.indexOf("apple"))
