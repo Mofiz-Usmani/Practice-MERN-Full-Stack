@@ -1199,7 +1199,14 @@
 
 
 
-let arr = [1,6,3,2,8,9,4];
-arr.sort((a, b) => a-b);
-console.log(arr)
- 
+// let arr = [1,6,3,2,8,9,4];
+// arr.sort((a, b) => a-b);
+// console.log(arr)
+
+
+
+
+
+
+let nums = ["one", "two", "three", "four"]
+console.log(nums.reverse())
