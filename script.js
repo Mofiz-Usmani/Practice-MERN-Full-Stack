@@ -1114,10 +1114,19 @@
 
 
 // Find method
-let arr = [1,2,3,4,5,6];
+// let arr = [1,2,3,4,5,6];
 
-let found = arr.find((num) => {
-    return num > 3;
-})
+// let found = arr.find((num) => {
+//     return num > 3;
+// })
 
-console.log(found)
+// console.log(found)
+
+
+
+
+
+
+let numbers = [1, 2, 3, 4, 5];
+let hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); 
