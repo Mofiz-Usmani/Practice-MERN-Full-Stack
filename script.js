@@ -1085,7 +1085,7 @@ class Student extends Person {
         super(name, age);
         this.marks = marks;
     }
-    info() {
+    talk() {
         console.log(`My name is : ${this.name} and i am ${this.age} years old and my marks is ${this.marks}`)
     }
 }
@@ -1095,7 +1095,7 @@ class Teacher extends Person {
         super(name, age);
         this.subject = subject;
     }
-    info() {
+    talk() {
         console.log(`My name is : ${this.name} and i am ${this.age} years old and i teach ${this.subject}`)
     }
 }
@@ -1105,5 +1105,3 @@ let tch1 = new Teacher("Jackal", 25, "English");
 
 std1.talk()
 tch1.talk()
-std1.info()
-tch1.info()
