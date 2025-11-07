@@ -1158,5 +1158,16 @@
 
 
 
+// let fruits = ['apple', 'banana', 'cherry'];
+// console.log(fruits.indexOf("apple"))
+
+
+
+
+
+
+
 let fruits = ['apple', 'banana', 'cherry'];
-console.log(fruits.indexOf("apple"))
+let newFruits = fruits.splice(0,1, "Dragon")
+console.log(newFruits)
+console.log(fruits)
