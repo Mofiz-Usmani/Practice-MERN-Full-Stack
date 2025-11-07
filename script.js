@@ -1167,7 +1167,18 @@
 
 
 
+// let fruits = ['apple', 'banana', 'cherry'];
+// let newFruits = fruits.splice(0,1, "Dragon")
+// console.log(newFruits)
+// console.log(fruits)
+
+
+
+
+
+
+
+// array to string
 let fruits = ['apple', 'banana', 'cherry'];
-let newFruits = fruits.splice(0,1, "Dragon")
-console.log(newFruits)
-console.log(fruits)
+let fruitString = fruits.join();
+console.log(fruitString); 
