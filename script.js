@@ -1208,5 +1208,35 @@
 
 
 
-let nums = ["one", "two", "three", "four"]
-console.log(nums.reverse())
+// let nums = ["one", "two", "three", "four"]
+// console.log(nums.reverse())
+
+
+
+
+
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    talk(){
+        console.log(`Hello ${this.name} and age is ${this.age}`);
+    }
+}
+
+class Student extends Person {
+    constructor(name, age, marks){
+        super(age, name);
+        this.marks = marks;
+    }
+    info(){
+        console.log(`Hello ${this.name} and age is ${this.age} with marks ${this.marks}`);
+    }
+}
+
+
+let std1 = new Student("Alex", 24, 95);
+
+std1.talk();
+std1.info();
