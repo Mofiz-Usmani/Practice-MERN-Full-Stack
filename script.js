@@ -1179,6 +1179,18 @@
 
 
 // array to string
+// let fruits = ['apple', 'banana', 'cherry'];
+// let fruitString = fruits.join();
+// console.log(fruitString); 
+
+
+
+
+
+
+
+
+// Desructuring
 let fruits = ['apple', 'banana', 'cherry'];
-let fruitString = fruits.join();
-console.log(fruitString); 
+let [first, second] = fruits;
+console.log(first, second); 
