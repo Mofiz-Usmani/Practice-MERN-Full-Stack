@@ -1191,6 +1191,15 @@
 
 
 // Desructuring
-let fruits = ['apple', 'banana', 'cherry'];
-let [first, second] = fruits;
-console.log(first, second); 
+// let fruits = ['apple', 'banana', 'cherry'];
+// let [first, second] = fruits;
+// console.log(first, second); 
+
+
+
+
+
+let arr = [1,6,3,2,8,9,4];
+arr.sort((a, b) => a-b);
+console.log(arr)
+ 
