@@ -1139,6 +1139,15 @@
 
 
 
-let numbers = [1, 2, 3, 4, 5];
-let hasEven = numbers.every(num => num % 2 === 0);
-console.log(hasEven); 
+// let numbers = [1, 2, 3, 4, 5];
+// let hasEven = numbers.every(num => num % 2 === 0);
+// console.log(hasEven); 
+
+
+
+
+
+
+
+let fruits = ['apple', 'banana', 'cherry'];
+console.log(fruits.includes("apple"))
