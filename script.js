@@ -1068,3 +1068,42 @@
 // console.log(now.getDay());
 
 
+
+
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    talk() {
+        console.log(`Hi, I am ${this.name}`);
+    }
+}
+
+class Student extends Person {
+    constructor(name, age, marks) {
+        super(name, age);
+        this.marks = marks;
+    }
+    info() {
+        console.log(`My name is : ${this.name} and i am ${this.age} years old and my marks is ${this.marks}`)
+    }
+}
+
+class Teacher extends Person {
+    constructor(name, age, subject){
+        super(name, age);
+        this.subject = subject;
+    }
+    info() {
+        console.log(`My name is : ${this.name} and i am ${this.age} years old and i teach ${this.subject}`)
+    }
+}
+
+let std1 = new Student("Alex", 25, 95);
+let tch1 = new Teacher("Jackal", 25, "English");
+
+std1.talk()
+tch1.talk()
+std1.info()
+tch1.info()
