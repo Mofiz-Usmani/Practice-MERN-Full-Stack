@@ -1070,38 +1070,54 @@
 
 
 
-class Person {
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    talk() {
-        console.log(`Hi, I am ${this.name}`);
-    }
-}
+// class Person {
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     talk() {
+//         console.log(`Hi, I am ${this.name}`);
+//     }
+// }
 
-class Student extends Person {
-    constructor(name, age, marks) {
-        super(name, age);
-        this.marks = marks;
-    }
-    talk() {
-        console.log(`My name is : ${this.name} and i am ${this.age} years old and my marks is ${this.marks}`)
-    }
-}
+// class Student extends Person {
+//     constructor(name, age, marks) {
+//         super(name, age);
+//         this.marks = marks;
+//     }
+//     talk() {
+//         console.log(`My name is : ${this.name} and i am ${this.age} years old and my marks is ${this.marks}`)
+//     }
+// }
 
-class Teacher extends Person {
-    constructor(name, age, subject){
-        super(name, age);
-        this.subject = subject;
-    }
-    talk() {
-        console.log(`My name is : ${this.name} and i am ${this.age} years old and i teach ${this.subject}`)
-    }
-}
+// class Teacher extends Person {
+//     constructor(name, age, subject){
+//         super(name, age);
+//         this.subject = subject;
+//     }
+//     talk() {
+//         console.log(`My name is : ${this.name} and i am ${this.age} years old and i teach ${this.subject}`)
+//     }
+// }
 
-let std1 = new Student("Alex", 25, 95);
-let tch1 = new Teacher("Jackal", 25, "English");
+// let std1 = new Student("Alex", 25, 95);
+// let tch1 = new Teacher("Jackal", 25, "English");
 
-std1.talk()
-tch1.talk()
+// std1.talk()
+// tch1.talk()
+
+
+
+
+
+
+
+
+// Find method
+let arr = [1,2,3,4,5,6];
+
+let found = arr.find((num) => {
+    return num > 3;
+})
+
+console.log(found)
