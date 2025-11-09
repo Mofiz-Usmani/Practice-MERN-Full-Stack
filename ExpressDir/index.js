@@ -15,7 +15,7 @@ let getRandomUser = () => {
   };
 };
 
-console.log("Random User:", getRandomUser());
+// console.log("Random User:", getRandomUser());
 
 
 
@@ -34,7 +34,7 @@ const connection = mysql.createConnection({
 let q = "SHOW TABLES";
 
 try {
-  connection.query(q, (err, results) => {
+  connection.query(q, (err, result) => {
     if (err) throw err;
     console.log(result);
     console.log(result.length);
