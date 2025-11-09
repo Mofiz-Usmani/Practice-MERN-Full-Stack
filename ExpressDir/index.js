@@ -31,10 +31,17 @@ const connection = mysql.createConnection({
 
 
 
-let q = "SHOW TABLES";
+let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+
+let users = [
+  ["1", "john_doe", "john@example.com", "password123"],
+  ["2", "jane_smith", "jane@example.com", "password456"]
+];
+
+
 
 try {
-  connection.query(q, (err, result) => {
+  connection.query(q, [users], (err, result) => {
     if (err) throw err;
     console.log(result);
     console.log(result.length);
