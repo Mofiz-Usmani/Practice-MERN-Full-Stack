@@ -43,6 +43,7 @@ let users = [
 try {
   connection.query(q, [users], (err, result) => {
     if (err) throw err;
+    console.log("Rows inserted:", result.affectedRows);
     console.log(result);
     console.log(result.length);
     console.log(result[0]);
