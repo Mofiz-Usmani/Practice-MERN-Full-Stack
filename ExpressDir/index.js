@@ -46,11 +46,14 @@ let q = "INSERT INTO user (id, username, email, password) VALUES ?";
 
 
 let data = [];
+for(let i=0; i<=100; i++){
+  data.push(getRandomUser());
+}
 
 try {
-  connection.query(q, [users], (err, result) => {
+  connection.query(q, [data], (err, result) => {
     if (err) throw err;
-    console.log("Rows inserted:", result.affectedRows);
+    // console.log("Rows inserted:", result.affectedRows);
     console.log(result);
     console.log(result.length);
     console.log(result[0]);
