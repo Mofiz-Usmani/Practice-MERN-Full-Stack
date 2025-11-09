@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const path = require("path");
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
 
 // Import faker
 const { faker, th } = require("@faker-js/faker");
@@ -32,38 +37,52 @@ const connection = mysql.createConnection({
 
 
 
-let getRandomUser = () => {
-  return [
-    faker.string.uuid(),                
-    faker.person.firstName(),          
-    faker.internet.email(),
-    faker.internet.password()
-  ];
-}
+// let getRandomUser = () => {
+//   return [
+//     faker.string.uuid(),                
+//     faker.person.firstName(),          
+//     faker.internet.email(),
+//     faker.internet.password()
+//   ];
+// }
 
 
-let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+// let q = "INSERT INTO user (id, username, email, password) VALUES ?";
 
 
-let data = [];
-for(let i=0; i<=100; i++){
-  data.push(getRandomUser());
-}
+// let data = [];
+// for(let i=0; i<=100; i++){
+//   data.push(getRandomUser());
+// }
 
-try {
-  connection.query(q, [data], (err, result) => {
-    if (err) throw err;
-    // console.log("Rows inserted:", result.affectedRows);
-    console.log(result);
-    console.log(result.length);
-    console.log(result[0]);
-    console.log(result[1]);
-  } );
-} catch (error) {
-  console.error("Error executing query:", error);
-}
+// try {
+//   connection.query(q, [data], (err, result) => {
+//     if (err) throw err;
+//     // console.log("Rows inserted:", result.affectedRows);
+//     console.log(result);
+//     console.log(result.length);
+//     console.log(result[0]);
+//     console.log(result[1]);
+//   } );
+// } catch (error) {
+//   console.error("Error executing query:", error);
+// }
 
 
+
+app.get("/", (req, res) => {
+  let q = "SELECT count(*) FROM user";
+
+  try {
+    connection.query(q, (err, result) => {
+      if (err) throw err;
+      let count = result[0]['count(*)'];
+      res.render("home", {count: count});
+    } );
+  } catch (error) {
+    console.error("Error executing query:", error);
+  }
+});
 
 
 
