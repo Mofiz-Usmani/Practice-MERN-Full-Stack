@@ -6,14 +6,14 @@ const port = 3000;
 const { faker, th } = require("@faker-js/faker");
 
 // Function to create a random user
-let getRandomUser = () => {
-  return {
-    id: faker.string.uuid(),                
-    name: faker.person.fullName(),          
-    email: faker.internet.email(),
-    address: faker.location.streetAddress(),
-  };
-};
+// let getRandomUser = () => {
+//   return {
+//     id: faker.string.uuid(),                
+//     name: faker.person.fullName(),          
+//     email: faker.internet.email(),
+//     address: faker.location.streetAddress(),
+//   };
+// };
 
 // console.log("Random User:", getRandomUser());
 
@@ -31,14 +31,21 @@ const connection = mysql.createConnection({
 
 
 
+
+let getRandomUser = () => {
+  return [
+    faker.string.uuid(),                
+    faker.person.firstName(),          
+    faker.internet.email(),
+    faker.internet.password()
+  ];
+}
+
+
 let q = "INSERT INTO user (id, username, email, password) VALUES ?";
 
-let users = [
-  ["1", "john_doe", "john@example.com", "password123"],
-  ["2", "jane_smith", "jane@example.com", "password456"]
-];
 
-
+let data = [];
 
 try {
   connection.query(q, [users], (err, result) => {
