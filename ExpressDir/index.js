@@ -1,8 +1,21 @@
 const express = require("express");
 const app = express();
-
 const port = 3000;
 
+// Import faker
+const { faker } = require("@faker-js/faker");
+
+// Function to create a random user
+let getRandomUser = () => {
+  return {
+    id: faker.string.uuid(),                
+    name: faker.person.fullName(),          
+    email: faker.internet.email(),
+    address: faker.location.streetAddress(),
+  };
+};
+
+console.log("Random User:", getRandomUser());
 
 app.get("/", (req, res) => {
   res.send("Hello World");
