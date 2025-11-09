@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 // Import faker
-const { faker } = require("@faker-js/faker");
+const { faker, th } = require("@faker-js/faker");
 
 // Function to create a random user
 let getRandomUser = () => {
@@ -29,15 +29,21 @@ const connection = mysql.createConnection({
   database: 'delta_student'
 });
 
-// connect and check
-connection.connect((err) => {
-  if (err) {
-    console.error('Connection failed:', err);
-  } else {
-    console.log('Connected to MySQL!');
-  }
-});
 
+
+let q = "SHOW TABLES";
+
+try {
+  connection.query(q, (err, results) => {
+    if (err) throw err;
+    console.log(result);
+    console.log(result.length);
+    console.log(result[0]);
+    console.log(result[1]);
+  } );
+} catch (error) {
+  console.error("Error executing query:", error);
+}
 
 
 
