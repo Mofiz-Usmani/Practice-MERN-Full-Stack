@@ -141,6 +141,13 @@ app.patch("/user/:id", (req, res) => {
 });
 
 
+
+
+app.get("/user/new", (req, res) => {
+  res.render("newuser");
+})
+
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
