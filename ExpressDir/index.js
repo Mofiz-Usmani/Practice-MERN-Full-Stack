@@ -85,6 +85,22 @@ app.get("/", (req, res) => {
 });
 
 
+
+
+app.get("/users", (req, res) => {
+  let q = "SELECT * FROM user";
+
+  try {
+    connection.query(q, (err, users) => {
+      if(err) throw err;
+      res.render("showusers", {users});
+    });
+  } catch(err) {
+    res.send("Error retrieving users");
+  }
+});
+
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
