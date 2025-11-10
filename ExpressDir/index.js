@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const path = require("path");
+const methodOverride = require("method-override");
+app.use(express.urlencoded({ extended: true }));  // To parse form data
+app.use(methodOverride("_method"));  // To allow PATCH, DELETE, etc.
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
