@@ -101,6 +101,24 @@ app.get("/users", (req, res) => {
 });
 
 
+
+app.get("/user/:id/edit", (req, res) => {
+  let {id} = req.params;
+
+  let q = `SELECT * FROM user WHERE id = '${id}'`;
+
+  try {
+    connection.query(q, (err, result) => {
+      if(err) throw err;
+      let user = result[0];
+      res.render("edituser", {user});
+    });
+  } catch(err) {
+    res.send("Error retrieving user");
+  }
+});
+
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
