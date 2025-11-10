@@ -119,6 +119,24 @@ app.get("/user/:id/edit", (req, res) => {
 });
 
 
+
+app.patch("/user/:id", (req, res) => {
+  let {id} = req.params;
+  let {username, email, password} = req.body;
+
+  let q = `UPDATE user SET username = ?, password = ? WHERE id = ?`;
+
+  try {
+    connection.query(q, [username, password, id], (err, result) => {
+      if(err) throw err;
+      res.redirect("/users");
+    });
+  } catch(err) {
+    res.send("Error updating user");
+  }
+});
+
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
