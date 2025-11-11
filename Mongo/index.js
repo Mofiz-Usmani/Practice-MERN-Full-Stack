@@ -46,12 +46,22 @@ const Data = mongoose.model('Data', userSchema);
 
 
 
-Data.find({})
+// Data.find({})
+// .then((res) => {
+//     console.log("Retrieved users:", res);
+// })
+// .catch(err => {
+//     console.error("Error retrieving users:", err);
+// });
+
+
+
+Data.find({age: {$gt: 28}})
 .then((res) => {
-    console.log("Retrieved users:", res);
+    console.log("Retrieved users with age > 28:", res);
 })
 .catch(err => {
-    console.error("Error retrieving users:", err);
+    console.error("Error retrieving users with age > 28:", err);
 });
 
 
