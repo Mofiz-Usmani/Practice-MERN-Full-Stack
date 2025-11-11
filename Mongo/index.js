@@ -36,13 +36,19 @@ Data.insertMany([
     { name: 'Bob', email: 'bob@example.com', age: 28 },
     { name: 'Charlie', email: 'charlie@example.com', age: 32 },
     { name: 'Diana', email: 'diana@example.com', age: 27 }
-]);
-
-
-newUser.save()
+])
 .then(() => {
-    console.log("User saved successfully");
+    console.log("Multiple users inserted successfully");
 })
 .catch(err => {
-    console.error("Error saving user:", err);
+    console.error("Error inserting multiple users:", err);
 });
+
+
+// newUser.save()
+// .then(() => {
+//     console.log("User saved successfully");
+// })
+// .catch(err => {
+//     console.error("Error saving user:", err);
+// });
