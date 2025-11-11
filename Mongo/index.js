@@ -31,17 +31,27 @@ const Data = mongoose.model('Data', userSchema);
 // });
 
 
-Data.insertMany([
-    { name: 'Alice', email: 'alice@example.com', age: 25 },
-    { name: 'Bob', email: 'bob@example.com', age: 28 },
-    { name: 'Charlie', email: 'charlie@example.com', age: 32 },
-    { name: 'Diana', email: 'diana@example.com', age: 27 }
-])
-.then(() => {
-    console.log("Multiple users inserted successfully");
+// Data.insertMany([
+//     { name: 'Alice', email: 'alice@example.com', age: 25 },
+//     { name: 'Bob', email: 'bob@example.com', age: 28 },
+//     { name: 'Charlie', email: 'charlie@example.com', age: 32 },
+//     { name: 'Diana', email: 'diana@example.com', age: 27 }
+// ])
+// .then(() => {
+//     console.log("Multiple users inserted successfully");
+// })
+// .catch(err => {
+//     console.error("Error inserting multiple users:", err);
+// });
+
+
+
+Data.find({})
+.then((res) => {
+    console.log("Retrieved users:", res);
 })
 .catch(err => {
-    console.error("Error inserting multiple users:", err);
+    console.error("Error retrieving users:", err);
 });
 
 
