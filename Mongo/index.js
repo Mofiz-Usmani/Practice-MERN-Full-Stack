@@ -10,7 +10,7 @@ main()
 
 
 async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/testdb');
+    await mongoose.connect('mongodb://127.0.0.1:27017/test');
 }
 
 
@@ -21,5 +21,19 @@ const userSchema = new mongoose.Schema({
 });
 
 
-const User = mongoose.model('User', userSchema);
+const Data = mongoose.model('Data', userSchema);
 
+
+const newUser = new Data({
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    age: 30
+});
+
+newUser.save()
+.then(() => {
+    console.log("User saved successfully");
+})
+.catch(err => {
+    console.error("Error saving user:", err);
+});
