@@ -43,6 +43,10 @@
                 <form method="get" action="/user/<%=user.id%>/edit">
                     <button>Edit username</button>
                 </form>
+                <br>
+                <form method="get" action="/users/<%=user.id%>/delete">
+                    <button>Delete User</button>
+                </form>
             </td>
         </tr>
         <% } %>

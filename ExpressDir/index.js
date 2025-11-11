@@ -145,7 +145,83 @@ app.patch("/user/:id", (req, res) => {
 
 app.get("/user/new", (req, res) => {
   res.render("newuser");
-})
+});
+
+
+
+app.post("/user/submit", (req, res) => {
+  let {id, username, email, password} = req.body;
+
+  let q = `INSERT INTO user (id, username, email, password) VALUES (?, ?, ?, ?)`;
+  let data = [id, username, email, password];
+
+  try {
+    connection.query(q, data, (err) => {
+      if(err) throw err;
+      res.redirect("/users");
+    });
+  }
+  catch(err) {
+    res.send("Error adding user");
+  }
+});
+
+
+
+
+app.get("/users/:id/delete", (req, res) => {
+  let { id } = req.params;
+
+  let q = `SELECT * FROM user WHERE id = ?`;
+
+  connection.query(q, [id], (err, result) => {
+    if (err) {
+      console.log(err);
+      return res.send("Error retrieving user.");
+    }
+
+    if (result.length === 0) {
+      return res.send("User not found.");
+    }
+
+    const user = result[0];
+    res.render("delete", { user });  // shows your delete confirmation form
+  });
+});
+
+
+
+
+
+app.post('/users/delete', (req, res) => {
+    const { id, password } = req.body;
+
+    const selectQuery = `SELECT * FROM user WHERE id = ?`;
+    connection.query(selectQuery, [id], (err, results) => {
+        if (err) return res.send("Error retrieving user.");
+        if (results.length === 0) return res.send("User not found.");
+
+        const user = results[0];
+
+        if (user.password !== password) {
+            return res.send("Incorrect password. User not deleted.");
+        }
+
+        const deleteQuery = `DELETE FROM user WHERE id = ?`;
+        connection.query(deleteQuery, [id], (err) => {
+            if (err) return res.send("Error deleting user.");
+
+            // Show alert and redirect
+            res.send(`
+              <script>
+                alert("User deleted successfully.");
+                window.location.href = "/users";
+              </script>
+            `);
+        });
+    });
+});
+
 
 
 app.get("/", (req, res) => {
