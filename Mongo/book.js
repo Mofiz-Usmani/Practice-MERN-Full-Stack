@@ -66,14 +66,23 @@ const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model name
 
 
 
-Book.updateOne({title: "1984"}, {price: 9.99})
+// Book.updateOne({title: "1984"}, {price: 9.99})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.error("Error updating book:", err);
+// });
+
+
+
+Book.findByIdAndDelete("691420ef09859828eb9f06aa")
 .then((res) => {
     console.log(res);
 })
 .catch((err) => {
-    console.error("Error updating book:", err);
+    console.error("Error deleting book:", err);
 });
-
 
 
 
