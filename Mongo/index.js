@@ -69,6 +69,19 @@ Data.updateOne({name: 'Alice'}, {age: 26})
 
 
 
+
+Data.findByIdAndDelete("691365a4becdbf2b488dbe55")
+.then((res) => {
+    console.log(res);
+})
+.catch(err => {
+    console.error("Error deleting user:", err);
+});
+
+
+
+
+
 // Data.find({age: {$gt: 28}})
 // .then((res) => {
 //     console.log("Retrieved users with age > 28:", res);
