@@ -56,14 +56,23 @@ const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model name
 
 
 
-Book.find({})
+// Book.find({})
+// .then((res) => {
+//     console.log("Retrieved books:", res);
+// })
+// .catch((err) => {
+//     console.error("Error retrieving books:", err);
+// });
+
+
+
+Book.updateOne({title: "1984"}, {price: 9.99})
 .then((res) => {
-    console.log("Retrieved books:", res);
+    console.log(res);
 })
 .catch((err) => {
-    console.error("Error retrieving books:", err);
+    console.error("Error updating book:", err);
 });
-
 
 
 
