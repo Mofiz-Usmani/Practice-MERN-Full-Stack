@@ -38,20 +38,33 @@ const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model name
 // });
 
 
-let Book2 = new Book({
-    title: "1984",
-    author: "George Orwell",
-    price: 8.99
-});
+// let Book2 = new Book({
+//     title: "1984",
+//     author: "George Orwell",
+//     price: 8.99
+// });
 
 
-Book2.save()
-.then(() => {
-    console.log("Book saved successfully");
+// Book2.save()
+// .then(() => {
+//     console.log("Book saved successfully");
+// })
+// .catch((err) => {
+//     console.error("Error saving book:", err);
+// });
+
+
+
+
+Book.find({})
+.then((res) => {
+    console.log("Retrieved books:", res);
 })
 .catch((err) => {
-    console.error("Error saving book:", err);
+    console.error("Error retrieving books:", err);
 });
+
+
 
 
 
