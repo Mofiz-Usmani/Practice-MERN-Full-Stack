@@ -56,13 +56,26 @@ const Data = mongoose.model('Data', userSchema);
 
 
 
-Data.find({age: {$gt: 28}})
+
+
+
+Data.updateOne({name: 'Alice'}, {age: 26})
 .then((res) => {
-    console.log("Retrieved users with age > 28:", res);
+    console.log(res);
 })
 .catch(err => {
-    console.error("Error retrieving users with age > 28:", err);
+    console.error("Error updating user:", err);
 });
+
+
+
+// Data.find({age: {$gt: 28}})
+// .then((res) => {
+//     console.log("Retrieved users with age > 28:", res);
+// })
+// .catch(err => {
+//     console.error("Error retrieving users with age > 28:", err);
+// });
 
 
 // newUser.save()
