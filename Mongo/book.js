@@ -26,3 +26,21 @@ const bookSchema = new mongoose.Schema({
         required: true,
     },
 });
+
+
+const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model named 'Book' using the defined schema
+
+
+let Books = new Book({
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    price: 10.99
+});
+
+Books.save()
+.then(() => {
+    console.log("Book saved successfully");
+})
+.catch((err) => {
+    console.error("Error saving book:", err);
+});
