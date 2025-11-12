@@ -18,5 +18,9 @@ main()
 .catch(err => console.log(err)); // If an error occurs, log error
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/whatsapp'); // Connecting to MongoDB database
+  await mongoose.connect('mongodb://127.0.0.1:27017/telegram'); // Connecting to MongoDB database
 };
+
+
+
+
