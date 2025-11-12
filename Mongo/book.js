@@ -86,13 +86,13 @@ const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model name
 
 
 
-Book.deleteMany({price: {$lt: 12}})
-.then((res) => {
-    console.log(res);
-})
-.catch((err) => {
-    console.error("Error deleting books:", err);
-});
+// Book.deleteMany({price: {$lt: 12}})
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.error("Error deleting books:", err);
+// });
 
 
 // Books.save()
