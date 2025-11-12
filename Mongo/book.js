@@ -76,14 +76,23 @@ const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model name
 
 
 
-Book.findByIdAndDelete("691420ef09859828eb9f06aa")
+// Book.findByIdAndDelete("691420ef09859828eb9f06aa")
+// .then((res) => {
+//     console.log(res);
+// })
+// .catch((err) => {
+//     console.error("Error deleting book:", err);
+// });
+
+
+
+Book.deleteMany({price: {$lt: 12}})
 .then((res) => {
     console.log(res);
 })
 .catch((err) => {
-    console.error("Error deleting book:", err);
+    console.error("Error deleting books:", err);
 });
-
 
 
 // Books.save()
