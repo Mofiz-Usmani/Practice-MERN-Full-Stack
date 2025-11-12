@@ -31,16 +31,34 @@ const bookSchema = new mongoose.Schema({
 const Book = mongoose.model('Book', bookSchema); // Create a Mongoose model named 'Book' using the defined schema
 
 
-let Books = new Book({
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    price: 10.99
+// let Books = new Book({
+//     title: "The Great Gatsby",
+//     author: "F. Scott Fitzgerald",
+//     price: 10.99
+// });
+
+
+let Book2 = new Book({
+    title: "1984",
+    author: "George Orwell",
+    price: 8.99
 });
 
-Books.save()
+
+Book2.save()
 .then(() => {
     console.log("Book saved successfully");
 })
 .catch((err) => {
     console.error("Error saving book:", err);
 });
+
+
+
+// Books.save()
+// .then(() => {
+//     console.log("Book saved successfully");
+// })
+// .catch((err) => {
+//     console.error("Error saving book:", err);
+// });
